@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @NICANORKYAMBA
 - 👀 I’m interested in Computer programming
-- 🌱 I’m currently learning software engineering
+- 🌱 I’m currently learning software engineering @ALX SE PROGRAMME
 - 💞️ I’m looking to collaborate on learning C programming language
 - 📫 How to reach me Email: nicanorkyamba98@gmail.com, Linkedin: nicanor kyamba 
 
