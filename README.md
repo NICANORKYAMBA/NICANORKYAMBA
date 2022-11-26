@@ -21,7 +21,7 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://twitter.com/@this_is_cable4" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@this_is_cable4" height="30" width="40" /></a>
+<a href="https://twitter.com/@nicanor kyamba" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="@this_is_cable4" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/nicanor kyamba" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nicanor kyamba" height="30" width="40" /></a>
 <a href="https://fb.com/nicanor kyamba" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="nicanor kyamba" height="30" width="40" /></a>
 <a href="https://instagram.com/nicanor.kyamba" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="nicanor.kyamba" height="30" width="40" /></a>
