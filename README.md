@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=nicanorkyamba" alt="nicanorkyamba" /></a> </p>
 
-<p align="left"> <a href="https://twitter.com/this_is_cable4" target="blank"><img src="https://img.shields.io/twitter/follow/this_is_cable4?logo=twitter&style=for-the-badge" alt="this_is_cable4" /></a> </p>
+<p align="left"> <a href="https://twitter.com/nicanor_kyamba" target="blank"><img src="https://img.shields.io/twitter/follow/this_is_cable4?logo=twitter&style=for-the-badge" alt="this_is_cable4" /></a> </p>
 
 - 🔭 I’m currently undertaking **Both Software Engineering Course and AWS cloud practitioner @Alx_Africa**
 
