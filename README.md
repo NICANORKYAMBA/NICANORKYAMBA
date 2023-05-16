@@ -7,21 +7,21 @@
 
 <p align="left"> <a href="https://twitter.com/this_is_cable4" target="blank"><img src="https://img.shields.io/twitter/follow/this_is_cable4?logo=twitter&style=for-the-badge" alt="this_is_cable4" /></a> </p>
 
-- 🔭 I’m currently undertaking **my Software Engineering course @Alx_Africa**
+- 🔭 I’m currently undertaking **Both Software Engineering Course and AWS cloud practitioner @Alx_Africa**
 
-- 🌱 I’m currently learning **creating a simple shell, printf in c**
+- 🌱 I’m currently learning **C, JavaScript and it's associated libraries, Python, MongoDB, MySQL**
 
-- 👯 I’m looking to collaborate on **cpython and c languages**
+- 👯 I’m looking to collaborate on **JavaScript and Python projects that enhance both backend and frontend skills**
 
-- 🤝 I’m looking for help with **data structures in c**
+- 🤝 I’m looking for help with **Node.js, React, Redux, MaterialUI,**
 
-- 💬 Ask me about **python, cpython and c language**
+- 💬 Ask me about **Python, Node.js, MongoDB, React, Redux, MySQL**
 
 - 📫 How to reach me **nicanorkyamba98@gmail.com**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://twitter.com/this_is_cable4" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="this_is_cable4" height="30" width="40" /></a>
+<a href="https://twitter.com/nicanor_kyamba" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="this_is_cable4" height="30" width="40" /></a>
 <a href="https://linkedin.com/in/nicanor kyamba" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nicanor kyamba" height="30" width="40" /></a>
 <a href="https://fb.com/nicanor kyamba" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="nicanor kyamba" height="30" width="40" /></a>
 <a href="https://instagram.com/nicanor.kyamba" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="nicanor.kyamba" height="30" width="40" /></a>
