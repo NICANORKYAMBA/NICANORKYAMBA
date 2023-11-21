@@ -7,9 +7,9 @@
 
 <p align="left"> <a href="https://twitter.com/nicanor_kyamba" target="blank"><img src="https://img.shields.io/twitter/follow/nicanor_kyamba?logo=twitter&style=for-the-badge" alt="nicanor_kyamba" /></a> </p>
 
-- 🔭 I’m currently undertaking **Both Software Engineering Course and AWS cloud practitioner @Alx_Africa**
+- 🔭 I’m currently undertaking **Software Engineering and AWS Solutions Architect @ALX Africa**
 
-- 🌱 I’m currently learning **C, JavaScript and it's associated libraries, Python, MongoDB, MySQL**
+- 🌱 I’m currently learning **Data Structures and Algorithmns in C**
 
 - 👯 I’m looking to collaborate on **JavaScript and Python projects that enhance both backend and frontend skills**
 
