@@ -1,5 +1,6 @@
-<h1 align="center">👋 Welcome to the GitHub Home of Nicanor Kyamba</h1>
-<h3 align="center">Passionate Software Engineer from Kenya</h3>
+# Nicanor Kyamba - Passionate Software Engineer from Kenya 🚀
+
+## Welcome to My GitHub Hub 👋
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=nicanorkyamba&label=Profile%20views&color=0e75b6&style=flat" alt="Profile Views" />
@@ -17,25 +18,32 @@
   </a>
 </p>
 
-🔭 I’m currently undertaking **Software Engineering and AWS Solutions Architect @ALX Africa**
+### 🔭 Currently Undertaking
+- Software Engineering and AWS Solutions Architect @ALX Africa
 
-🌱 I’m currently learning **Data Structures and Algorithms in C**
+### 🌱 Currently Learning
+- Data Structures and Algorithms in C
 
-👯 I’m looking to collaborate on **JavaScript and Python projects that enhance both backend and frontend skills**
+### 👯 Looking to Collaborate On
+- JavaScript and Python projects to enhance both backend and frontend skills
 
-🤝 I’m looking for help with **Node.js, React, Redux, MaterialUI**
+### 🤝 Seeking Help With
+- Node.js, React, Redux, MaterialUI
 
-💬 Ask me about **Python, Node.js, MongoDB, React, Redux, MySQL**
+### 💬 Ask Me About
+- Python, Node.js, MongoDB, React, Redux, MySQL
 
-📫 How to reach me: **nicanorkyamba98@gmail.com**
+### 📫 How to Reach Me
+- **Email**: [nicanorkyamba98@gmail.com](mailto:nicanorkyamba98@gmail.com)
 
-<h3 align="center">Connect with Me:</h3>
+### Connect with Me:
+
 <p align="center">
   <a href="https://twitter.com/nicanor_kyamba" target="_blank">
     <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" />
   </a>
-<a href="https://linkedin.com/in/nicanor kyamba" target="_blank">
-<img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nicanor kyamba" height="30" width="40" />
+  <a href="https://linkedin.com/in/nicanor-kyamba" target="_blank">
+    <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="LinkedIn" height="30" width="40" />
   </a>
   <a href="https://facebook.com/nicanor.kyamba" target="_blank">
     <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="Facebook" height="30" width="40" />
@@ -48,7 +56,8 @@
   </a>
 </p>
 
-<h3 align="center">Languages and Tools:</h3>
+### Languages and Tools:
+
 <p align="center">
   <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" width="40" height="40"/>
@@ -71,4 +80,4 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=nicanorkyamba&" alt="GitHub Streak" />
 </p>
 
-Feel free to explore my repositories, and let's connect and collaborate on exciting projects! 🚀
+Feel free to use this code in your GitHub README, and don't forget to customize it further based on your preferences!
