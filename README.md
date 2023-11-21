@@ -34,7 +34,7 @@
   <a href="https://twitter.com/nicanor_kyamba" target="_blank">
     <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" />
   </a>
-<a href="https://linkedin.com/in/nicanor kyamba" target="blank">
+<a href="https://linkedin.com/in/nicanor kyamba" target="_blank">
 <img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="nicanor kyamba" height="30" width="40" />
   </a>
   <a href="https://facebook.com/nicanor.kyamba" target="_blank">
