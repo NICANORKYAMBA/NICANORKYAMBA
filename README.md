@@ -38,7 +38,7 @@
 
 ### Connect with Me:
 
-<p align="center">
+<p align="left">
   <a href="https://twitter.com/nicanor_kyamba" target="_blank">
     <img src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="Twitter" height="30" width="40" />
   </a>
@@ -62,7 +62,7 @@ alt="nicanor kyamba" height="30" width="40" />
 
 ### Languages and Tools:
 
-<p align="center">
+<p align="left">
   <a href="https://aws.amazon.com" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" width="40" height="40"/>
   </a>
@@ -92,7 +92,7 @@ alt="nicanor kyamba" height="30" width="40" />
   </a>
 </p>
 
-<p align="left">
+<p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs?username=nicanorkyamba&show_icons=true&locale=en&layout=compact" alt="Top Languages" />
 </p>
 
