@@ -103,5 +103,3 @@ alt="nicanor kyamba" height="30" width="40" />
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=nicanorkyamba&" alt="GitHub Streak" />
 </p>
-
-Feel free to use this code in your GitHub README, and don't forget to customize it further based on your preferences!
