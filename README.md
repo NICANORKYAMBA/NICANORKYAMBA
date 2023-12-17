@@ -11,17 +11,20 @@ I'm a passionate Software Engineer from Kenya 🚀. I'm currently honing my skil
 
 ## 🛠 Tools
 
-- AWS
+- Python
+- Amazon Web Services(AWS)
 - Node.js
 - React
 - Redux
 - MongoDB
 - MySQL
+- Postgres
 
 ## 🌱 I’m currently learning
 
 - Advanced Data Structures and Algorithms in C
-- Deepening my knowledge in Node.js, React, Redux, MaterialUI
+- Deepening my knowledge in Node.js, Express.js, React, Redux, MaterialUI
+- Rust Programming Language
 
 ## 👯 I’m looking to collaborate on
 
@@ -33,7 +36,7 @@ I'm a passionate Software Engineer from Kenya 🚀. I'm currently honing my skil
 
 ## 💬 Ask me about
 
-- Python, Node.js, MongoDB, React, Redux, MySQL
+- Python, Node.js, MongoDB, Postgres, React, Redux, MySQL
 
 ## 📫 How to reach me
 
@@ -42,6 +45,10 @@ I'm a passionate Software Engineer from Kenya 🚀. I'm currently honing my skil
 ## 📈 My GitHub Stats
 
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=nicanorkyamba&show_icons=true&theme=gotham" alt="Nicanor Kyamba | Stats" />
+
+<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=nicanorkyamba&theme=dark" alt="Nicanor Kyamba | Streaks" />
+
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nicanorkyamba&theme=gotham" alt="Nicanor Kyamba | Top Langs" />
 
 ## Connect with Me:
 
