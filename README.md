@@ -1,6 +1,6 @@
 # Hello, I'm Nicanor Kyamba! 👋
 
-I'm a passionate Software Engineer from Kenya 🚀. I'm currently honing my skills as a Software Engineer and AWS Solutions Architect at ALX Africa. I'm always open to collaborating on projects and innovative/disruptive ideas.
+I'm a passionate Software Engineer from Kenya 🚀. I'm a graduate of ALX Africa where I honed my skills as a Software Engineer. I'm a certified AWS Cloud Computing Practitioner and currently pursuing Solutions Architect at ALX Africa. I'm always open to collaborating on projects and innovative/disruptive ideas.
 
 ## 🚀 Skills and Experience
 
@@ -50,9 +50,13 @@ I'm a passionate Software Engineer from Kenya 🚀. I'm currently honing my skil
 
 <p align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nicanorkyamba&theme=gotham" alt="Nicanor Kyamba | Top Langs" />
 
-## Connect with Me:
+## 🚀 Current Projects
 
-[![Linkedin Badge](https://img.shields.io/badge/-nicanorkyamba-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/nicanor-kyamba/)](https://www.linkedin.com/in/nicanor-kyamba/)
+- Building a real-world bank API project for personal growth using Node.js and Express
+
+## Connect with Me
+
+[![Linkedin Badge](https://img.shields.io/badge/-nicanorkyamba-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/nicanor-kyamba-36b362158/)](https://www.linkedin.com/in/nicanor-kyamba-36b362158/)
 [![Twitter Badge](https://img.shields.io/badge/-nicanor_kyamba-1da1f2?style=flat-square&logo=twitter&logoColor=white&link=https://twitter.com/nicanor_kyamba)](https://twitter.com/nicanor_kyamba)
 [![Github Badge](https://img.shields.io/badge/-nicanorkyamba-grey?style=flat-square&logo=github&logoColor=white&link=https://github.com/nicanorkyamba/)](https://www.github.com/nicanorkyamba/)
 [![Facebook Badge](https://img.shields.io/badge/-nicanor.kyamba-blue?style=flat-square&logo=facebook&logoColor=white&link=https://facebook.com/nicanor.kyamba/)](https://facebook.com/nicanor.kyamba/)
