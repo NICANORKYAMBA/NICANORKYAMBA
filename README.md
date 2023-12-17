@@ -6,7 +6,7 @@ I'm a passionate Software Engineer from Kenya 🚀. I'm currently honing my skil
 
 - 🌐 Full-stack development with JavaScript technologies (React, Node.js)
 - 📊 Data Structures and Algorithms in C
-- ☁ AWS Solutions Architect
+- ☁ AWS Cloud Computing Practitioner and Solutions Architect
 - 🐍 Python programming
 
 ## 🛠 Tools
