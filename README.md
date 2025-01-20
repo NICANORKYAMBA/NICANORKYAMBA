@@ -1,7 +1,5 @@
 # Hello, I'm Nicanor Kyamba! 👋
 
-<img src="https://avatars.githubusercontent.com/u/NICANORKYAMBA?v=4" width="150" align="left" style="margin-right: 20px" />
-
 I'm a passionate Software Engineer from Kenya 🚀. I graduated from ALX Africa, where I honed my skills as a Software Engineer. I am a certified AWS Cloud Practitioner and AWS Solutions Architect. I'm always open to collaborating on projects and innovative/disruptive ideas.
 
 ---
@@ -99,30 +97,6 @@ I'm a passionate Software Engineer from Kenya 🚀. I graduated from ALX Africa,
 
 - **Nifty Work Plus TV**: As a Full-Stack Developer, I contributed to the development of NWPLUS TV, an award-winning creative company that produces high-definition creative content. Users can stream or temporarily download shows, movies, podcasts, or audio-visual material. I utilized technologies such as Node.js, Express.js, Prisma, PostgreSQL, AngularJS, CSS, Tailwind, and Google Authentication to build a scalable and secure platform.
   - **Tools used**: Node.js | Express.js | Prisma | PostgreSQL | AngularJS | CSS | Tailwind | Google Authentication | AWS Solutions Architect | Google Cloud Platform for hosting
-
----
-
-## 🏆 Achievements and Certifications
-
-- **AWS Certified Solutions Architect**
-- **AWS Certified Cloud Practitioner**
-- **CISCO Ethical Hacking Certification**
-
----
-
-## 📚 Blog Posts and Articles
-
-- [My Journey into Full-Stack Development](https://medium.com/@nicanorkyamba/my-journey-into-full-stack-development)
-- [Understanding Docker and Its Uses](https://medium.com/@nicanorkyamba/understanding-docker-and-its-uses)
-- [Advanced Data Structures in C](https://medium.com/@nicanorkyamba/advanced-data-structures-in-c)
-
----
-
-## 📊 Visitor Count
-
-<p align="center">
-  <img src="https://visitor-badge.glitch.me/badge?page_id=nicanorkyamba.nicanorkyamba" alt="visitor badge"/>
-</p>
 
 ---
 
