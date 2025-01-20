@@ -1,21 +1,17 @@
 # Hello, I'm Nicanor Kyamba! 👋
 
-<p style="background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
 I'm a passionate Software Engineer from Kenya 🚀. I graduated from ALX Africa, where I honed my skills as a Software Engineer. I am a certified AWS Cloud Practitioner and AWS Solutions Architect. I'm always open to collaborating on projects and innovative/disruptive ideas.
-</p>
 
 ---
 
 ## 🚀 Skills and Experience
 
-<ul style="list-style-type: none;">
-  <li>🌐 Full-stack development with JavaScript technologies (React, Node.js, AngularJS)</li>
-  <li>📊 Data Structures and Algorithms in Java, JavaScript, and C</li>
-  <li>☁ Certified AWS Cloud Practitioner and AWS Solutions Architect</li>
-  <li>🐍 Python programming</li>
-  <li>🐳 Docker</li>
-  <li>☕ Currently learning Java</li>
-</ul>
+- 🌐 Full-stack development with JavaScript technologies (React, Node.js, AngularJS)
+- 📊 Data Structures and Algorithms in Java, JavaScript, and C
+- ☁ Certified AWS Cloud Practitioner and AWS Solutions Architect
+- 🐍 Python programming
+- 🐳 Docker
+- ☕ Currently learning Java
 
 ---
 
@@ -40,38 +36,30 @@ I'm a passionate Software Engineer from Kenya 🚀. I graduated from ALX Africa,
 
 ## 🌱 I’m currently learning
 
-<ul style="list-style-type: none;">
-  <li>Advanced Data Structures and Algorithms in C</li>
-  <li>Deepening my knowledge in Node.js, Express.js, React, Redux, MaterialUI</li>
-  <li>Java for backend development</li>
-</ul>
+- Advanced Data Structures and Algorithms in C
+- Deepening my knowledge in Node.js, Express.js, React, Redux, MaterialUI
+- Java for backend development
 
 ---
 
 ## 👯 I’m looking to collaborate on
 
-<ul style="list-style-type: none;">
-  <li>JavaScript and Python projects to enhance both backend and frontend skills</li>
-  <li>Java projects as I'm building my expertise in this new language</li>
-</ul>
+- JavaScript and Python projects to enhance both backend and frontend skills
+- Java projects as I'm building my expertise in this new language
 
 ---
 
 ## 🤔 I’m looking for help with
 
-<ul style="list-style-type: none;">
-  <li>Advanced concepts in Java, Node.js, React, Redux, MaterialUI</li>
-  <li>Java for enterprise applications</li>
-</ul>
+- Advanced concepts in Java, Node.js, React, Redux, MaterialUI
+- Java for enterprise applications
 
 ---
 
 ## 💬 Ask me about
 
-<ul style="list-style-type: none;">
-  <li>Python, Node.js, MongoDB, PostgreSQL, React, Redux, MySQL</li>
-  <li>My experience with AWS certifications</li>
-</ul>
+- Python, Node.js, MongoDB, PostgreSQL, React, Redux, MySQL
+- My experience with AWS certifications
 
 ---
 
@@ -107,10 +95,8 @@ I'm a passionate Software Engineer from Kenya 🚀. I graduated from ALX Africa,
 
 ## 🚀 Current Projects
 
-<p style="background-color: #f0f0f0; padding: 20px; border-radius: 10px;">
 - **Nifty Work Plus TV**: As a Full-Stack Developer, I contributed to the development of NWPLUS TV, an award-winning creative company that produces high-definition creative content. Users can stream or temporarily download shows, movies, podcasts, or audio-visual material. I utilized technologies such as Node.js, Express.js, Prisma, PostgreSQL, AngularJS, CSS, Tailwind, and Google Authentication to build a scalable and secure platform.
   - **Tools used**: Node.js | Express.js | Prisma | PostgreSQL | AngularJS | CSS | Tailwind | Google Authentication | AWS Solutions Architect | Google Cloud Platform for hosting
-</p>
 
 ---
 
