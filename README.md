@@ -66,16 +66,6 @@
 
 ---
 
-## 🎓 Education & Academic Background
-
-<div align="center">
-
-### 📚 Educational Excellence
-
-</div>
-
----
-
 ## 🏆 Professional Certifications & Credentials
 
 <div align="center">
