@@ -29,7 +29,7 @@
 **Experience Metrics**
 
 ![5+ Years](https://img.shields.io/badge/Experience-5%2B%20Years-blue?style=for-the-badge)
-![50+ Apps](https://img.shields.io/badge/Apps%20Built-50%2B-green?style=for-the-badge)
+![10+ Apps](https://img.shields.io/badge/Apps%20Built-50%2B-green?style=for-the-badge)
 ![99.9% Uptime](https://img.shields.io/badge/Uptime-99.9%25-brightgreen?style=for-the-badge)
 ![24/7 Support](https://img.shields.io/badge/Support-24%2F7-orange?style=for-the-badge)
 
@@ -42,7 +42,7 @@
 <td width="50%">
 
 ### 🎯 Core Competencies
-- **🌐 Full-Stack Development**: React, Next.js, Node.js, TypeScript
+- **🌐 Full-Stack Development**: Java, AngularJS, React, Next.js, Node.js, TypeScript
 - **☁️ Cloud Architecture**: AWS, Azure, GCP Solutions & Implementation
 - **🔒 Security Engineering**: Cloud security, authentication, compliance
 - **📊 Algorithm Design**: Data Structures & Algorithms (Java, JavaScript, C)
@@ -55,7 +55,7 @@
 ### 🏆 Achievements & Metrics
 - ✅ **AWS Solutions Architect** & **Cloud Practitioner**
 - 🎓 **ALX Africa Software Engineering Graduate**
-- 🚀 **50+ Applications Built** with production deployment
+- 🚀 **10+ Applications Built** with production deployment
 - 📈 **99.9% Uptime** guarantee across all projects
 - 🌟 **99% Client Satisfaction** rate
 - 💰 **ROI +300%** for client projects
@@ -74,43 +74,6 @@
 
 </div>
 
-<table>
-<tr>
-<td width="50%">
-
-### 🏫 Formal Education
-**Bachelor of Commerce (Information Technology)**  
-*Kisii University* | 2018 - 2022  
-📍 Kisii, Kenya
-
-**Key Coursework:**
-- Information Systems & Management
-- Business Analytics & Intelligence  
-- Database Design & Management
-- Systems Analysis & Design
-- Project Management
-- Business Process Optimization
-
-</td>
-<td width="50%">
-
-### 💻 Professional Development
-**Software Engineering Program**  
-*ALX Africa* | 2023 - 2024  
-📍 Remote Learning
-
-**Specialized Training:**
-- Full-Stack Web Development
-- Data Structures & Algorithms
-- System Design & Architecture
-- DevOps & Cloud Engineering
-- Software Engineering Best Practices
-- Collaborative Development
-
-</td>
-</tr>
-</table>
-
 ---
 
 ## 🏆 Professional Certifications & Credentials
@@ -127,6 +90,10 @@
 
 ### ☁️ Cloud Certifications
 ![AWS](https://img.shields.io/badge/-AWS%20Certified-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**AWS Security Speciality**  
+*Amazon Web Services*  
+✅ **Certified 2025**
 
 **AWS Solutions Architect Associate**  
 *Amazon Web Services*  
@@ -391,51 +358,6 @@
 - **Tech Innovation** & Industry Trends
 
 ---
-
----
-
-## 🌟 Client Testimonials & Recommendations
-
-<div align="center">
-
-### 💬 What Clients Say About Working With Me
-
-</div>
-
-<table>
-<tr>
-<td width="33%">
-
-### 🏆 Outstanding Results
-*"Nicanor delivered our e-commerce platform ahead of schedule with exceptional quality. The performance improvements exceeded our expectations by 40%."*
-
-**Sarah Johnson**  
-*CEO, TechStart Solutions*  
-⭐⭐⭐⭐⭐ **5/5 Stars**
-
-</td>
-<td width="33%">
-
-### 🚀 Technical Excellence
-*"His cloud architecture skills are outstanding. We saw 60% cost reduction while improving our system reliability to 99.9% uptime."*
-
-**Michael Chen**  
-*CTO, DataFlow Inc.*  
-⭐⭐⭐⭐⭐ **5/5 Stars**
-
-</td>
-<td width="34%">
-
-### 🎯 Professional Service
-*"Working with Nicanor was seamless. His communication, technical skills, and problem-solving abilities are top-notch."*
-
-**Emily Rodriguez**  
-*Product Manager, InnovateHub*  
-⭐⭐⭐⭐⭐ **5/5 Stars**
-
-</td>
-</tr>
-</table>
 
 ---
 
