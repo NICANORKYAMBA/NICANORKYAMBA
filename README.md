@@ -321,25 +321,25 @@ Comfortable owning infrastructure **end-to-end**—from CI/CD automation and Lin
 <table>
 <tr>
 <td align="center" width="25%">
-  <h1>🏆</h1>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Trophy.png" width="80"/>
   <h3>12+</h3>
   <p><b>Professional Certifications</b></p>
   <p>AWS & GCP Certified</p>
 </td>
 <td align="center" width="25%">
-  <h1>📈</h1>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="80"/>
   <h3>99.9%</h3>
   <p><b>System Uptime</b></p>
   <p>Mission-Critical Systems</p>
 </td>
 <td align="center" width="25%">
-  <h1>💰</h1>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Money%20Bag.png" width="80"/>
   <h3>40%</h3>
   <p><b>Cost Reduction</b></p>
   <p>Infrastructure Optimization</p>
 </td>
 <td align="center" width="25%">
-  <h1>🔒</h1>
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Locked.png" width="80"/>
   <h3>Zero</h3>
   <p><b>Security Breaches</b></p>
   <p>Enterprise-Grade Protection</p>
