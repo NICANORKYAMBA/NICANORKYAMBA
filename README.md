@@ -18,7 +18,7 @@ Comfortable owning infrastructure **end-to-end**—from CI/CD automation and Lin
 
 <div align="center">
 
-**📍 Nairobi, Kenya 00100** | **📧 nicanorkyamba98@gmail.com** | **📱 +254 798 749 254**
+**📍 Nairobi, Kenya 00100** | **📧 nicanorkyamba98@gmail.com**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nicanor-kyamba-36b362158/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-FF6B6B?style=flat-square&logo=google-chrome&logoColor=white)](https://nkcloud.dev)
@@ -441,11 +441,6 @@ Comfortable owning infrastructure **end-to-end**—from CI/CD automation and Lin
 <td align="center">
   <a href="https://nkcloud.dev">
     <img src="https://img.shields.io/badge/Portfolio-FF6B6B?style=flat-square&logo=google-chrome&logoColor=white" alt="Portfolio"/>
-  </a>
-</td>
-<td align="center">
-  <a href="https://wa.me/254798749254">
-    <img src="https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
   </a>
 </td>
 </tr>
