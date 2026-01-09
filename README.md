@@ -321,25 +321,25 @@ Comfortable owning infrastructure **end-to-end**—from CI/CD automation and Lin
 <table>
 <tr>
 <td align="center" width="25%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Trophy.png" width="80"/>
+  <h2>🏆</h2>
   <h3>12+</h3>
   <p><b>Professional Certifications</b></p>
   <p>AWS & GCP Certified</p>
 </td>
 <td align="center" width="25%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="80"/>
+  <h2>📈</h2>
   <h3>99.9%</h3>
   <p><b>System Uptime</b></p>
   <p>Mission-Critical Systems</p>
 </td>
 <td align="center" width="25%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Money%20Bag.png" width="80"/>
+  <h2>💰</h2>
   <h3>40%</h3>
   <p><b>Cost Reduction</b></p>
   <p>Infrastructure Optimization</p>
 </td>
 <td align="center" width="25%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Locked.png" width="80"/>
+  <h2>🔒</h2>
   <h3>Zero</h3>
   <p><b>Security Breaches</b></p>
   <p>Enterprise-Grade Protection</p>
@@ -366,11 +366,10 @@ Comfortable owning infrastructure **end-to-end**—from CI/CD automation and Lin
 
 <div align="center">
   
-  <img src="https://github-readme-stats.vercel.app/api?username=nicanorkyamba&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff" alt="GitHub Stats" height="170"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=nicanorkyamba&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" alt="GitHub Streak" height="170"/>
+  ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=nicanorkyamba&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff)
+  ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=nicanorkyamba&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff)
   
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nicanorkyamba&theme=github_dark&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages" height="170"/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nicanorkyamba&theme=github-compact&hide_border=true&area=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=c9d1d9" alt="Activity Graph" width="100%"/>
+  ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=nicanorkyamba&theme=github_dark&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9)
   
 </div>
 
