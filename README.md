@@ -321,25 +321,25 @@ Comfortable owning infrastructure **end-to-end**—from CI/CD automation and Lin
 <table>
 <tr>
 <td align="center" width="25%">
-  <img src="https://img.icons8.com/?size=100&id=85500&format=png&color=000000" width="80"/>
+  <h2>🏆</h2>
   <h3>12+</h3>
   <p><b>Professional Certifications</b></p>
   <p>AWS & GCP Certified</p>
 </td>
 <td align="center" width="25%">
-  <img src="https://img.icons8.com/?size=100&id=90377&format=png&color=000000" width="80"/>
+  <h2>📊</h2>
   <h3>99.9%</h3>
   <p><b>System Uptime</b></p>
   <p>Mission-Critical Systems</p>
 </td>
 <td align="center" width="25%">
-  <img src="https://img.icons8.com/?size=100&id=2969&format=png&color=000000" width="80"/>
+  <h2>💰</h2>
   <h3>40%</h3>
   <p><b>Cost Reduction</b></p>
   <p>Infrastructure Optimization</p>
 </td>
 <td align="center" width="25%">
-  <img src="https://img.icons8.com/?size=100&id=15778&format=png&color=000000" width="80"/>
+  <h2>🔒</h2>
   <h3>Zero</h3>
   <p><b>Security Breaches</b></p>
   <p>Enterprise-Grade Protection</p>
