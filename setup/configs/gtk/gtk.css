@@ -1,0 +1,49 @@
+/* Modern rounded dialog boxes */
+window {
+  border-radius: 8px;
+}
+
+dialog {
+  border-radius: 12px;
+}
+
+.titlebar {
+  min-height: 32px;
+  padding: 0 8px;
+  border-radius: 12px 12px 0 0;
+}
+
+button {
+  border-radius: 6px;
+  padding: 6px 12px;
+  min-height: 28px;
+}
+
+button:hover {
+  background-alpha: 0.9;
+}
+
+entry {
+  border-radius: 4px;
+  padding: 6px 8px;
+}
+
+/* Modern popover styling */
+popover {
+  border-radius: 8px;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 200ms ease-in-out;
+}
+
+/* Modern scrollbar */
+scrollbar {
+  min-width: 10px;
+}
+
+scrollbar slider {
+  border-radius: 5px;
+  min-width: 10px;
+}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Redshift
+Comment=Screen color temperature adjustment
+Exec=redshift-gtk
+Icon=redshift
+Categories=Utility;
+X-GNOME-Autostart-enabled=true
