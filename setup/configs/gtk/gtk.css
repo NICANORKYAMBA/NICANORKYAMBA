@@ -1,49 +1,223 @@
-/* Modern rounded dialog boxes */
-window {
-  border-radius: 8px;
+/* === Premium XFCE Desktop - Developer Edition === */
+
+/* ─── Window Decorations ─── */
+window.csd decoration {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-dialog {
+window.csd.popup decoration {
+  border-radius: 10px;
+}
+
+dialog.background {
   border-radius: 12px;
 }
 
-.titlebar {
-  min-height: 32px;
+/* ─── Headerbar / Titlebar ─── */
+headerbar, .titlebar {
+  min-height: 36px;
   padding: 0 8px;
   border-radius: 12px 12px 0 0;
 }
 
+/* ─── Buttons ─── */
 button {
-  border-radius: 6px;
-  padding: 6px 12px;
-  min-height: 28px;
-}
-
-button:hover {
-  background-alpha: 0.9;
-}
-
-entry {
-  border-radius: 4px;
-  padding: 6px 8px;
-}
-
-/* Modern popover styling */
-popover {
   border-radius: 8px;
+  padding: 6px 14px;
+  min-height: 28px;
+  transition: background-color 150ms ease, box-shadow 150ms ease;
 }
 
-/* Smooth transitions */
-* {
-  transition: all 200ms ease-in-out;
+/* ─── Text Entries ─── */
+entry {
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
 }
 
-/* Modern scrollbar */
+/* ─── Popovers & Menus ─── */
+popover.background {
+  border-radius: 12px;
+  padding: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+menu {
+  border-radius: 10px;
+  padding: 6px;
+}
+
+menu menuitem {
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 2px 4px;
+  transition: background-color 100ms ease;
+}
+
+/* ─── Scrollbar - global thin minimal ─── */
 scrollbar {
-  min-width: 10px;
+  background: none;
+  border: none;
+}
+
+scrollbar trough {
+  background: none;
+  border: none;
+  min-width: 8px;
+  min-height: 8px;
 }
 
 scrollbar slider {
-  border-radius: 5px;
-  min-width: 10px;
+  border-radius: 99px;
+  min-width: 4px;
+  min-height: 4px;
+  background-color: alpha(currentColor, 0.25);
+  border: 2px solid transparent;
+}
+
+scrollbar:hover slider {
+  min-width: 6px;
+  background-color: alpha(currentColor, 0.45);
+}
+
+/* ─── Tooltips ─── */
+tooltip, tooltip.background {
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
+/* ─── Notebook Tabs ─── */
+notebook > header > tabs > tab {
+  border-radius: 8px 8px 0 0;
+  padding: 4px 12px;
+}
+
+/* ─── Switches ─── */
+switch {
+  border-radius: 99px;
+  min-height: 24px;
+  min-width: 48px;
+}
+
+switch slider {
+  border-radius: 99px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+/* ─── List Rows ─── */
+row {
+  border-radius: 6px;
+}
+
+/* ─── PANEL ─── */
+.xfce4-panel {
+  border: none;
+  font-weight: 500;
+}
+
+.xfce4-panel button {
+  border-radius: 6px;
+  padding: 2px 4px;
+  margin: 2px 1px;
+  transition: background-color 100ms ease;
+}
+
+.xfce4-panel button:hover {
+  background-color: alpha(white, 0.1);
+}
+
+.xfce4-panel button:checked {
+  background-color: alpha(white, 0.08);
+}
+
+/* ─── Docklike Taskbar ─── */
+.xfce4-panel .docklike-plugin button {
+  padding: 2px 6px;
+  margin: 2px;
+  border-radius: 6px;
+}
+
+.xfce4-panel .docklike-plugin button:hover {
+  background-color: alpha(white, 0.12);
+}
+
+.xfce4-panel .docklike-plugin button:checked {
+  background-color: alpha(white, 0.1);
+  box-shadow: inset 0 -2px 0 #5294e2;
+}
+
+/* ─── System Tray ─── */
+.xfce4-panel .systray {
+  padding: 0 4px;
+}
+
+/* ─── Clock ─── */
+.xfce4-panel .clock-button {
+  font-weight: 500;
+}
+
+/* ─── Whiskermenu ─── */
+#whiskermenu-window {
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+#whiskermenu-window entry {
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 4px;
+}
+
+#whiskermenu-window .view {
+  border-radius: 8px;
+}
+
+#whiskermenu-window .view:selected {
+  border-radius: 6px;
+}
+
+#whiskermenu-window button {
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+
+#whiskermenu-window .category-button {
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 1px 2px;
+}
+
+#whiskermenu-window .category-button:checked {
+  border-radius: 6px;
+}
+
+/* ─── Whiskermenu scrollbar - hidden until hover ─── */
+#whiskermenu-window scrollbar {
+  background: none;
+  border: none;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+#whiskermenu-window scrollbar trough {
+  background: none;
+  border: none;
+  min-width: 6px;
+}
+
+#whiskermenu-window scrolledwindow:hover scrollbar {
+  opacity: 1;
+}
+
+#whiskermenu-window scrollbar slider {
+  min-width: 3px;
+  border-radius: 99px;
+  background-color: alpha(white, 0.2);
+}
+
+#whiskermenu-window scrollbar:hover slider {
+  min-width: 5px;
+  background-color: alpha(white, 0.4);
 }
