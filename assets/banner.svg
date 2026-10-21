@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="Nicanor Kyamba — Cloud &amp; DevOps Engineer. 12 of 12 AWS certifications, 3 Google Cloud certifications, 34 Credly badges.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b110d"/>
+      <stop offset="1" stop-color="#050806"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.35" r="0.55">
+      <stop offset="0" stop-color="#39d98a" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#39d98a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#39d98a" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <style>
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', monospace; }
+      .name { font-size: 52px; font-weight: 700; fill: #5dffa8; letter-spacing: 1px; }
+      .role { font-size: 20px; fill: #39d98a; }
+      .dim  { fill: #4a6b52; }
+      .text { font-size: 16px; fill: #c9d6cc; }
+      .num  { font-size: 30px; font-weight: 700; fill: #5dffa8; }
+      .lbl  { font-size: 13px; fill: #8fa894; letter-spacing: 0.5px; }
+      .prompt { font-size: 15px; fill: #39d98a; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="360" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#grid)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#glow)"/>
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="18" fill="none" stroke="#39d98a" stroke-opacity="0.25"/>
+
+  <!-- accent bar, same as the terminal banner -->
+  <rect x="56" y="58" width="5" height="128" rx="2" fill="#39d98a"/>
+
+  <text x="80" y="54" class="mono prompt">~/nicanor <tspan class="dim">❯</tspan> whoami</text>
+  <text x="80" y="112" class="mono name">NICANOR KYAMBA</text>
+  <text x="80" y="148" class="mono role">Cloud &amp; DevOps Engineer <tspan class="dim">·</tspan> Software Engineer</text>
+  <text x="80" y="180" class="mono text">AWS · Google Cloud · Kubernetes · Terraform · Platform security · FinOps</text>
+
+  <!-- verified headline numbers -->
+  <g class="mono">
+    <rect x="56" y="222" width="250" height="96" rx="12" fill="#133D17" fill-opacity="0.45" stroke="#39d98a" stroke-opacity="0.3"/>
+    <text x="80" y="266" class="num">12 / 12</text>
+    <text x="80" y="296" class="lbl">AWS CERTS · ALL ACTIVE</text>
+
+    <rect x="326" y="222" width="250" height="96" rx="12" fill="#133D17" fill-opacity="0.45" stroke="#39d98a" stroke-opacity="0.3"/>
+    <text x="350" y="266" class="num">3</text>
+    <text x="350" y="296" class="lbl">GOOGLE CLOUD CERTS</text>
+
+    <rect x="596" y="222" width="250" height="96" rx="12" fill="#133D17" fill-opacity="0.45" stroke="#39d98a" stroke-opacity="0.3"/>
+    <text x="620" y="266" class="num">34</text>
+    <text x="620" y="296" class="lbl">CREDLY BADGES</text>
+
+    <rect x="866" y="222" width="278" height="96" rx="12" fill="#133D17" fill-opacity="0.45" stroke="#39d98a" stroke-opacity="0.3"/>
+    <text x="890" y="266" class="num">Nairobi</text>
+    <text x="890" y="296" class="lbl">KENYA · EAT (GMT+3)</text>
+  </g>
+
+  <!-- Kali-style dragon mark, abstracted to a few strokes -->
+  <g transform="translate(985 46)" fill="none" stroke="#39d98a" stroke-width="3" stroke-linecap="round" opacity="0.55">
+    <path d="M0 30 C 40 18, 80 20, 112 40"/>
+    <path d="M8 46 C 44 34, 84 38, 112 52"/>
+    <path d="M20 62 C 52 54, 88 56, 110 64"/>
+    <path d="M112 40 C 128 54, 140 60, 156 58 L 166 66"/>
+    <path d="M112 52 C 92 74, 96 104, 124 112 C 150 120, 168 138, 170 160"/>
+  </g>
+</svg>

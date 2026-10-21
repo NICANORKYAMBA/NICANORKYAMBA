@@ -1,474 +1,213 @@
 <div align="center">
-  
-  # Hi, I'm Nicanor 👋
-  
-  ### 🚀 Cloud/DevOps Engineer | Software Engineer | AWS/GCP Solutions Architect
-  
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2196F3&center=true&vCenter=true&width=500&lines=Cloud+%26+DevOps+Engineer;Full-Stack+Software+Engineer;5%2B+Years+Experience;AWS+%26+GCP+Certified;Kubernetes+%26+Terraform+Expert;Available+for+New+Opportunities" alt="Typing SVG" />
-  
-</div>
 
----
+<img src="assets/banner.svg" alt="Nicanor Kyamba — Cloud & DevOps Engineer. 12 of 12 AWS certifications, 3 Google Cloud certifications, 34 Credly badges." width="100%"/>
 
-## 💡 Professional Summary
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=39D98A&center=true&vCenter=true&width=680&lines=Terraform+platforms+on+AWS+%E2%80%94+417+resources%2C+zero+drift;Multi-tenant+AI+SaaS+running+in+production;Security+pipelines+across+client+AWS+accounts;Open+to+Cloud%2C+DevOps+%26+Platform+roles" alt="Terraform platforms on AWS, multi-tenant AI SaaS in production, security pipelines across client AWS accounts, open to Cloud, DevOps and Platform roles"/>
 
-Cloud/DevOps Engineer with **hands-on experience** designing, automating, and operating **secure, production-grade cloud infrastructure** across AWS and Google Cloud. **Kubernetes-first mindset** with strong experience on EKS/GKE, Infrastructure as Code (Terraform, CloudFormation), and cloud-native security practices.
-
-Comfortable owning infrastructure **end-to-end**—from CI/CD automation and Linux systems administration to configuration management with Ansible and observability using CloudWatch and Datadog. Also experienced in **full-stack software development** with modern web technologies. **FinOps-aware**, **reliability-driven**, and experienced working in fast-moving environments supporting scalable, mission-critical systems.
-
-<div align="center">
-
-**📍 Nairobi, Kenya 00100** | **📧 nicanorkyamba98@gmail.com**
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nicanor-kyamba-36b362158/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-FF6B6B?style=flat-square&logo=google-chrome&logoColor=white)](https://nkcloud.dev)
-[![Email](https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:nicanorkyamba98@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTQgOWg0djExSDR6TTYgMy41YTIuMjUgMi4yNSAwIDEgMSAwIDQuNSAyLjI1IDIuMjUgMCAwIDEgMC00LjV6TTEwIDloMy44djEuNmguMDVjLjUzLTEgMS44My0yLjA1IDMuNzctMi4wNSA0LjAzIDAgNC43OCAyLjY1IDQuNzggNi4xVjIwaC00di00LjhjMC0xLjE1LS4wMi0yLjYyLTEuNi0yLjYyLTEuNiAwLTEuODUgMS4yNS0xLjg1IDIuNTRWMjBIMTB6Ii8+PC9zdmc+)](https://www.linkedin.com/in/nicanor-kyamba-36b362158/)
+[![Credly](https://img.shields.io/badge/Credly_·_34_badges-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTEyIDJsMi40IDEuOCAzLS4xLjkgMi45IDIuNCAxLjgtMSAyLjggMSAyLjgtMi40IDEuOC0uOSAyLjktMy0uMUwxMiAyMC40bC0yLjQtMS44LTMgLjEtLjktMi45LTIuNC0xLjggMS0yLjgtMS0yLjggMi40LTEuOC45LTIuOSAzIC4xek0xMC42IDE0LjZsLTIuNS0yLjUtMS40IDEuNCAzLjkgMy45IDYuOC02LjgtMS40LTEuNHoiLz48L3N2Zz4=)](https://www.credly.com/users/nicanor-kyamba)
+[![Email](https://img.shields.io/badge/Email-0b110d?style=for-the-badge&logo=gmail&logoColor=39d98a)](mailto:nicanorkyamba98@gmail.com)
 
 </div>
 
----
+## `$ cat about.md`
 
-## 🎯 Core Competencies
+I'm a **Cloud & DevOps Engineer** at [Kitsilano Technologies](https://kitstek.com), an AWS Partner in Nairobi, where I own AWS infrastructure for clients across East Africa: I write it in Terraform, secure it, keep it observable and keep its bill honest. Before and alongside that, I build software: multi-tenant AI products, a video-streaming platform and the pipelines that ship them.
+
+- 🏗️ **Infrastructure as code that matches reality.** I brought a client's live AWS estate under Terraform with zero drift, and I design for the recovery targets the business actually signed up for.
+- 🛡️ **Security people can act on.** Org-wide guardrails, threat-detection pipelines that page on real threats rather than routine admin work, least-privilege access.
+- 🤖 **Full-stack and AI.** Next.js, Angular, Node and Python products running LLMs, retrieval and event-driven pipelines in production.
+- 🏆 **All 12 active AWS certifications**, plus Google Cloud Professional Cloud Architect and Professional Cloud DevOps Engineer, and KCNA.
+
+## `$ ls ~/work --featured`
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### ☁️ Cloud & DevOps Engineering
+### ☁️ Multi-environment AWS platform
+**East African beverage group · vendor platform**
 
-#### 🏗️ Infrastructure & Platform
-- **Cloud Platforms**: AWS, GCP (Multi-account/Multi-region)
-- **Infrastructure as Code**: Terraform, CloudFormation, Ansible
-- **Container Orchestration**: Kubernetes, Amazon EKS, GKE, Helm
-- **Containerization**: Docker, Docker Compose
+Terraform for a containerised platform across staging and production accounts, with one reusable country stack and a thin root per country and environment.
 
-#### 🔄 CI/CD & Automation
-- **CI/CD Pipelines**: GitHub Actions, AWS CodePipeline
-- **Configuration Management**: Ansible, AWS Systems Manager
-- **Automation**: Bash scripting, Python automation
+- **417 staging resources at zero drift**, including adopting hand-built live resources without disturbing them; **202 in production**
+- ECS Fargate on Graviton, RDS MySQL behind RDS Proxy, ElastiCache, API Gateway (HTTP, REST, WebSocket), EventBridge, SQS FIFO
+- CloudFront + WAF at the edge, TLS end to end, GuardDuty, Inspector, AWS Config, CloudTrail alarms
+- Datadog monitors and DB monitoring, cost anomaly detection
+- DR position written against a **30-minute RTO / 15-minute RPO**; state and config backed up encrypted to a second region
 
-#### 📊 Observability & Monitoring
-- **Monitoring**: Amazon CloudWatch, Datadog
-- **Logging**: CloudWatch Logs, ELK Stack
-- **Alerting**: PagerDuty integration, SNS
-
-#### 🔒 Security & Compliance
-- **IAM**: Least privilege, Role-based access control
-- **Encryption**: TLS/SSL, AWS KMS, Secrets Manager
-- **Security**: Zero Trust, SCPs, Security Groups, Firewalls
-- **Compliance**: AWS Well-Architected Framework
-
-#### 💰 FinOps & Cost Optimization
-- **Cost Management**: AWS Cost Explorer, Budgets
-- **Optimization**: Rightsizing, Reserved Instances, S3 Lifecycle
-- **Financial Governance**: Cloud cost allocation, FinOps practices
-
-#### 🐧 Systems & Networking
-- **Operating Systems**: Linux (Ubuntu, Amazon Linux, RHEL)
-- **Networking**: VPC, Subnets, Route Tables, Load Balancers
-- **Troubleshooting**: System performance, Network diagnostics
+`Terraform` `ECS Fargate` `RDS Proxy` `WAF` `Datadog` `GitHub Actions`
 
 </td>
 <td width="50%" valign="top">
 
-### 💻 Software Engineering
+### 🤖 RibboAI: AI customer-support SaaS
+**Multi-tenant platform · 1,400+ of my commits**
 
-#### 🌐 Programming Languages
-- **Primary**: TypeScript, JavaScript (ES6+), Python
-- **Secondary**: Java, Bash/Shell scripting
-- **Query**: SQL, NoSQL
+Businesses train a chatbot on their own documents and websites, embed it on their site and hand conversations to a human when needed.
 
-#### 🎨 Frontend Development
-- **Frameworks**: React.js, Next.js, Angular, Vue.js
-- **Styling**: Tailwind CSS, Sass/SCSS, CSS3
-- **UI/UX**: Responsive design, Material-UI, Figma
-- **State Management**: Redux, Context API, Zustand
+- Built **live agent handoff** and **LLM-driven conversational onboarding**
+- Privacy detection that understands **Swahili** contact requests (*jina, simu, nambari*)
+- Fixed a **cross-visitor chat-resume** security flaw by verifying the visitor on contact match
+- Subscription, credits and billing correctness; MRR / ARR in the admin overview
+- Streaming fixes so long answers are never truncated
 
-#### ⚙️ Backend Development
-- **Node.js**: Express.js, NestJS
-- **Python**: Django, Flask, FastAPI
-- **APIs**: RESTful APIs, GraphQL
-- **Real-time**: WebSockets, Socket.io
-
-#### 🗄️ Database Management
-- **Relational**: PostgreSQL, MySQL, Amazon RDS
-- **NoSQL**: MongoDB, Redis, DynamoDB
-- **ORMs**: Prisma, TypeORM, Sequelize, SQLAlchemy
-- **Optimization**: Query optimization, Indexing, Caching
-
-#### 🛠️ Development Tools & Practices
-- **Version Control**: Git, GitHub, GitLab
-- **Testing**: Jest, Pytest, Cypress, TDD
-- **Architecture**: Microservices, Serverless, Event-driven
-- **Methodologies**: Agile/Scrum, DevOps, CI/CD
-
-#### 📦 Additional Technologies
-- **Message Queues**: RabbitMQ, AWS SQS, SNS
-- **Caching**: Redis, Memcached, CloudFront
-- **Search**: Elasticsearch
-- **Authentication**: OAuth2, JWT, AWS Cognito
+`Next.js` `TypeScript` `Firebase` `LangChain` `Pinecone` `Amazon Bedrock`
 
 </td>
 </tr>
-</table>
-
----
-
-## 🏆 Professional Certifications
-
-<div align="center">
-
-### 🎖️ 12+ Industry-Recognized Certifications
-
-</div>
-
-<table>
 <tr>
 <td width="50%" valign="top">
 
-### ☁️ AWS Certifications (10)
+### 🧠 Ajirii: AI recruitment platform
+**Full stack · Next.js app + serverless API (95 of 131 API commits)**
 
-<img src="https://img.shields.io/badge/AWS-Solutions_Architect_Professional-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS SAP"/>
+Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionally anonymised candidates.
 
-- 🏅 **AWS Certified Solutions Architect – Professional** (2025)
-- 🏅 **AWS Certified DevOps Engineer – Professional** (2025)
-- 🏅 **AWS Certified Security – Specialty** (2025)
-- 🏅 **AWS Certified Developer – Associate** (2024)
-- 🏅 **AWS Certified Solutions Architect – Associate** (2024)
-- 🏅 **AWS Certified Cloud Practitioner** (2023)
-- 💰 **AWS Cost Optimization for FinOps – Part 1** (2024)
-- 💰 **AWS Cost Optimization for FinOps – Part 2** (2024)
+- Serverless **Python API on AWS SAM**: Cognito with a Lambda authorizer, DynamoDB, SES, tests
+- **CV text extraction** with Textract and DOCX parsing, and **SHA-256 de-duplication**
+- Anonymisation as a configurable org setting; **ML-scoring integration** endpoints
+- Next.js 15 frontend: processing pipeline with stage progress, analytics, notifications, audit logs, **MFA enforced for admins**
+
+`Next.js` `TypeScript` `Python` `AWS SAM` `Cognito` `Textract`
 
 </td>
 <td width="50%" valign="top">
 
-### 🌐 Google Cloud & Other Certifications (4+)
+### 🎬 NW Plus TV: African video streaming
+**Video-on-demand platform · 2024–2026 · 970+ commits across 3 repos**
 
-<img src="https://img.shields.io/badge/GCP-Professional_Cloud_Architect-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" alt="GCP PCA"/>
+[nwplus.tv](https://www.nwplus.tv) streams African films, documentaries and podcasts. I built most of it end to end.
 
-- 🏅 **Google Professional Cloud Architect** (2024)
-- 🏅 **Google Associate Cloud Engineer (ACE)** (2024)
-- 🔐 **CISCO Ethical Hacking** (2024)
-- 💰 **FinOps Fundamentals & Strategies – Part 1** (2024)
-- 💰 **FinOps Fundamentals & Strategies – Part 2** (2024)
+- **Node.js / Express / Prisma API** on Google Cloud Run, media in **Cloud Storage** behind signed URLs, Paystack payments
+- **Angular 15 + NgRx** frontend: content, subscriptions, discounts, payment plans and profiles
+- Admin analytics built on **server-authoritative counts** (paying customers, not just active subscribers), with filters and export
+- GA4 conversion-funnel tracking; Next.js business site ([nwplus.biz](https://nwplus.biz))
+- Wrote the full technical handover
+
+`Node.js` `Prisma` `Angular` `NgRx` `Cloud Run` `Paystack`
 
 </td>
 </tr>
-</table>
-
----
-
-## 💼 Professional Experience
-
-### ☁️ Cloud Engineer
-**Kitsilano Technologies LTD** | Nairobi, Kenya | *March 2025 - Present* | Hybrid
-
-<table>
 <tr>
 <td width="50%" valign="top">
 
-#### 🏗️ Cloud Infrastructure & IaC
-- ✓ Designed and deployed **scalable multi-account AWS environments** using Terraform and CloudFormation
-- ✓ Aligned infrastructure with **AWS Well-Architected Framework** and production reliability standards
-- ✓ Implemented **infrastructure as code best practices** for repeatable, version-controlled deployments
-- ✓ Managed **multi-region deployments** for high availability and disaster recovery
+### 🛡️ Security & governance at org scale
 
-#### 🔄 CI/CD & Automation
-- ✓ Built and maintained **CI/CD pipelines** using GitHub Actions and AWS CodePipeline
-- ✓ **Reduced release-related incidents by 60%** through automated deployments
-- ✓ Streamlined deployment processes for **faster time-to-market**
-- ✓ Implemented **automated testing and quality gates** in pipelines
+- **Threat-detection pipeline across 4 client AWS accounts**: GuardDuty → EventBridge (severity ≥ 7) → Lambda enricher → SNS, with operator attribution so routine admin activity doesn't page but genuine threats do. Includes deploy and end-to-end verification tooling.
+- **AWS Partner tag enforcement in four layers**: SCP hard-block, tag policy, AWS Config auto-remediation and an EventBridge + Lambda safety net, rolled out with CloudFormation StackSets across the organisation.
 
-#### 🐳 Containers & Kubernetes
-- ✓ Provisioned cloud infrastructure using Terraform for **Kubernetes workloads**
-- ✓ Supported Kubernetes application deployments on **Amazon EKS** using Helm-based workflows
-- ✓ Enabled **repeatable, versioned, and highly available releases** across key projects
-- ✓ Implemented **auto-scaling and resource optimization** for containerized workloads
+`GuardDuty` `EventBridge` `Lambda` `SCPs` `AWS Config` `StackSets`
 
 </td>
 <td width="50%" valign="top">
 
-#### 📊 Monitoring & Observability
-- ✓ Implemented **end-to-end observability** using Amazon CloudWatch and Datadog
-- ✓ Improved system visibility, proactive alerting, and **reduced MTTR by 45%**
-- ✓ Established **monitoring best practices** for production systems
-- ✓ Created **custom dashboards and alerts** for critical metrics
+### 💰 Operations & FinOps
 
-#### 🔒 Security & Governance
-- ✓ Strengthened cloud security posture with **IAM least privilege policies**
-- ✓ Implemented **SCPs, TLS/KMS encryption, and Zero Trust enforcement**
-- ✓ Configured **firewalls and security controls** for compliance
-- ✓ Achieved **zero security breaches** with enterprise-grade protection
+- **SAP HANA backup automation** for a multi-tenant logistics account: S3 lifecycle to Glacier Instant Retrieval, plus a cross-region Deep Archive copy
+- **Cost investigations** for client accounts that tripped their budgets: root cause, remediation and a written report each time
+- **Migration decision guides**, e.g. SQL Server on EC2 (BYOL) vs RDS (BYOM) with costed recommendations
+- Incident RCAs, runbooks and weekly client reporting
 
-#### 💰 FinOps & Cost Optimization
-- ✓ Implemented cost optimization strategies: **budgets, rightsizing, S3 lifecycle policies**
-- ✓ **Reduced infrastructure costs by 40%** through optimization
-- ✓ Established **cloud financial governance practices**
-- ✓ Implemented **cost allocation tags and chargeback models**
+`AWS Backup` `S3 Lifecycle` `Cost Explorer` `Budgets` `Python`
 
 </td>
 </tr>
 </table>
 
-**Tech Stack:** `AWS` `GCP` `Terraform` `CloudFormation` `Kubernetes` `EKS` `GKE` `Helm` `Docker` `GitHub Actions` `AWS CodePipeline` `CloudWatch` `Datadog` `Ansible` `Linux` `Python` `Bash`
+<sub>Client work is described without client names or internal details. Happy to walk through any of it in conversation.</sub>
 
----
-
-### 💻 Full-Stack Developer
-**Nifty Work Plus TV** - Nairobi | *June 2024 - January 2025*
-
-- ✓ Designed and deployed a **scalable media delivery platform** using Amazon S3 and CloudFront
-- ✓ Built **serverless APIs** using AWS Lambda and API Gateway, reducing operational overhead
-- ✓ Managed **RDS PostgreSQL databases** with focus on availability, performance tuning, and backups
-- ✓ Automated CI/CD workflows using AWS CodePipeline and CodeBuild, **reducing deployment time by 40%**
-- ✓ Enforced security best practices including IAM policies, MFA, encryption-at-rest, and least-privilege access
-- ✓ Integrated **Google Cloud Storage (GCS)** to optimize storage costs and enable cross-platform data access
-
-**Tech Stack:** `AWS Lambda` `API Gateway` `S3` `CloudFront` `RDS PostgreSQL` `CodePipeline` `CodeBuild` `GCS` `IAM`
-
----
-
-### ☁️ Cloud Solutions Architect
-**Nifty Work Plus TV** - Nairobi | *June 2024 - January 2025*
-
-- ✓ Architected **serverless solutions** using AWS Lambda, DynamoDB, and S3
-- ✓ Improved system availability with **multi-AZ deployments** and S3 cross-region replication
-- ✓ Conducted **cost optimization** using Reserved Instances and Savings Plans
-- ✓ Designed **disaster recovery and failover strategies** using Elastic Load Balancing and Route 53
-- ✓ Implemented resilient **data backup and replication strategies** for business continuity
-
-**Tech Stack:** `AWS Lambda` `DynamoDB` `S3` `Multi-AZ` `ELB` `Route 53` `Reserved Instances` `Disaster Recovery`
-
----
-
-## 🛠 Technical Skills & Expertise
+## `$ cat certifications.yml`
 
 <div align="center">
 
-### 💻 Programming Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-
-### ☁️ Cloud Platforms & Services
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white)
-![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-![Lambda](https://img.shields.io/badge/AWS_Lambda-FF9900?style=flat-square&logo=aws-lambda&logoColor=white)
-![EC2](https://img.shields.io/badge/Amazon_EC2-FF9900?style=flat-square&logo=amazon-ec2&logoColor=white)
-![S3](https://img.shields.io/badge/Amazon_S3-569A31?style=flat-square&logo=amazon-s3&logoColor=white)
-![RDS](https://img.shields.io/badge/Amazon_RDS-527FFF?style=flat-square&logo=amazon-rds&logoColor=white)
-
-### 🏗️ Infrastructure as Code & Configuration
-![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white)
-![CloudFormation](https://img.shields.io/badge/CloudFormation-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)
-![Ansible](https://img.shields.io/badge/Ansible-EE0000?style=flat-square&logo=ansible&logoColor=white)
-
-### 🐳 Containers & Orchestration
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![Helm](https://img.shields.io/badge/Helm-0F1689?style=flat-square&logo=helm&logoColor=white)
-![EKS](https://img.shields.io/badge/Amazon_EKS-FF9900?style=flat-square&logo=amazon-eks&logoColor=white)
-![GKE](https://img.shields.io/badge/Google_GKE-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
-
-### 🔄 CI/CD & Automation
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
-![AWS CodePipeline](https://img.shields.io/badge/AWS_CodePipeline-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)
-![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat-square&logo=jenkins&logoColor=white)
-
-### 📊 Monitoring & Observability
-![CloudWatch](https://img.shields.io/badge/CloudWatch-FF4F8B?style=flat-square&logo=amazon-cloudwatch&logoColor=white)
-![Datadog](https://img.shields.io/badge/Datadog-632CA6?style=flat-square&logo=datadog&logoColor=white)
-![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white)
-![Grafana](https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white)
-
-### 🎨 Frontend Development
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)
-![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=flat-square&logo=vue.js&logoColor=4FC08D)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
-
-### ⚙️ Backend Development
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat-square&logo=express&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-
-### 🗄️ Databases
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![DynamoDB](https://img.shields.io/badge/DynamoDB-4053D6?style=flat-square&logo=amazon-dynamodb&logoColor=white)
-
-### 🐧 Operating Systems & Tools
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visual-studio-code&logoColor=white)
+**All 12 active AWS certifications · 3 Google Cloud certifications · 34 badges on [Credly](https://www.credly.com/users/nicanor-kyamba)**
 
 </div>
 
----
+| | Certification | Earned |
+|---|---|---|
+| ![AWS](https://img.shields.io/badge/AWS-Professional-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Solutions Architect · DevOps Engineer · Generative AI Developer *(early adopter)* | 2025–26 |
+| ![AWS](https://img.shields.io/badge/AWS-Specialty-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Security · Advanced Networking | 2025–26 |
+| ![AWS](https://img.shields.io/badge/AWS-Associate-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Solutions Architect · Developer · CloudOps Engineer · Data Engineer · Machine Learning Engineer | 2024–26 |
+| ![AWS](https://img.shields.io/badge/AWS-Foundational-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Cloud Practitioner · AI Practitioner | 2023, 2026 |
+| ![Google Cloud](https://img.shields.io/badge/Google_Cloud-Professional-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Cloud Architect · Cloud DevOps Engineer | 2025–26 |
+| ![Google Cloud](https://img.shields.io/badge/Google_Cloud-Associate-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Associate Cloud Engineer | 2025 |
+| ![Linux Foundation](https://img.shields.io/badge/Linux_Foundation-CNCF-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | KCNA: Kubernetes and Cloud Native Associate | 2026 |
+| ![Microsoft · Cisco](https://img.shields.io/badge/Microsoft_·_Cisco-Fundamentals-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Security, Compliance & Identity · Microsoft 365 · Cisco Ethical Hacker | 2024–25 |
 
-## 🎯 Key Achievements & Impact
+## `$ which --all tools`
 
 <div align="center">
 
-<table>
-<tr>
-<td align="center" width="25%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Trophy.png" width="80"/>
-  <h3>12+</h3>
-  <p><b>Professional Certifications</b></p>
-  <p>AWS & GCP Certified</p>
-</td>
-<td align="center" width="25%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="80"/>
-  <h3>99.9%</h3>
-  <p><b>System Uptime</b></p>
-  <p>Mission-Critical Systems</p>
-</td>
-<td align="center" width="25%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Money%20Bag.png" width="80"/>
-  <h3>40%</h3>
-  <p><b>Cost Reduction</b></p>
-  <p>Infrastructure Optimization</p>
-</td>
-<td align="center" width="25%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Locked.png" width="80"/>
-  <h3>Zero</h3>
-  <p><b>Security Breaches</b></p>
-  <p>Enterprise-Grade Protection</p>
-</td>
-</tr>
-</table>
+**Cloud & IaC**<br/>
+<img src="https://img.shields.io/badge/AWS-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="AWS"/>
+<img src="https://img.shields.io/badge/Google_Cloud-0b110d?style=for-the-badge&logo=googlecloud&logoColor=39d98a" alt="Google Cloud"/>
+<img src="https://img.shields.io/badge/Terraform-0b110d?style=for-the-badge&logo=terraform&logoColor=39d98a" alt="Terraform"/>
+<img src="https://img.shields.io/badge/CloudFormation-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="CloudFormation"/>
+<img src="https://img.shields.io/badge/Ansible-0b110d?style=for-the-badge&logo=ansible&logoColor=39d98a" alt="Ansible"/>
+
+**Containers & delivery**<br/>
+<img src="https://img.shields.io/badge/Kubernetes-0b110d?style=for-the-badge&logo=kubernetes&logoColor=39d98a" alt="Kubernetes"/>
+<img src="https://img.shields.io/badge/Docker-0b110d?style=for-the-badge&logo=docker&logoColor=39d98a" alt="Docker"/>
+<img src="https://img.shields.io/badge/Helm-0b110d?style=for-the-badge&logo=helm&logoColor=39d98a" alt="Helm"/>
+<img src="https://img.shields.io/badge/GitHub_Actions-0b110d?style=for-the-badge&logo=githubactions&logoColor=39d98a" alt="GitHub Actions"/>
+<img src="https://img.shields.io/badge/Linux-0b110d?style=for-the-badge&logo=linux&logoColor=39d98a" alt="Linux"/>
+
+**Observability & security**<br/>
+<img src="https://img.shields.io/badge/Datadog-0b110d?style=for-the-badge&logo=datadog&logoColor=39d98a" alt="Datadog"/>
+<img src="https://img.shields.io/badge/CloudWatch-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="CloudWatch"/>
+<img src="https://img.shields.io/badge/Prometheus-0b110d?style=for-the-badge&logo=prometheus&logoColor=39d98a" alt="Prometheus"/>
+<img src="https://img.shields.io/badge/Grafana-0b110d?style=for-the-badge&logo=grafana&logoColor=39d98a" alt="Grafana"/>
+<img src="https://img.shields.io/badge/Kali_Linux-0b110d?style=for-the-badge&logo=kalilinux&logoColor=39d98a" alt="Kali Linux"/>
+
+**Software & AI**<br/>
+<img src="https://img.shields.io/badge/TypeScript-0b110d?style=for-the-badge&logo=typescript&logoColor=39d98a" alt="TypeScript"/>
+<img src="https://img.shields.io/badge/Python-0b110d?style=for-the-badge&logo=python&logoColor=39d98a" alt="Python"/>
+<img src="https://img.shields.io/badge/Next.js-0b110d?style=for-the-badge&logo=nextdotjs&logoColor=39d98a" alt="Next.js"/>
+<img src="https://img.shields.io/badge/Angular-0b110d?style=for-the-badge&logo=angular&logoColor=39d98a" alt="Angular"/>
+<img src="https://img.shields.io/badge/Node.js-0b110d?style=for-the-badge&logo=nodedotjs&logoColor=39d98a" alt="Node.js"/>
+<img src="https://img.shields.io/badge/Firebase-0b110d?style=for-the-badge&logo=firebase&logoColor=39d98a" alt="Firebase"/>
+<img src="https://img.shields.io/badge/LangChain-0b110d?style=for-the-badge&logo=langchain&logoColor=39d98a" alt="LangChain"/>
+<img src="https://img.shields.io/badge/PostgreSQL_·_MySQL-0b110d?style=for-the-badge&logo=postgresql&logoColor=39d98a" alt="PostgreSQL and MySQL"/>
+<img src="https://img.shields.io/badge/Redis-0b110d?style=for-the-badge&logo=redis&logoColor=39d98a" alt="Redis"/>
 
 </div>
 
-### 🏆 Notable Accomplishments
+## `$ git log --career --oneline`
 
-- 🎖️ **10 AWS Certifications** including Solutions Architect Professional & DevOps Professional
-- 🎖️ **2 Google Cloud Certifications** (Associate Cloud Engineer & Professional Cloud Architect)
-- 🏗️ **Designed & deployed multi-account AWS environments** with Terraform and CloudFormation
-- 📈 **Achieved 99.9% uptime** across mission-critical production systems
-- 💰 **Reduced infrastructure costs by 40%** through strategic optimization and FinOps practices
-- 🔒 **Maintained zero security breaches** with enterprise-grade security controls
-- ⚡ **Reduced release incidents by 60%** through automated CI/CD pipelines
-- 📊 **Improved MTTR by 45%** with comprehensive observability and monitoring
+```text
+2025-03 → now      Cloud Engineer · Kitsilano Technologies (AWS Partner), Nairobi
+                   AWS platforms, security and FinOps for clients across East Africa
+2024-06 → 2026-07  Full-Stack Engineer · NW Plus TV (Nifty Works Plus)
+                   Video-streaming platform on Google Cloud: Node.js, Angular, Cloud Run
 
----
+2026-01 → now      BSc Computer Science · University of the People
+2025-01 → 2025-02  HNG12 Internship · DevOps & backend track
+2022-08 → 2023     ALX Software Engineering programme
+```
 
-## 📊 GitHub Analytics
-
-<div align="center">
-  
-  <img src="https://github-readme-stats.vercel.app/api?username=nicanorkyamba&show_icons=true&theme=github_dark&hide_border=true&count_private=true&include_all_commits=true&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9&icon_color=58a6ff" alt="GitHub Stats" height="170"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=nicanorkyamba&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" alt="GitHub Streak" height="170"/>
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nicanorkyamba&theme=github_dark&hide_border=true&layout=compact&langs_count=8&bg_color=0d1117&title_color=58a6ff&text_color=c9d1d9" alt="Top Languages" height="170"/>
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nicanorkyamba&theme=github-compact&hide_border=true&area=true&bg_color=0d1117&color=58a6ff&line=58a6ff&point=c9d1d9" alt="Activity Graph" width="100%"/>
-  
-</div>
-
----
-
-## 🎯 Current Focus & Learning
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-### 👨‍💻 Currently Mastering
-- Advanced Kubernetes & Service Mesh (Istio)
-- Multi-Cloud Architecture (AWS + GCP)
-- Advanced Terraform Patterns & Modules
-- GitOps with ArgoCD & Flux
-- Cloud-Native Security (Falco, OPA)
-
-</td>
-<td width="33%" valign="top">
-
-### 🤝 Open to Collaborate On
-- Cloud Infrastructure Projects
-- Kubernetes & Container Solutions
-- DevOps Automation & CI/CD
-- Multi-Cloud Architectures
-- Open Source Cloud Tools
-
-</td>
-<td width="34%" valign="top">
-
-### 💡 Areas of Interest
-- Site Reliability Engineering (SRE)
-- Platform Engineering
-- Cloud Security & Compliance
-- FinOps & Cost Optimization
-- Infrastructure Automation
-
-</td>
-</tr>
-</table>
-
----
-
-## 📫 Let's Connect & Collaborate
+## `$ gh stats`
 
 <div align="center">
 
-### 🤝 I'm Available for New Opportunities!
+<img src="https://github-readme-stats.vercel.app/api?username=NICANORKYAMBA&show_icons=true&count_private=true&hide_border=true&bg_color=0b110d&title_color=5dffa8&text_color=c9d6cc&icon_color=39d98a&ring_color=39d98a" alt="GitHub stats for NICANORKYAMBA" height="165"/>
+<img src="https://streak-stats.demolab.com?user=NICANORKYAMBA&hide_border=true&background=0b110d&ring=39d98a&fire=5dffa8&currStreakLabel=5dffa8&sideLabels=c9d6cc&currStreakNum=c9d6cc&sideNums=c9d6cc&dates=4a6b52&stroke=1f3324" alt="GitHub contribution streak for NICANORKYAMBA" height="165"/>
 
-<table>
-<tr>
-<td align="center">
-  <a href="mailto:nicanorkyamba98@gmail.com">
-    <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-</td>
-<td align="center">
-  <a href="https://www.linkedin.com/in/nicanor-kyamba-36b362158/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-</td>
-<td align="center">
-  <a href="https://github.com/nicanorkyamba/">
-    <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/>
-  </a>
-</td>
-<td align="center">
-  <a href="https://nkcloud.dev">
-    <img src="https://img.shields.io/badge/Portfolio-FF6B6B?style=flat-square&logo=google-chrome&logoColor=white" alt="Portfolio"/>
-  </a>
-</td>
-</tr>
-</table>
-
-**💼 Status:** Open to Full-time, Contract, and Freelance Opportunities  
-**🌍 Work Preference:** Remote | Hybrid | On-site  
-**📍 Location:** Nairobi, Kenya 00100  
-**⏰ Timezone:** GMT+3 (EAT)
+<sub>Most of my work lives in private client and company repositories, so public repos show only part of it.</sub>
 
 </div>
 
----
+## `$ ./contact.sh`
 
 <div align="center">
-  
-  <img src="https://komarev.com/ghpvc/?username=nicanorkyamba&label=Profile%20Views&color=58a6ff&style=flat-square" alt="Profile Views"/>
-  
-  ### 🚀 Let's Build Something Amazing Together!
-  
-  *Passionate about cloud infrastructure, automation, and building scalable systems that make a difference.*
-  
-  ---
-  
-  **© 2026 Nicanor.** All rights reserved.
-  
-  Cloud/DevOps Engineer | Software Engineer | AWS & GCP Solutions Architect
-  
-  *Powered by AWS ☁️ | Built with ❤️ in Nairobi, Kenya | Visit: [nkcloud.dev](https://nkcloud.dev) 🚀*
-  
+
+**🟢 Open to Cloud, DevOps and Platform Engineering roles: full-time, contract or freelance.**<br/>
+Remote, hybrid or on-site · Nairobi, Kenya · EAT (GMT+3)
+
+[![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTQgOWg0djExSDR6TTYgMy41YTIuMjUgMi4yNSAwIDEgMSAwIDQuNSAyLjI1IDIuMjUgMCAwIDEgMC00LjV6TTEwIDloMy44djEuNmguMDVjLjUzLTEgMS44My0yLjA1IDMuNzctMi4wNSA0LjAzIDAgNC43OCAyLjY1IDQuNzggNi4xVjIwaC00di00LjhjMC0xLjE1LS4wMi0yLjYyLTEuNi0yLjYyLTEuNiAwLTEuODUgMS4yNS0xLjg1IDIuNTRWMjBIMTB6Ii8+PC9zdmc+)](https://www.linkedin.com/in/nicanor-kyamba-36b362158/)
+[![Email](https://img.shields.io/badge/nicanorkyamba98@gmail.com-0b110d?style=for-the-badge&logo=gmail&logoColor=39d98a)](mailto:nicanorkyamba98@gmail.com)
+
+<img src="https://komarev.com/ghpvc/?username=NICANORKYAMBA&label=profile+views&color=133D17&style=flat-square" alt="Profile views"/>
+
 </div>
