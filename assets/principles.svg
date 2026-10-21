@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="278" viewBox="0 0 1000 278" role="img" aria-label="Principles: Git is the source of truth: If it runs in production, it is in Terraform or GitOps. Drift is found and closed.; Design for the recovery target: Agree RTO and RPO first. Backups, regions and runbooks follow from them.; Alerts must mean something: A page is a real threat or a real outage, never routine admin work.; Cost is a feature: Graviton, right-sizing, lifecycle rules, budgets and anomaly detection by default.; Leave it documented: Runbooks, RCAs, DR positions and handovers that let someone else take over.">
+<defs><pattern id="g" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#39d98a" stroke-opacity="0.04"/></pattern><style>text{font-family:'JetBrains Mono','Fira Code',SFMono-Regular,Consolas,'Liberation Mono',monospace}.n{font-size:30px;font-weight:700;fill:#133D17;stroke:#39d98a;stroke-width:1;stroke-opacity:.7}.t{font-size:13.5px;font-weight:700;fill:#5dffa8}.d{font-size:11.5px;fill:#c9d6cc}</style></defs>
+<rect width="1000" height="278" rx="16" fill="#0b110d"/><rect width="1000" height="278" rx="16" fill="url(#g)"/><rect x="0.5" y="0.5" width="999" height="277" rx="16" fill="none" stroke="#39d98a" stroke-opacity="0.22"/>
+<rect x="20" y="20" width="180" height="238" rx="12" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="36" y="20" width="40" height="3" rx="1.5" fill="#39d98a"/>
+<text x="36" y="68" class="n">01</text>
+<text x="36" y="100" class="t">Git is the source</text>
+<text x="36" y="119" class="t">of truth</text>
+<text x="36" y="148" class="d">If it runs in</text>
+<text x="36" y="165" class="d">production, it is in</text>
+<text x="36" y="182" class="d">Terraform or GitOps.</text>
+<text x="36" y="199" class="d">Drift is found and</text>
+<text x="36" y="216" class="d">closed.</text>
+<rect x="214" y="20" width="180" height="238" rx="12" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="230" y="20" width="40" height="3" rx="1.5" fill="#39d98a"/>
+<text x="230" y="68" class="n">02</text>
+<text x="230" y="100" class="t">Design for the</text>
+<text x="230" y="119" class="t">recovery target</text>
+<text x="230" y="148" class="d">Agree RTO and RPO</text>
+<text x="230" y="165" class="d">first. Backups,</text>
+<text x="230" y="182" class="d">regions and runbooks</text>
+<text x="230" y="199" class="d">follow from them.</text>
+<rect x="408" y="20" width="180" height="238" rx="12" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="424" y="20" width="40" height="3" rx="1.5" fill="#39d98a"/>
+<text x="424" y="68" class="n">03</text>
+<text x="424" y="100" class="t">Alerts must mean</text>
+<text x="424" y="119" class="t">something</text>
+<text x="424" y="148" class="d">A page is a real</text>
+<text x="424" y="165" class="d">threat or a real</text>
+<text x="424" y="182" class="d">outage, never routine</text>
+<text x="424" y="199" class="d">admin work.</text>
+<rect x="602" y="20" width="180" height="238" rx="12" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="618" y="20" width="40" height="3" rx="1.5" fill="#39d98a"/>
+<text x="618" y="68" class="n">04</text>
+<text x="618" y="100" class="t">Cost is a feature</text>
+<text x="618" y="129" class="d">Graviton,</text>
+<text x="618" y="146" class="d">right-sizing,</text>
+<text x="618" y="163" class="d">lifecycle rules,</text>
+<text x="618" y="180" class="d">budgets and anomaly</text>
+<text x="618" y="197" class="d">detection by default.</text>
+<rect x="796" y="20" width="180" height="238" rx="12" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="812" y="20" width="40" height="3" rx="1.5" fill="#39d98a"/>
+<text x="812" y="68" class="n">05</text>
+<text x="812" y="100" class="t">Leave it</text>
+<text x="812" y="119" class="t">documented</text>
+<text x="812" y="148" class="d">Runbooks, RCAs, DR</text>
+<text x="812" y="165" class="d">positions and</text>
+<text x="812" y="182" class="d">handovers that let</text>
+<text x="812" y="199" class="d">someone else take</text>
+<text x="812" y="216" class="d">over.</text>
+</svg>

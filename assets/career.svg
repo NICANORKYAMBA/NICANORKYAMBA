@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" role="img" aria-label="Career timeline. Work: Cloud Engineer at Kitsilano Technologies since March 2025; Full-Stack Engineer at NW Plus TV, June 2024 to July 2026. Learning: ALX Software Engineering 2022 to 2023; HNG12 internship January to February 2025; BSc Computer Science at the University of the People since January 2026. Milestones: first AWS certification October 2023; AWS Solutions Architect Professional and Google Cloud Professional Cloud Architect December 2025; all 12 AWS certifications June 2026. Now: preparing for CKAD, writing about the road to 12 AWS certifications, studying computer science.">
+<defs><pattern id="g" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#39d98a" stroke-opacity="0.04"/></pattern><style>text{font-family:'JetBrains Mono','Fira Code',SFMono-Regular,Consolas,'Liberation Mono',monospace}.t{font-size:19px;font-weight:700;fill:#5dffa8}.st{font-size:12.5px;fill:#8fa894}.zone{font-size:11px;font-weight:700;fill:#39d98a;letter-spacing:1.5px}.bl{font-size:12px;font-weight:700;fill:#0b110d}.bl2{font-size:12px;font-weight:700;fill:#d6e5d8}.yr{font-size:11px;fill:#4a6b52}.ms{font-size:11px;fill:#c9d6cc}.msb{font-size:11px;font-weight:700;fill:#5dffa8}.now{font-size:12px;fill:#c9d6cc}</style></defs>
+<rect width="1000" height="420" rx="16" fill="#0b110d"/><rect width="1000" height="420" rx="16" fill="url(#g)"/><rect x="0.5" y="0.5" width="999" height="419" rx="16" fill="none" stroke="#39d98a" stroke-opacity="0.22"/>
+<text x="30" y="40" class="t">Career</text>
+<text x="30" y="62" class="st">Work, learning and certification milestones, 2022 to today</text>
+<path d="M260.0 84V318" stroke="#1f3324" stroke-dasharray="3 5"/><text x="264.0" y="334" class="yr">2023</text>
+<path d="M440.0 84V318" stroke="#1f3324" stroke-dasharray="3 5"/><text x="444.0" y="334" class="yr">2024</text>
+<path d="M620.0 84V318" stroke="#1f3324" stroke-dasharray="3 5"/><text x="624.0" y="334" class="yr">2025</text>
+<path d="M800.0 84V318" stroke="#1f3324" stroke-dasharray="3 5"/><text x="804.0" y="334" class="yr">2026</text>
+<path d="M935.0 84V318" stroke="#39d98a" stroke-opacity="0.6" stroke-dasharray="2 3"/><text x="909.0" y="334" class="msb">now</text>
+<text x="30" y="112" class="zone">WORK</text>
+<rect x="650.0" y="94" width="285.0" height="28" rx="7" fill="#39d98a" stroke="#39d98a" stroke-opacity="1"/>
+<text x="660.0" y="113" class="bl">Cloud Engineer · Kitsilano</text>
+<rect x="515.0" y="132" width="375.0" height="28" rx="7" fill="#133D17" stroke="#39d98a" stroke-opacity="0.6"/>
+<text x="525.0" y="151" class="bl2">Full-Stack Engineer · NW Plus TV</text>
+<text x="30" y="200" class="zone">LEARNING</text>
+<rect x="185.0" y="182" width="240.0" height="28" rx="7" fill="#133D17" stroke="#39d98a" stroke-opacity="0.6"/>
+<text x="195.0" y="201" class="bl2">ALX Software Engineering</text>
+<rect x="620.0" y="182" width="15.0" height="28" rx="7" fill="#133D17" stroke="#39d98a" stroke-opacity="0.6"/>
+<text x="643.0" y="201" class="bl2">HNG12</text>
+<rect x="800.0" y="182" width="135.0" height="28" rx="7" fill="#133D17" stroke="#39d98a" stroke-opacity="0.6"/>
+<text x="810.0" y="201" class="bl2">BSc CS · UoP</text>
+<text x="30" y="270" class="zone">MILESTONES</text>
+<circle cx="395.0" cy="266" r="6" fill="#0b110d" stroke="#5dffa8" stroke-width="2"/><circle cx="395.0" cy="266" r="2.5" fill="#5dffa8"/>
+<text x="405.0" y="250" text-anchor="start" class="ms">First AWS certification</text>
+<circle cx="785.0" cy="266" r="6" fill="#0b110d" stroke="#5dffa8" stroke-width="2"/><circle cx="785.0" cy="266" r="2.5" fill="#5dffa8"/>
+<text x="775.0" y="250" text-anchor="end" class="ms">AWS SA Pro + GCP Architect</text>
+<circle cx="875.0" cy="266" r="6" fill="#0b110d" stroke="#5dffa8" stroke-width="2"/><circle cx="875.0" cy="266" r="2.5" fill="#5dffa8"/>
+<text x="865.0" y="294" text-anchor="end" class="msb">All 12 AWS certifications</text>
+<rect x="30" y="352" width="940" height="46" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.3"/>
+<text x="48" y="380" class="zone">NOW</text>
+<circle cx="110" cy="376" r="3" fill="#5dffa8"/><text x="122" y="380" class="now">Preparing for CKAD</text>
+<circle cx="287.4" cy="376" r="3" fill="#5dffa8"/><text x="299.4" y="380" class="now">Writing up the road to 12/12 AWS</text>
+<circle cx="567.0" cy="376" r="3" fill="#5dffa8"/><text x="579.0" y="380" class="now">Studying Computer Science</text>
+</svg>

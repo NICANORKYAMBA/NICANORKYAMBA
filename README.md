@@ -20,9 +20,11 @@ What people get when they work with me: infrastructure that matches what's in gi
 
 ## `$ ls ~/work --flagship`
 
-### ☸️ DukQa: production platform on Amazon EKS · *Platform Lead*
+### ☸️ DukQa · production platform on Amazon EKS
 
-DukQa is a B2C logistics product for East Africa. I led the production platform: **12 microservices on EKS, delivered entirely through GitOps**, and I wrote most of the platform code (380+ commits across the platform repos).
+> **Role** Platform Lead · **Period** Dec 2025 – May 2026 · **Scale** 12 microservices, 16 GitOps apps, 380+ commits
+
+DukQa is a B2C logistics product for East Africa. I led the production platform: **12 microservices on EKS, delivered entirely through GitOps**, and wrote most of the platform code.
 
 <img src="assets/arch-dukqa.svg" alt="DukQa architecture: GitHub and CI push images to ECR; ArgoCD Image Updater writes new digests back to git; ArgoCD syncs 16 applications into EKS; 12 microservices behind an ALB ingress; RabbitMQ, Secrets Store CSI with IRSA, Prometheus; RDS PostgreSQL through RDS Proxy, ElastiCache and S3." width="100%"/>
 
@@ -33,9 +35,11 @@ DukQa is a B2C logistics product for East Africa. I led the production platform:
 
 `EKS` `ArgoCD` `Helm` `Terraform` `RDS Proxy` `RabbitMQ` `Prometheus` `IRSA`
 
-### ☁️ Vendor platform on AWS · *fully in Terraform*
+### ☁️ Vendor platform on AWS · fully in Terraform
 
-A containerised vendor platform for an East African beverage group, across staging and production accounts. I wrote the Terraform (401 of 409 commits) and run the platform.
+> **Role** Infrastructure owner · **Period** Apr 2026 – present · **Scale** 619 resources across 2 accounts, 401 of 409 commits
+
+A containerised vendor platform for an East African beverage group, across staging and production accounts. I wrote the Terraform and run the platform.
 
 <img src="assets/arch-aws-platform.svg" alt="AWS vendor platform: CloudFront with WAF, ALB and API Gateway, ECS Fargate on Graviton and Lambda, RDS MySQL through RDS Proxy, ElastiCache, SQS, EventBridge and SES; GuardDuty, Inspector, AWS Config and CloudTrail alarms; Datadog, CloudWatch and X-Ray. Terraform: one country stack, staging at 417 resources with zero drift, production at 202, encrypted state backup in a second region, 30-minute RTO and 15-minute RPO." width="100%"/>
 
@@ -46,7 +50,9 @@ A containerised vendor platform for an East African beverage group, across stagi
 
 `Terraform` `ECS Fargate` `Graviton` `RDS Proxy` `WAF` `Datadog` `GitHub Actions`
 
-### 🤖 RibboAI: multi-tenant AI customer support · *1,460+ commits*
+### 🤖 RibboAI · multi-tenant AI customer support
+
+> **Role** Full-stack & AI engineer · **Period** Nov 2025 – Sep 2026 · **Scale** 1,460+ commits
 
 Businesses train an AI agent on their own documents and websites, embed it on their site or in WhatsApp, and hand conversations to a human when needed.
 
@@ -158,13 +164,7 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 
 ## `$ cat principles.md`
 
-| Principle | In practice |
-|---|---|
-| **Git is the source of truth** | If it runs in production, it's in Terraform or the GitOps repo. Drift gets found and closed, not tolerated. |
-| **Design for the recovery target** | RTO and RPO are agreed first; backups, regions and runbooks follow from them. |
-| **Alerts must mean something** | A page is a real threat or a real outage. Routine admin activity is attributed and filtered out. |
-| **Cost is a feature** | Graviton, right-sized requests, lifecycle policies, budgets and anomaly detection by default. |
-| **Leave it better documented** | Runbooks, RCAs, DR positions and handover documents that let someone else take over. |
+<img src="assets/principles.svg" alt="Principles: 01 Git is the source of truth: if it runs in production, it is in Terraform or GitOps, and drift is found and closed. 02 Design for the recovery target: agree RTO and RPO first; backups, regions and runbooks follow. 03 Alerts must mean something: a page is a real threat or a real outage, never routine admin work. 04 Cost is a feature: Graviton, right-sizing, lifecycle rules, budgets and anomaly detection by default. 05 Leave it documented: runbooks, RCAs, DR positions and handovers that let someone else take over." width="100%"/>
 
 ## `$ cat certifications.yml`
 
@@ -181,7 +181,7 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 <img src="https://img.shields.io/badge/Google_Cloud-0b110d?style=for-the-badge&logo=googlecloud&logoColor=39d98a" alt="Google Cloud"/>
 <img src="https://img.shields.io/badge/Terraform-0b110d?style=for-the-badge&logo=terraform&logoColor=39d98a" alt="Terraform"/>
 <img src="https://img.shields.io/badge/CloudFormation_·_SAM-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="CloudFormation and SAM"/>
-<img src="https://img.shields.io/badge/Ansible-0b110d?style=for-the-badge&logo=ansible&logoColor=39d98a" alt="Ansible"/>
+<img src="https://img.shields.io/badge/Bash-0b110d?style=for-the-badge&logo=gnubash&logoColor=39d98a" alt="Bash"/>
 
 **Containers & delivery**<br/>
 <img src="https://img.shields.io/badge/Kubernetes-0b110d?style=for-the-badge&logo=kubernetes&logoColor=39d98a" alt="Kubernetes"/>
@@ -212,24 +212,9 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 
 </div>
 
-## `$ git log --career --oneline`
+## `$ git log --career`
 
-```text
-2025-03 → now      Cloud Engineer · Kitsilano Technologies (AWS Partner), Nairobi
-                   Platform lead on EKS and AWS; security and FinOps for clients across East Africa
-2024-06 → 2026-07  Full-Stack Engineer · NW Plus TV (Nifty Works Plus)
-                   Video-streaming platform on Google Cloud: Node.js, Angular, Cloud Run
-
-2026-01 → now      BSc Computer Science · University of the People
-2025-01 → 2025-02  HNG12 Internship · DevOps & backend track
-2022-08 → 2023     ALX Software Engineering programme
-```
-
-## `$ cat now.md`
-
-- 📚 Preparing for **CKAD**, with hands-on labs in my CKAD repository
-- ✍️ Writing up the road to **all 12 AWS certifications** and what I learned along the way
-- 🎓 Studying **Computer Science** at the University of the People
+<img src="assets/career.svg" alt="Career timeline. Work: Cloud Engineer at Kitsilano Technologies (AWS Partner, Nairobi) since March 2025; Full-Stack Engineer at NW Plus TV, June 2024 to July 2026. Learning: ALX Software Engineering programme 2022 to 2023; HNG12 internship (DevOps and backend) January to February 2025; BSc Computer Science at the University of the People since January 2026. Milestones: first AWS certification October 2023; AWS Solutions Architect Professional and Google Cloud Professional Cloud Architect December 2025; all 12 AWS certifications June 2026. Now: preparing for CKAD, writing about the road to 12 AWS certifications, studying computer science." width="100%"/>
 
 ## `$ gh stats`
 
