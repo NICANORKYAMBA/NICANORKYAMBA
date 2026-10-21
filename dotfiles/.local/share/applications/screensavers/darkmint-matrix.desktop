@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=DarkMint Matrix
-Comment=Green matrix rain with a large clock and date
-Exec=/usr/libexec/xscreensaver/darkmint-screensaver
-TryExec=/usr/libexec/xscreensaver/darkmint-screensaver
+Comment=Green 3D matrix rain
+Exec=/usr/libexec/xscreensaver/glmatrix -root -density 40 -speed 0.8 -mode matrix -fog -waves -rotate
+TryExec=/usr/libexec/xscreensaver/glmatrix
 StartupNotify=false
 Terminal=false
 Type=Application

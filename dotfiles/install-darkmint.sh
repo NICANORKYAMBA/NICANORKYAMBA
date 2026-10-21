@@ -2,7 +2,6 @@
 # Restore the DarkMint Neon desktop (Kali XFCE) from this repo.
 #   Packages: sudo apt install -y darkmint-gtk-theme papirus-icon-theme picom conky-all qt5ct qt6ct \
 #               rofi fastfetch zoxide fd-find eza bat fzf xscreensaver-gl btop tmux
-#   Screensaver (sudo): sudo ln -sf ~/.local/bin/darkmint-screensaver /usr/libexec/xscreensaver/
 #   Fonts:    JetBrainsMono Nerd Font, Cascadia Code NF; cursor: Bibata-Modern-Classic
 #   Optional, sudo: ~/.local/bin/darkmint-login-setup   (login screen)
 #                   ~/.local/bin/darkmint-boot-setup    (GRUB menu + boot splash)
