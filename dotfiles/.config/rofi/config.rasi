@@ -1,0 +1,20 @@
+configuration {
+    modi: "drun,window,ssh,run";
+    show-icons: true;
+    icon-theme: "Papirus-Dark";
+    font: "JetBrainsMono Nerd Font 11";
+    terminal: "qterminal";
+    drun-display-format: "{name}";
+    display-drun: "󰀻  apps";
+    display-window: "󰖲  windows";
+    display-ssh: "󰣀  ssh";
+    display-run: "󰆍  run";
+    matching: "fuzzy";
+    sort: true;
+    sorting-method: "fzf";
+    kb-mode-next: "Tab";
+    kb-mode-previous: "ISO_Left_Tab";
+    kb-element-next: "";
+    kb-element-prev: "";
+}
+@theme "darkmint"

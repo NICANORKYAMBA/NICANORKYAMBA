@@ -1158,6 +1158,9 @@ export KUBE_EDITOR=vi
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
 
+# DarkMint terminal power-ups (eza, bat, fzf, zoxide, fastfetch)
+[[ -r ~/.config/zsh/darkmint-tools.zsh ]] && source ~/.config/zsh/darkmint-tools.zsh
+
 # ═══════════════════════════════════════════════════════════════════
 # 🌟 WELCOME BANNER — drawn LAST, on purpose
 # ═══════════════════════════════════════════════════════════════════

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Toggle Kali Undercover (Windows look for working in public) without leaking
+# the DarkMint setup: effects/dashboard off while undercover, dark mode restored after.
+set -u
+STATE=~/.local/share/kali-undercover/user-profile.tar.bz2
+
+if [ ! -f "$STATE" ]; then
+  ~/.local/bin/fx-off                       # dashboard + rounded glass would give it away
+  [ -d ~/.config/gtk-4.0 ] && mv ~/.config/gtk-4.0 ~/.config/gtk-4.0.privacy
+  sh -c 'kali-undercover; :' </dev/null     # ":" keeps sh as parent so it doesn't spawn a shell
+else
+  sh -c 'kali-undercover; :' </dev/null
+  [ -d ~/.config/gtk-4.0.privacy ] && mv ~/.config/gtk-4.0.privacy ~/.config/gtk-4.0
+  # kali-undercover resets this to light on every run, including the switch back
+  gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+  # ...and doesn't restore the panel CPU graph colors
+  g=/plugins/plugin-13
+  xfconf-query -c xfce4-panel -p $g/foreground-1 -t double -s 0.224 -t double -s 0.851 -t double -s 0.541 -t double -s 1
+  xfconf-query -c xfce4-panel -p $g/foreground-2 -t double -s 0.365 -t double -s 1.0 -t double -s 0.659 -t double -s 1
+  xfconf-query -c xfce4-panel -p $g/bars-color -t double -s 0.365 -t double -s 1.0 -t double -s 0.659 -t double -s 1
+  sleep 1
+  ~/.local/bin/fx-on
+fi

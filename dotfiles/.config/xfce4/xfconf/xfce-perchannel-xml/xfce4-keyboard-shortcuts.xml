@@ -69,6 +69,9 @@
       <property name="&lt;Super&gt;e" type="string" value="exo-open --launch FileManager"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;Print" type="string" value="/usr/share/kali-themes/xfce4-screenshooter --window --clipboard"/>
       <property name="XF86WWW" type="string" value="exo-open --launch WebBrowser"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;u" type="string" value="/home/nicanorkyamba/.local/bin/privacy-mode"/>
+      <property name="&lt;Super&gt;space" type="string" value="rofi -show drun"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;p" type="string" value="/home/nicanorkyamba/.local/bin/privacy-shield"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

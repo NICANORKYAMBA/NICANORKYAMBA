@@ -1,0 +1,52 @@
+/* DarkMint Neon launcher */
+* {
+    bg:        #0b110de8;
+    bg-alt:    #121b15;
+    sel:       #133D17;
+    fg:        #c9d6cc;
+    fg-dim:    #4a6b52;
+    green:     #39d98a;
+    neon:      #5dffa8;
+    background-color: transparent;
+    text-color: @fg;
+}
+window {
+    width: 640px;
+    background-color: @bg;
+    border: 1px;
+    border-color: #39d98a59;
+    border-radius: 14px;
+    padding: 18px;
+}
+mainbox { spacing: 14px; children: [ inputbar, mode-switcher, listview ]; }
+inputbar {
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: #1f3324;
+    border-radius: 10px;
+    padding: 10px 14px;
+    spacing: 10px;
+    children: [ prompt, entry ];
+}
+prompt { text-color: @green; }
+entry { placeholder: "search…"; placeholder-color: @fg-dim; cursor-color: @neon; }
+mode-switcher { spacing: 8px; }
+button {
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-color: @fg-dim;
+    background-color: @bg-alt;
+}
+button selected { text-color: @neon; background-color: @sel; }
+listview { lines: 8; columns: 1; spacing: 4px; scrollbar: false; fixed-height: true; }
+element { padding: 8px 12px; border-radius: 8px; spacing: 12px; }
+element-icon { size: 22px; }
+element-text { vertical-align: 0.5; }
+element selected.normal {
+    background-color: @sel;
+    text-color: #f2fff4;
+    border: 0 0 0 3px;
+    border-color: @green;
+}
+element-text selected { text-color: inherit; }
+element alternate.normal { background-color: transparent; }

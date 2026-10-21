@@ -20,10 +20,15 @@
     <property name="idle-activation" type="empty">
       <property name="delay" type="uint" value="10"/>
     </property>
-    <property name="mode" type="int" value="0"/>
+    <property name="mode" type="int" value="2"/>
     <property name="fullscreen-inhibit" type="bool" value="true"/>
     <property name="theme" type="empty">
       <property name="name" type="string" value="xfce-floaters"/>
+    </property>
+    <property name="themes" type="empty">
+      <property name="list" type="array">
+        <value type="string" value="screensavers-darkmint-matrix"/>
+      </property>
     </property>
   </property>
 </channel>

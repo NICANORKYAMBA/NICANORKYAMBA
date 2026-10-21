@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# One-time (needs sudo): DarkMint GRUB menu + green boot splash.
+# Undo: sudo rm /etc/default/grub.d/zz-darkmint.cfg && sudo update-grub
+#       sudo plymouth-set-default-theme -R kali
+set -euo pipefail
+SRC=~/.local/share/darkmint-boot
+
+sudo rm -rf /boot/grub/themes/darkmint /usr/share/plymouth/themes/darkmint
+sudo cp -r "$SRC/grub/darkmint" /boot/grub/themes/darkmint
+sudo cp -r "$SRC/plymouth/darkmint" /usr/share/plymouth/themes/darkmint
+
+# Loaded after Kali's kali-themes.cfg, so it wins without editing package files
+sudo tee /etc/default/grub.d/zz-darkmint.cfg >/dev/null <<'CFG'
+GRUB_THEME="/boot/grub/themes/darkmint/theme.txt"
+GRUB_GFXMODE="1920x1200,auto"
+CFG
+sudo update-grub
+
+echo "Setting boot splash (rebuilds initramfs, takes a minute)..."
+sudo plymouth-set-default-theme -R darkmint
+echo "Done. Reboot to see the new boot menu and splash."

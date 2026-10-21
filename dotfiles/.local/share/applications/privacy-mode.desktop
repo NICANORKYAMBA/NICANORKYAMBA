@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Privacy Mode
+Comment=Toggle the Windows disguise for working in public (Ctrl+Alt+U)
+Exec=/home/nicanorkyamba/.local/bin/privacy-mode
+Icon=kali-undercover
+Categories=Utility;

@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=DarkMint
+Description=Kali splash in DarkMint green
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/darkmint
+ScriptFile=/usr/share/plymouth/themes/darkmint/darkmint.script

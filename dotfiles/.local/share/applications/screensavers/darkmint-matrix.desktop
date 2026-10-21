@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=DarkMint Matrix
+Comment=Green 3D matrix rain
+Exec=/usr/libexec/xscreensaver/glmatrix -root -density 40 -speed 0.8 -mode matrix -fog -waves -rotate
+TryExec=/usr/libexec/xscreensaver/glmatrix
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=Screensaver;
+OnlyShowIn=XFCE;
+Hidden=true

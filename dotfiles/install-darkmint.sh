@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # Restore the DarkMint Neon desktop (Kali XFCE) from this repo.
-#   Packages: sudo apt install -y darkmint-gtk-theme papirus-icon-theme picom conky-all qt5ct qt6ct
+#   Packages: sudo apt install -y darkmint-gtk-theme papirus-icon-theme picom conky-all qt5ct qt6ct \
+#               rofi fastfetch zoxide fd-find eza bat fzf xscreensaver-gl
 #   Fonts:    JetBrainsMono Nerd Font, Cascadia Code NF; cursor: Bibata-Modern-Classic
-#   Login screen (sudo, optional): ~/.local/bin/darkmint-login-setup
+#   Optional, sudo: ~/.local/bin/darkmint-login-setup   (login screen)
+#                   ~/.local/bin/darkmint-boot-setup    (GRUB menu + boot splash)
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -59,6 +61,16 @@ q=~/.config/qterminal.org/qterminal.ini
 
 # Folders open in Thunar
 xdg-mime default thunar.desktop inode/directory
+
+# Hotkeys: Super+Space launcher, Ctrl+Alt+P privacy shield, Ctrl+Alt+U Windows disguise
+k() { x xfce4-keyboard-shortcuts "/commands/custom/$1" string "$2"; }
+k '<Super>space' 'rofi -show drun'
+k '<Primary><Alt>p' "$HOME/.local/bin/privacy-shield"
+k '<Primary><Alt>u' "$HOME/.local/bin/privacy-mode"
+
+# Matrix screensaver
+x xfce4-screensaver /saver/mode int 2
+xfconf-query -c xfce4-screensaver -p /saver/themes/list -n --force-array -t string -s screensavers-darkmint-matrix
 
 xfdesktop --reload 2>/dev/null || true
 ~/.local/bin/fx-on || true

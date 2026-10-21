@@ -1,0 +1,55 @@
+# DarkMint Neon GRUB theme
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#050806"
+terminal-font: "JetBrainsMono Nerd Font Regular 16"
+terminal-box: "select_*.png"
+
++ label {
+    top = 22%
+    left = 0
+    width = 100%
+    align = "center"
+    text = "KALI  ·  DarkMint"
+    color = "#5dffa8"
+    font = "JetBrainsMono Nerd Font Bold 30"
+}
+
++ boot_menu {
+    left = 28%
+    top = 34%
+    width = 44%
+    height = 40%
+    item_font = "JetBrainsMono Nerd Font Regular 22"
+    item_color = "#8fa894"
+    selected_item_font = "JetBrainsMono Nerd Font Regular 22"
+    selected_item_color = "#f2fff4"
+    item_height = 44
+    item_padding = 18
+    item_spacing = 8
+    icon_width = 0
+    icon_height = 0
+    selected_item_pixmap_style = "select_*.png"
+    scrollbar = false
+}
+
++ label {
+    id = "__timeout__"
+    top = 80%
+    left = 0
+    width = 100%
+    align = "center"
+    text = "booting in %d s"
+    color = "#39d98a"
+    font = "JetBrainsMono Nerd Font Regular 16"
+}
+
++ label {
+    top = 85%
+    left = 0
+    width = 100%
+    align = "center"
+    text = "↑ ↓ select    enter boot    e edit    c console"
+    color = "#4a6b52"
+    font = "JetBrainsMono Nerd Font Regular 16"
+}

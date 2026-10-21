@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Privacy Shield (Ctrl+Alt+P): pairs with the EliteBook's hardware Sure View key.
+# On:  extra software dim on the laptop panel, notifications muted, dashboard hidden.
+# Off: everything back as it was.
+STATE=${XDG_RUNTIME_DIR:-/tmp}/privacy-shield.on
+PANEL=$(xrandr --listmonitors | awk 'NR>1 && $4 ~ /^eDP/ {print $4; exit}')
+PANEL=${PANEL:-eDP}
+DIM=0.55
+
+if [ ! -f "$STATE" ]; then
+  xfconf-query -c xfce4-notifyd -p /do-not-disturb -n -t bool -s true
+  pgrep -x conky >/dev/null && { pkill -x conky; echo conky > "$STATE"; } || : > "$STATE"
+  xrandr --output "$PANEL" --brightness "$DIM"
+else
+  xrandr --output "$PANEL" --brightness 1.0
+  xfconf-query -c xfce4-notifyd -p /do-not-disturb -n -t bool -s false
+  grep -q conky "$STATE" && conky -c ~/.config/conky/darkmint.conf -d -p 1 >/dev/null 2>&1
+  rm -f "$STATE"
+  notify-send -t 2000 -i security-high 'Privacy Shield off' 'Notifications and dashboard are back.'
+fi

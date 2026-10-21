@@ -7,11 +7,13 @@ This directory contains all configuration files for a modern, professional DevOp
 The current look lives in [`../dotfiles/`](../dotfiles/), mirrored to home-folder paths, with a one-shot installer:
 
 ```bash
-sudo apt install -y darkmint-gtk-theme papirus-icon-theme picom conky-all qt5ct qt6ct
+sudo apt install -y darkmint-gtk-theme papirus-icon-theme picom conky-all qt5ct qt6ct \
+  rofi fastfetch zoxide fd-find eza bat fzf xscreensaver-gl
 # Fonts: JetBrainsMono Nerd Font, Cascadia Code NF. Cursor: Bibata-Modern-Classic
 git clone git@github.com:NICANORKYAMBA/NICANORKYAMBA.git && cd NICANORKYAMBA
 dotfiles/install-darkmint.sh        # copies dotfiles + applies all theme settings
 ~/.local/bin/darkmint-login-setup   # optional, sudo: matching login screen
+~/.local/bin/darkmint-boot-setup    # optional, sudo: GRUB menu + green boot splash
 # Log out and back in
 ```
 
@@ -28,6 +30,11 @@ What it gives you:
 | Dashboard | conky: clock, CPU/temp, RAM, disk, Wi-Fi, VPN, Docker, K8s, AWS |
 | Terminals | DarkMint Neon scheme in qterminal + Alacritty, Nerd Fonts |
 | Notifications | `DarkMint-Notify` theme |
+| Launcher | Rofi on **Super+Space** (apps / windows / ssh / run, Tab to switch) |
+| Shell tools | `ls`→eza icons, `cat`→bat, fzf on Ctrl+R / Ctrl+T, `z` (zoxide), `ff` (fastfetch) — `~/.config/zsh/darkmint-tools.zsh` |
+| Screensaver | DarkMint Matrix (glmatrix), then lock screen |
+| Boot | DarkMint GRUB theme + green Kali Plymouth splash (`~/.local/share/darkmint-boot/`) |
+| Privacy | Hardware privacy key + **Ctrl+Alt+P** shield (dim, mute notifications, hide dashboard); **Ctrl+Alt+U** Windows disguise via kali-undercover |
 
 XFCE settings files (panel layout, shortcuts, etc.) are under `dotfiles/.config/xfce4/`. Copy them before the first login on a new machine; in a running session XFCE keeps its settings in memory and can overwrite them, which is why the installer also applies the key settings live.
 
