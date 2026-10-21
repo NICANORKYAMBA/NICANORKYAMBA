@@ -12,6 +12,8 @@ sudo cp -r "$SRC/plymouth/darkmint" /usr/share/plymouth/themes/darkmint
 # Loaded after Kali's kali-themes.cfg, so it wins without editing package files
 sudo tee /etc/default/grub.d/zz-darkmint.cfg >/dev/null <<'CFG'
 GRUB_THEME="/boot/grub/themes/darkmint/theme.txt"
+# Shown behind the "Booting `Kali GNU/Linux'" text after a menu entry is picked
+GRUB_BACKGROUND="/boot/grub/themes/darkmint/boot.png"
 CFG
 sudo update-grub
 
