@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470" role="img" aria-label="Certifications: all 12 active AWS certifications (3 Professional, 2 Specialty, 5 Associate, 2 Foundational); Google Cloud Professional Cloud Architect, Professional Cloud DevOps Engineer and Associate Cloud Engineer; Linux Foundation KCNA; Microsoft SC-900 and MS-900; Cisco Ethical Hacker.">
+<defs><pattern id="g" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#39d98a" stroke-opacity="0.04"/></pattern>
+<style>text{font-family:'JetBrains Mono','Fira Code',SFMono-Regular,Consolas,'Liberation Mono',monospace}.t{font-size:19px;font-weight:700;fill:#5dffa8}.st{font-size:12.5px;fill:#8fa894}.zone{font-size:11px;font-weight:700;fill:#39d98a;letter-spacing:1.5px}.lv{font-size:9.5px;font-weight:700;letter-spacing:1px}.n{font-size:13px;font-weight:700;fill:#d6e5d8}.m{font-size:11px;fill:#8fa894}.y{font-size:11px;fill:#4a6b52}</style></defs>
+<rect width="1000" height="470" rx="16" fill="#0b110d"/><rect width="1000" height="470" rx="16" fill="url(#g)"/><rect x="0.5" y="0.5" width="999" height="469" rx="16" fill="none" stroke="#39d98a" stroke-opacity="0.22"/>
+<text x="20" y="40" class="t">Certifications</text>
+<text x="20" y="62" class="st">All 12 active AWS certifications · 3 Google Cloud · 34 badges on Credly</text>
+<text x="20" y="98" class="zone">AWS · 12 / 12</text>
+<rect x="20" y="110" width="150" height="100" rx="10" fill="#133D17" stroke="#5dffa8" stroke-opacity="0.8" stroke-width="1.2"/>
+<rect x="20" y="110" width="4" height="100" rx="2" fill="#5dffa8"/>
+<text x="34" y="132" class="lv" fill="#5dffa8">PROFESSIONAL</text>
+<text x="34" y="158" class="n">Solutions</text>
+<text x="34" y="176" class="m">Architect</text>
+<text x="34" y="198" class="y">2025</text>
+<rect x="182" y="110" width="150" height="100" rx="10" fill="#133D17" stroke="#5dffa8" stroke-opacity="0.8" stroke-width="1.2"/>
+<rect x="182" y="110" width="4" height="100" rx="2" fill="#5dffa8"/>
+<text x="196" y="132" class="lv" fill="#5dffa8">PROFESSIONAL</text>
+<text x="196" y="158" class="n">DevOps</text>
+<text x="196" y="176" class="m">Engineer</text>
+<text x="196" y="198" class="y">2025</text>
+<rect x="344" y="110" width="150" height="100" rx="10" fill="#133D17" stroke="#5dffa8" stroke-opacity="0.8" stroke-width="1.2"/>
+<rect x="344" y="110" width="4" height="100" rx="2" fill="#5dffa8"/>
+<text x="358" y="132" class="lv" fill="#5dffa8">PROFESSIONAL</text>
+<text x="358" y="158" class="n">Generative AI</text>
+<text x="358" y="176" class="m">Developer</text>
+<text x="358" y="198" class="y">2026</text>
+<rect x="506" y="110" width="150" height="100" rx="10" fill="#0f1a13" stroke="#2ee6c5" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="506" y="110" width="4" height="100" rx="2" fill="#2ee6c5"/>
+<text x="520" y="132" class="lv" fill="#2ee6c5">SPECIALTY</text>
+<text x="520" y="158" class="n">Security</text>
+<text x="520" y="198" class="y">2025</text>
+<rect x="668" y="110" width="150" height="100" rx="10" fill="#0f1a13" stroke="#2ee6c5" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="668" y="110" width="4" height="100" rx="2" fill="#2ee6c5"/>
+<text x="682" y="132" class="lv" fill="#2ee6c5">SPECIALTY</text>
+<text x="682" y="158" class="n">Advanced</text>
+<text x="682" y="176" class="m">Networking</text>
+<text x="682" y="198" class="y">2026</text>
+<rect x="830" y="110" width="150" height="100" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="830" y="110" width="4" height="100" rx="2" fill="#39d98a"/>
+<text x="844" y="132" class="lv" fill="#39d98a">ASSOCIATE</text>
+<text x="844" y="158" class="n">Solutions</text>
+<text x="844" y="176" class="m">Architect</text>
+<text x="844" y="198" class="y">2024</text>
+<rect x="20" y="222" width="150" height="100" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="20" y="222" width="4" height="100" rx="2" fill="#39d98a"/>
+<text x="34" y="244" class="lv" fill="#39d98a">ASSOCIATE</text>
+<text x="34" y="270" class="n">Developer</text>
+<text x="34" y="310" class="y">2025</text>
+<rect x="182" y="222" width="150" height="100" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="182" y="222" width="4" height="100" rx="2" fill="#39d98a"/>
+<text x="196" y="244" class="lv" fill="#39d98a">ASSOCIATE</text>
+<text x="196" y="270" class="n">CloudOps</text>
+<text x="196" y="288" class="m">Engineer</text>
+<text x="196" y="310" class="y">2026</text>
+<rect x="344" y="222" width="150" height="100" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="344" y="222" width="4" height="100" rx="2" fill="#39d98a"/>
+<text x="358" y="244" class="lv" fill="#39d98a">ASSOCIATE</text>
+<text x="358" y="270" class="n">Data</text>
+<text x="358" y="288" class="m">Engineer</text>
+<text x="358" y="310" class="y">2026</text>
+<rect x="506" y="222" width="150" height="100" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="506" y="222" width="4" height="100" rx="2" fill="#39d98a"/>
+<text x="520" y="244" class="lv" fill="#39d98a">ASSOCIATE</text>
+<text x="520" y="270" class="n">Machine Learning</text>
+<text x="520" y="288" class="m">Engineer</text>
+<text x="520" y="310" class="y">2026</text>
+<rect x="668" y="222" width="150" height="100" rx="10" fill="#0f1a13" stroke="#8fa894" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="668" y="222" width="4" height="100" rx="2" fill="#8fa894"/>
+<text x="682" y="244" class="lv" fill="#8fa894">FOUNDATIONAL</text>
+<text x="682" y="270" class="n">Cloud</text>
+<text x="682" y="288" class="m">Practitioner</text>
+<text x="682" y="310" class="y">2023</text>
+<rect x="830" y="222" width="150" height="100" rx="10" fill="#0f1a13" stroke="#8fa894" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="830" y="222" width="4" height="100" rx="2" fill="#8fa894"/>
+<text x="844" y="244" class="lv" fill="#8fa894">FOUNDATIONAL</text>
+<text x="844" y="270" class="n">AI</text>
+<text x="844" y="288" class="m">Practitioner</text>
+<text x="844" y="310" class="y">2026</text>
+<text x="20" y="352" class="zone">GOOGLE CLOUD · LINUX FOUNDATION · MICROSOFT · CISCO</text>
+<rect x="20" y="364" width="126" height="96" rx="10" fill="#133D17" stroke="#5dffa8" stroke-opacity="0.8" stroke-width="1.2"/>
+<rect x="20" y="364" width="4" height="96" rx="2" fill="#5dffa8"/>
+<text x="34" y="386" class="lv" fill="#5dffa8">GCP · PRO</text>
+<text x="34" y="412" class="n">Cloud</text>
+<text x="34" y="430" class="m">Architect</text>
+<text x="34" y="448" class="y">2025</text>
+<rect x="158" y="364" width="126" height="96" rx="10" fill="#133D17" stroke="#5dffa8" stroke-opacity="0.8" stroke-width="1.2"/>
+<rect x="158" y="364" width="4" height="96" rx="2" fill="#5dffa8"/>
+<text x="172" y="386" class="lv" fill="#5dffa8">GCP · PRO</text>
+<text x="172" y="412" class="n">Cloud DevOps</text>
+<text x="172" y="430" class="m">Engineer</text>
+<text x="172" y="448" class="y">2026</text>
+<rect x="296" y="364" width="126" height="96" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="296" y="364" width="4" height="96" rx="2" fill="#39d98a"/>
+<text x="310" y="386" class="lv" fill="#39d98a">GCP · ASSOC</text>
+<text x="310" y="412" class="n">Cloud</text>
+<text x="310" y="430" class="m">Engineer</text>
+<text x="310" y="448" class="y">2025</text>
+<rect x="434" y="364" width="126" height="96" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="434" y="364" width="4" height="96" rx="2" fill="#39d98a"/>
+<text x="448" y="386" class="lv" fill="#39d98a">CNCF · LF</text>
+<text x="448" y="412" class="n">KCNA</text>
+<text x="448" y="430" class="m">Kubernetes</text>
+<text x="448" y="448" class="y">2026</text>
+<rect x="572" y="364" width="126" height="96" rx="10" fill="#0f1a13" stroke="#8fa894" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="572" y="364" width="4" height="96" rx="2" fill="#8fa894"/>
+<text x="586" y="386" class="lv" fill="#8fa894">MICROSOFT</text>
+<text x="586" y="412" class="n">SC-900</text>
+<text x="586" y="430" class="m">Security &amp; ID</text>
+<text x="586" y="448" class="y">2025</text>
+<rect x="710" y="364" width="126" height="96" rx="10" fill="#0f1a13" stroke="#8fa894" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="710" y="364" width="4" height="96" rx="2" fill="#8fa894"/>
+<text x="724" y="386" class="lv" fill="#8fa894">MICROSOFT</text>
+<text x="724" y="412" class="n">MS-900</text>
+<text x="724" y="430" class="m">Microsoft 365</text>
+<text x="724" y="448" class="y">2025</text>
+<rect x="848" y="364" width="126" height="96" rx="10" fill="#0f1a13" stroke="#39d98a" stroke-opacity="0.35" stroke-width="1.2"/>
+<rect x="848" y="364" width="4" height="96" rx="2" fill="#39d98a"/>
+<text x="862" y="386" class="lv" fill="#39d98a">CISCO</text>
+<text x="862" y="412" class="n">Ethical</text>
+<text x="862" y="430" class="m">Hacker</text>
+<text x="862" y="448" class="y">2024</text>
+</svg>

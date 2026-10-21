@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" role="img" aria-label="DukQa production platform: GitHub and CI push images to Amazon ECR; ArgoCD Image Updater writes new digests back to the GitOps repo; ArgoCD syncs 16 applications into an Amazon EKS cluster with 12 microservices behind an ALB ingress, RabbitMQ, Secrets Store CSI with IRSA and Prometheus monitoring; data in RDS PostgreSQL through RDS Proxy, ElastiCache Redis and S3.">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#39d98a"/></marker>
+    <pattern id="g" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#39d98a" stroke-opacity="0.04"/></pattern>
+    <style>
+      text { font-family: 'JetBrains Mono','Fira Code',SFMono-Regular,Consolas,'Liberation Mono',monospace; }
+      .t  { font-size: 19px; font-weight: 700; fill: #5dffa8; }
+      .st { font-size: 12.5px; fill: #8fa894; }
+      .h  { font-size: 13px; font-weight: 700; fill: #d6e5d8; }
+      .s  { font-size: 11px; fill: #8fa894; }
+      .c  { font-size: 11.5px; fill: #c9d6cc; }
+      .zone { font-size: 11px; font-weight: 700; fill: #39d98a; letter-spacing: 1.5px; }
+      .box { fill: #0f1a13; stroke: #2f6b45; stroke-width: 1.2; }
+      .hot { fill: #133D17; stroke: #39d98a; stroke-width: 1.2; }
+      .chip { fill: #0b110d; stroke: #1f3324; }
+      .ln { stroke: #39d98a; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+      .ln2 { stroke: #39d98a; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; marker-end: url(#a); }
+    </style>
+  </defs>
+  <rect width="1000" height="560" rx="16" fill="#0b110d"/>
+  <rect width="1000" height="560" rx="16" fill="url(#g)"/>
+  <rect x="0.5" y="0.5" width="999" height="559" rx="16" fill="none" stroke="#39d98a" stroke-opacity="0.22"/>
+
+  <text x="30" y="40" class="t">DukQa · production platform on Amazon EKS</text>
+  <text x="30" y="62" class="st">B2C logistics · 12 microservices · GitOps with ArgoCD · eu-west-1 across 2 AZs</text>
+
+  <!-- delivery column -->
+  <text x="30" y="104" class="zone">DELIVERY</text>
+  <rect x="30" y="116" width="200" height="62" rx="10" class="box"/>
+  <text x="46" y="142" class="h">GitHub</text>
+  <text x="46" y="162" class="s">services + GitOps repo</text>
+
+  <rect x="30" y="212" width="200" height="62" rx="10" class="box"/>
+  <text x="46" y="238" class="h">CI → Amazon ECR</text>
+  <text x="46" y="258" class="s">images built and pushed</text>
+
+  <rect x="30" y="308" width="200" height="62" rx="10" class="box"/>
+  <text x="46" y="334" class="h">ArgoCD Image Updater</text>
+  <text x="46" y="354" class="s">digest → git write-back</text>
+
+  <rect x="30" y="404" width="200" height="62" rx="10" class="hot"/>
+  <text x="46" y="430" class="h">ArgoCD</text>
+  <text x="46" y="450" class="s">ApplicationSets · 16 apps</text>
+
+  <path d="M130 178V208" class="ln"/>
+  <path d="M130 274V304" class="ln"/>
+  <path d="M30 339H14V147H26" class="ln2"/>
+  <path d="M130 370V400" class="ln"/>
+  <path d="M230 435H272" class="ln"/>
+  <text x="236" y="426" class="s">sync</text>
+
+  <!-- cluster -->
+  <rect x="276" y="96" width="470" height="430" rx="14" fill="#0d1610" stroke="#39d98a" stroke-opacity="0.55" stroke-width="1.4"/>
+  <text x="294" y="122" class="zone">AMAZON EKS · CLUSTER AUTOSCALER · 2 AZs</text>
+
+  <rect x="294" y="136" width="434" height="40" rx="9" class="hot"/>
+  <text x="310" y="161" class="h">ALB ingress</text>
+  <text x="420" y="161" class="s">AWS Load Balancer Controller · TLS</text>
+
+  <rect x="406" y="192" width="210" height="36" rx="9" class="box"/>
+  <text x="430" y="215" class="h">api-gateway</text>
+  <text x="536" y="215" class="s">rate limits</text>
+  <path d="M511 176V188" class="ln"/>
+  <path d="M511 228V240" class="ln"/>
+
+  <!-- 11 services -->
+  <g>
+    <rect x="294" y="244" width="138" height="30" rx="7" class="chip"/><text x="308" y="264" class="c">auth</text>
+    <rect x="442" y="244" width="138" height="30" rx="7" class="chip"/><text x="456" y="264" class="c">payment</text>
+    <rect x="590" y="244" width="138" height="30" rx="7" class="chip"/><text x="604" y="264" class="c">shipment</text>
+    <rect x="294" y="282" width="138" height="30" rx="7" class="chip"/><text x="308" y="302" class="c">delivery</text>
+    <rect x="442" y="282" width="138" height="30" rx="7" class="chip"/><text x="456" y="302" class="c">insurance</text>
+    <rect x="590" y="282" width="138" height="30" rx="7" class="chip"/><text x="604" y="302" class="c">customs-rates</text>
+    <rect x="294" y="320" width="138" height="30" rx="7" class="chip"/><text x="308" y="340" class="c">notification</text>
+    <rect x="442" y="320" width="138" height="30" rx="7" class="chip"/><text x="456" y="340" class="c">document</text>
+    <rect x="590" y="320" width="138" height="30" rx="7" class="chip"/><text x="604" y="340" class="c">customer-support</text>
+    <rect x="294" y="358" width="138" height="30" rx="7" class="chip"/><text x="308" y="378" class="c">admin-portal</text>
+    <rect x="442" y="358" width="138" height="30" rx="7" class="chip"/><text x="456" y="378" class="c">frontend</text>
+  </g>
+
+  <text x="294" y="414" class="zone">PLATFORM</text>
+  <rect x="294" y="424" width="138" height="84" rx="9" class="box"/>
+  <text x="308" y="448" class="h">RabbitMQ</text>
+  <text x="308" y="468" class="s">HA policy</text>
+  <text x="308" y="486" class="s">async events</text>
+
+  <rect x="442" y="424" width="138" height="84" rx="9" class="box"/>
+  <text x="456" y="448" class="h">Secrets CSI</text>
+  <text x="456" y="468" class="s">IRSA per service</text>
+  <text x="456" y="486" class="s">no keys in pods</text>
+
+  <rect x="590" y="424" width="138" height="84" rx="9" class="box"/>
+  <text x="604" y="448" class="h">Monitoring</text>
+  <text x="604" y="468" class="s">Prometheus</text>
+  <text x="604" y="486" class="s">policies · RBAC</text>
+
+  <!-- data -->
+  <text x="776" y="104" class="zone">DATA</text>
+  <rect x="776" y="116" width="196" height="62" rx="10" class="box"/>
+  <text x="792" y="142" class="h">RDS PostgreSQL</text>
+  <text x="792" y="162" class="s">through RDS Proxy · TLS</text>
+
+  <rect x="776" y="212" width="196" height="62" rx="10" class="box"/>
+  <text x="792" y="238" class="h">ElastiCache Redis</text>
+  <text x="792" y="258" class="s">caching, sessions</text>
+
+  <rect x="776" y="308" width="196" height="62" rx="10" class="box"/>
+  <text x="792" y="334" class="h">Amazon S3</text>
+  <text x="792" y="354" class="s">documents, backups</text>
+
+  <rect x="776" y="404" width="196" height="62" rx="10" class="box"/>
+  <text x="792" y="430" class="h">Secrets Manager</text>
+  <text x="792" y="450" class="s">mounted via CSI</text>
+
+  <path d="M746 260H770" class="ln"/>
+  <path d="M746 147H770" class="ln"/>
+  <path d="M746 339H770" class="ln"/>
+  <path d="M874 466V516H511V512" class="ln2"/>
+
+  <text x="30" y="500" class="s">Provisioned with Terraform:</text>
+  <text x="30" y="516" class="s">VPC, EKS, RDS, Redis, S3, IAM</text>
+</svg>

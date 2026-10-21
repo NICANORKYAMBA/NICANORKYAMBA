@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" role="img" aria-label="RibboAI architecture: visitors talk to an embeddable chat widget or WhatsApp; the multi-tenant Next.js app handles orgs, the agent builder, the operator inbox with live handoff, and billing; an AI layer routes to Amazon Bedrock through a model allowlist with PII anonymisation for other providers and Swahili-aware privacy detection; knowledge from documents, websites and Q&amp;A is embedded in Pinecone; data in Firebase; hosted on AWS.">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#39d98a"/></marker>
+    <pattern id="g" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#39d98a" stroke-opacity="0.04"/></pattern>
+    <style>
+      text { font-family: 'JetBrains Mono','Fira Code',SFMono-Regular,Consolas,'Liberation Mono',monospace; }
+      .t  { font-size: 19px; font-weight: 700; fill: #5dffa8; }
+      .st { font-size: 12.5px; fill: #8fa894; }
+      .h  { font-size: 13px; font-weight: 700; fill: #d6e5d8; }
+      .s  { font-size: 11px; fill: #8fa894; }
+      .zone { font-size: 11px; font-weight: 700; fill: #39d98a; letter-spacing: 1.5px; }
+      .box { fill: #0f1a13; stroke: #2f6b45; stroke-width: 1.2; }
+      .hot { fill: #133D17; stroke: #39d98a; stroke-width: 1.2; }
+      .ln { stroke: #39d98a; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+      .ln2 { stroke: #39d98a; stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; marker-end: url(#a); }
+    </style>
+  </defs>
+  <rect width="1000" height="520" rx="16" fill="#0b110d"/>
+  <rect width="1000" height="520" rx="16" fill="url(#g)"/>
+  <rect x="0.5" y="0.5" width="999" height="519" rx="16" fill="none" stroke="#39d98a" stroke-opacity="0.22"/>
+
+  <text x="30" y="40" class="t">RibboAI · multi-tenant AI customer support</text>
+  <text x="30" y="62" class="st">Businesses train an agent on their own knowledge, embed it, and hand off to humans</text>
+
+  <!-- channels -->
+  <text x="30" y="104" class="zone">CHANNELS</text>
+  <rect x="30" y="116" width="190" height="62" rx="10" class="box"/>
+  <text x="46" y="142" class="h">Web chat widget</text>
+  <text x="46" y="162" class="s">embedded on client sites</text>
+  <rect x="30" y="196" width="190" height="62" rx="10" class="box"/>
+  <text x="46" y="222" class="h">WhatsApp agents</text>
+  <text x="46" y="242" class="s">orders, repairs, bookings</text>
+  <rect x="30" y="276" width="190" height="62" rx="10" class="box"/>
+  <text x="46" y="302" class="h">Human operators</text>
+  <text x="46" y="322" class="s">take over live chats</text>
+
+  <!-- app -->
+  <rect x="250" y="96" width="330" height="262" rx="14" fill="#0d1610" stroke="#39d98a" stroke-opacity="0.55" stroke-width="1.4"/>
+  <text x="268" y="122" class="zone">NEXT.JS APP · MULTI-TENANT</text>
+  <rect x="268" y="136" width="146" height="62" rx="10" class="hot"/>
+  <text x="282" y="162" class="h">Agent builder</text>
+  <text x="282" y="182" class="s">rules, persona</text>
+  <rect x="420" y="136" width="146" height="62" rx="10" class="hot"/>
+  <text x="434" y="162" class="h">Live handoff</text>
+  <text x="434" y="182" class="s">operator inbox</text>
+  <rect x="268" y="208" width="146" height="62" rx="10" class="box"/>
+  <text x="282" y="234" class="h">Onboarding</text>
+  <text x="282" y="254" class="s">LLM-driven chat</text>
+  <rect x="420" y="208" width="146" height="62" rx="10" class="box"/>
+  <text x="434" y="234" class="h">Sessions</text>
+  <text x="434" y="254" class="s">audit, memory</text>
+  <rect x="268" y="280" width="298" height="62" rx="10" class="box"/>
+  <text x="282" y="306" class="h">Orgs · roles · subscriptions</text>
+  <text x="282" y="326" class="s">credits, renewals, MRR / ARR</text>
+
+  <path d="M220 147H246" class="ln"/>
+  <path d="M220 227H246" class="ln"/>
+  <path d="M220 307H246" class="ln"/>
+
+  <!-- AI -->
+  <text x="610" y="104" class="zone">AI LAYER</text>
+  <rect x="610" y="116" width="360" height="62" rx="10" class="hot"/>
+  <text x="626" y="142" class="h">Amazon Bedrock</text>
+  <text x="626" y="162" class="s">model allowlist: unapproved models refused</text>
+  <rect x="610" y="196" width="175" height="62" rx="10" class="box"/>
+  <text x="626" y="222" class="h">PII guard</text>
+  <text x="626" y="242" class="s">anonymise, Swahili</text>
+  <rect x="795" y="196" width="175" height="62" rx="10" class="box"/>
+  <text x="811" y="222" class="h">LangChain</text>
+  <text x="811" y="242" class="s">streaming, tools</text>
+  <rect x="610" y="276" width="360" height="62" rx="10" class="box"/>
+  <text x="626" y="302" class="h">Retrieval · Pinecone</text>
+  <text x="626" y="322" class="s">documents, crawled websites, Q&amp;A pairs</text>
+  <path d="M580 167H606" class="ln"/>
+  <path d="M580 307H606" class="ln"/>
+
+  <!-- platform -->
+  <text x="30" y="394" class="zone">PLATFORM</text>
+  <rect x="30" y="406" width="300" height="80" rx="10" class="box"/>
+  <text x="46" y="432" class="h">Firebase</text>
+  <text x="46" y="452" class="s">Firestore · Auth · Storage</text>
+  <text x="46" y="470" class="s">security rules tested</text>
+  <rect x="350" y="406" width="300" height="80" rx="10" class="box"/>
+  <text x="366" y="432" class="h">AWS hosting</text>
+  <text x="366" y="452" class="s">migrated from Vercel</text>
+  <text x="366" y="470" class="s">nginx · PM2 · scheduled jobs</text>
+  <rect x="670" y="406" width="300" height="80" rx="10" class="box"/>
+  <text x="686" y="432" class="h">Quality</text>
+  <text x="686" y="452" class="s">Cypress end-to-end tests</text>
+  <text x="686" y="470" class="s">Sentry · analytics</text>
+  <path d="M415 358V402" class="ln2"/>
+</svg>

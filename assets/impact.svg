@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="132" viewBox="0 0 1000 132" role="img" aria-label="Impact: 3,690+ commits on 7 production systems; 417 AWS resources under Terraform at zero drift; 12 microservices on Amazon EKS with GitOps; threat detection across 4 client AWS accounts.">
+  <defs>
+    <style>
+      text { font-family: 'JetBrains Mono','Fira Code',SFMono-Regular,Consolas,'Liberation Mono',monospace; }
+      .num { font-size: 28px; font-weight: 700; fill: #5dffa8; }
+      .lbl { font-size: 11.5px; fill: #c9d6cc; }
+      .sub { font-size: 10.5px; fill: #4a6b52; letter-spacing: 0.5px; }
+      .tile { fill: #0b110d; stroke: #39d98a; stroke-opacity: 0.3; stroke-width: 1.2; }
+    </style>
+  </defs>
+  <rect x="1" y="1" width="235" height="130" rx="12" class="tile"/>
+  <rect x="1" y="1" width="4" height="130" rx="2" fill="#39d98a"/>
+  <text x="22" y="52" class="num">3,690+</text>
+  <text x="22" y="80" class="lbl">commits on production</text>
+  <text x="22" y="98" class="lbl">systems</text>
+  <text x="22" y="118" class="sub">7 SYSTEMS · 2024–2026</text>
+
+  <rect x="255" y="1" width="235" height="130" rx="12" class="tile"/>
+  <rect x="255" y="1" width="4" height="130" rx="2" fill="#39d98a"/>
+  <text x="276" y="52" class="num">417</text>
+  <text x="276" y="80" class="lbl">AWS resources in</text>
+  <text x="276" y="98" class="lbl">Terraform · zero drift</text>
+  <text x="276" y="118" class="sub">STAGING · 202 IN PROD</text>
+
+  <rect x="509" y="1" width="235" height="130" rx="12" class="tile"/>
+  <rect x="509" y="1" width="4" height="130" rx="2" fill="#39d98a"/>
+  <text x="530" y="52" class="num">12</text>
+  <text x="530" y="80" class="lbl">microservices on EKS</text>
+  <text x="530" y="98" class="lbl">shipped with GitOps</text>
+  <text x="530" y="118" class="sub">ARGOCD · 16 APPS</text>
+
+  <rect x="763" y="1" width="235" height="130" rx="12" class="tile"/>
+  <rect x="763" y="1" width="4" height="130" rx="2" fill="#39d98a"/>
+  <text x="784" y="52" class="num">4</text>
+  <text x="784" y="80" class="lbl">client AWS accounts</text>
+  <text x="784" y="98" class="lbl">with threat detection</text>
+  <text x="784" y="118" class="sub">GUARDDUTY → LAMBDA → SNS</text>
+</svg>

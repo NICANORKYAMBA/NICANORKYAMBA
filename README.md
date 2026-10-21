@@ -2,7 +2,7 @@
 
 <img src="assets/banner.svg" alt="Nicanor Kyamba — Cloud & DevOps Engineer. 12 of 12 AWS certifications, 3 Google Cloud certifications, 34 Credly badges." width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=39D98A&center=true&vCenter=true&width=680&lines=Terraform+platforms+on+AWS+%E2%80%94+417+resources%2C+zero+drift;Multi-tenant+AI+SaaS+running+in+production;Security+pipelines+across+client+AWS+accounts;Open+to+Cloud%2C+DevOps+%26+Platform+roles" alt="Terraform platforms on AWS, multi-tenant AI SaaS in production, security pipelines across client AWS accounts, open to Cloud, DevOps and Platform roles"/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=18&pause=1400&color=39D98A&center=true&vCenter=true&width=700&lines=Platform+Lead+%E2%80%94+12+microservices+on+EKS+with+GitOps;Terraform+on+AWS+%E2%80%94+417+resources%2C+zero+drift;AI+SaaS+on+Amazon+Bedrock%2C+in+production;Open+to+Cloud%2C+DevOps+%26+Platform+roles" alt="Platform Lead for 12 microservices on EKS with GitOps; Terraform on AWS with 417 resources at zero drift; AI SaaS on Amazon Bedrock in production; open to Cloud, DevOps and Platform roles"/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTQgOWg0djExSDR6TTYgMy41YTIuMjUgMi4yNSAwIDEgMSAwIDQuNSAyLjI1IDIuMjUgMCAwIDEgMC00LjV6TTEwIDloMy44djEuNmguMDVjLjUzLTEgMS44My0yLjA1IDMuNzctMi4wNSA0LjAzIDAgNC43OCAyLjY1IDQuNzggNi4xVjIwaC00di00LjhjMC0xLjE1LS4wMi0yLjYyLTEuNi0yLjYyLTEuNiAwLTEuODUgMS4yNS0xLjg1IDIuNTRWMjBIMTB6Ii8+PC9zdmc+)](https://www.linkedin.com/in/nicanor-kyamba-36b362158/)
 [![Credly](https://img.shields.io/badge/Credly_·_34_badges-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTEyIDJsMi40IDEuOCAzLS4xLjkgMi45IDIuNCAxLjgtMSAyLjggMSAyLjgtMi40IDEuOC0uOSAyLjktMy0uMUwxMiAyMC40bC0yLjQtMS44LTMgLjEtLjktMi45LTIuNC0xLjggMS0yLjgtMS0yLjggMi40LTEuOC45LTIuOSAzIC4xek0xMC42IDE0LjZsLTIuNS0yLjUtMS40IDEuNCAzLjkgMy45IDYuOC02LjgtMS40LTEuNHoiLz48L3N2Zz4=)](https://www.credly.com/users/nicanor-kyamba)
@@ -12,80 +12,88 @@
 
 ## `$ cat about.md`
 
-I'm a **Cloud & DevOps Engineer** at [Kitsilano Technologies](https://kitstek.com), an AWS Partner in Nairobi, where I own AWS infrastructure for clients across East Africa: I write it in Terraform, secure it, keep it observable and keep its bill honest. Before and alongside that, I build software: multi-tenant AI products, a video-streaming platform and the pipelines that ship them.
+I'm a **Cloud & DevOps Engineer** at [Kitsilano Technologies](https://kitstek.com), an AWS Partner in Nairobi. I lead production platforms, from Kubernetes and GitOps to Terraform, security and cost, for products and clients across East Africa, and I write a lot of the software that runs on them: multi-tenant AI products, a video-streaming service, recruitment tooling.
 
-- 🏗️ **Infrastructure as code that matches reality.** I brought a client's live AWS estate under Terraform with zero drift, and I design for the recovery targets the business actually signed up for.
-- 🛡️ **Security people can act on.** Org-wide guardrails, threat-detection pipelines that page on real threats rather than routine admin work, least-privilege access.
-- 🤖 **Full-stack and AI.** Next.js, Angular, Node and Python products running LLMs, retrieval and event-driven pipelines in production.
-- 🏆 **All 12 active AWS certifications**, plus Google Cloud Professional Cloud Architect and Professional Cloud DevOps Engineer, and KCNA.
+What people get when they work with me: infrastructure that matches what's in git, security that pages on real threats, recovery targets that are written down and designed for, and documentation good enough to hand over.
 
-## `$ ls ~/work --featured`
+<img src="assets/impact.svg" alt="3,690+ commits on 7 production systems; 417 AWS resources in Terraform at zero drift; 12 microservices on EKS shipped with GitOps; threat detection across 4 client AWS accounts." width="100%"/>
+
+## `$ ls ~/work --flagship`
+
+### ☸️ DukQa: production platform on Amazon EKS · *Platform Lead*
+
+DukQa is a B2C logistics product for East Africa. I led the production platform: **12 microservices on EKS, delivered entirely through GitOps**, and I wrote most of the platform code (380+ commits across the platform repos).
+
+<img src="assets/arch-dukqa.svg" alt="DukQa architecture: GitHub and CI push images to ECR; ArgoCD Image Updater writes new digests back to git; ArgoCD syncs 16 applications into EKS; 12 microservices behind an ALB ingress; RabbitMQ, Secrets Store CSI with IRSA, Prometheus; RDS PostgreSQL through RDS Proxy, ElastiCache and S3." width="100%"/>
+
+- **GitOps end to end:** ArgoCD with ApplicationSets managing 16 applications; ArgoCD Image Updater writes new image digests back to git, so the cluster always matches the repo
+- **Scales on demand:** Cluster Autoscaler across node groups in two availability zones; right-sized requests and pinned image digests in production
+- **No credentials in pods:** Secrets Store CSI driver with IRSA per service, plus NetworkPolicies, RBAC, priority classes and limit ranges
+- **Hard problems, solved and written up:** diagnosed TLS failures between services and RDS Proxy (ACM certificates, not the RDS CA bundle), tuned RabbitMQ to HA with the right memory and topology, and reported to stakeholders on platform health
+
+`EKS` `ArgoCD` `Helm` `Terraform` `RDS Proxy` `RabbitMQ` `Prometheus` `IRSA`
+
+### ☁️ Vendor platform on AWS · *fully in Terraform*
+
+A containerised vendor platform for an East African beverage group, across staging and production accounts. I wrote the Terraform (401 of 409 commits) and run the platform.
+
+<img src="assets/arch-aws-platform.svg" alt="AWS vendor platform: CloudFront with WAF, ALB and API Gateway, ECS Fargate on Graviton and Lambda, RDS MySQL through RDS Proxy, ElastiCache, SQS, EventBridge and SES; GuardDuty, Inspector, AWS Config and CloudTrail alarms; Datadog, CloudWatch and X-Ray. Terraform: one country stack, staging at 417 resources with zero drift, production at 202, encrypted state backup in a second region, 30-minute RTO and 15-minute RPO." width="100%"/>
+
+- **Brought a live estate under code:** 417 staging resources at **zero drift**, including resources others built by hand, adopted without disturbing their live testing; 202 resources in production
+- **One stack, many countries:** everything a country runs is written once and deployed through thin per-environment roots, ready for expansion beyond Kenya
+- **Recovery designed, not hoped for:** DR position written against a **30-minute RTO / 15-minute RPO**, with state and configuration backed up encrypted to a second region
+- **Operated, not just built:** Datadog monitor audits and DB monitoring, RDS Proxy cutover, Redis scaling, credential rotation, cost anomaly detection and weekly reporting
+
+`Terraform` `ECS Fargate` `Graviton` `RDS Proxy` `WAF` `Datadog` `GitHub Actions`
+
+### 🤖 RibboAI: multi-tenant AI customer support · *1,460+ commits*
+
+Businesses train an AI agent on their own documents and websites, embed it on their site or in WhatsApp, and hand conversations to a human when needed.
+
+<img src="assets/arch-ribboai.svg" alt="RibboAI architecture: web widget, WhatsApp agents and human operators connect to a multi-tenant Next.js app with an agent builder, live handoff, onboarding, sessions and billing; an AI layer on Amazon Bedrock with a model allowlist, a PII guard, LangChain and retrieval on Pinecone; Firebase, AWS hosting, Cypress and Sentry." width="100%"/>
+
+- **Built the agent builder end to end on Amazon Bedrock**, and chose the model on evidence rather than habit
+- **Live agent handoff** and **LLM-driven conversational onboarding**, with persistent assistant sessions and an audit trail
+- **Security and privacy by default:** a Bedrock model allowlist (unapproved models are refused), a PII anonymisation design for other providers, Swahili-aware privacy detection (*jina, simu, nambari*), and a fix for unverified cross-visitor chat resume
+- **Billing that adds up:** subscriptions, credits and renewals credited to the right organisation; MRR / ARR in the admin overview
+- **Moved hosting from Vercel to AWS** and wrote the migration and operations guide
+
+`Next.js` `TypeScript` `Amazon Bedrock` `LangChain` `Pinecone` `Firebase` `Cypress`
+
+## `$ ls ~/work --selected`
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### ☁️ Multi-environment AWS platform
-**East African beverage group · vendor platform**
+### 🎬 NW Plus TV · African video streaming
 
-Terraform for a containerised platform across staging and production accounts, with one reusable country stack and a thin root per country and environment.
-
-- **417 staging resources at zero drift**, including adopting hand-built live resources without disturbing them; **202 in production**
-- ECS Fargate on Graviton, RDS MySQL behind RDS Proxy, ElastiCache, API Gateway (HTTP, REST, WebSocket), EventBridge, SQS FIFO
-- CloudFront + WAF at the edge, TLS end to end, GuardDuty, Inspector, AWS Config, CloudTrail alarms
-- Datadog monitors and DB monitoring, cost anomaly detection
-- DR position written against a **30-minute RTO / 15-minute RPO**; state and config backed up encrypted to a second region
-
-`Terraform` `ECS Fargate` `RDS Proxy` `WAF` `Datadog` `GitHub Actions`
-
-</td>
-<td width="50%" valign="top">
-
-### 🤖 RibboAI: AI customer-support SaaS
-**Multi-tenant platform · 1,400+ of my commits**
-
-Businesses train a chatbot on their own documents and websites, embed it on their site and hand conversations to a human when needed.
-
-- Built **live agent handoff** and **LLM-driven conversational onboarding**
-- Privacy detection that understands **Swahili** contact requests (*jina, simu, nambari*)
-- Fixed a **cross-visitor chat-resume** security flaw by verifying the visitor on contact match
-- Subscription, credits and billing correctness; MRR / ARR in the admin overview
-- Streaming fixes so long answers are never truncated
-
-`Next.js` `TypeScript` `Firebase` `LangChain` `Pinecone` `Amazon Bedrock`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### 🧠 Ajirii: AI recruitment platform
-**Full stack · Next.js app + serverless API (95 of 131 API commits)**
-
-Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionally anonymised candidates.
-
-- Serverless **Python API on AWS SAM**: Cognito with a Lambda authorizer, DynamoDB, SES, tests
-- **CV text extraction** with Textract and DOCX parsing, and **SHA-256 de-duplication**
-- Anonymisation as a configurable org setting; **ML-scoring integration** endpoints
-- Next.js 15 frontend: processing pipeline with stage progress, analytics, notifications, audit logs, **MFA enforced for admins**
-
-`Next.js` `TypeScript` `Python` `AWS SAM` `Cognito` `Textract`
-
-</td>
-<td width="50%" valign="top">
-
-### 🎬 NW Plus TV: African video streaming
-**Video-on-demand platform · 2024–2026 · 970+ commits across 3 repos**
+**970+ commits across 3 repos · 2024–2026**
 
 [nwplus.tv](https://www.nwplus.tv) streams African films, documentaries and podcasts. I built most of it end to end.
 
-- **Node.js / Express / Prisma API** on Google Cloud Run, media in **Cloud Storage** behind signed URLs, Paystack payments
-- **Angular 15 + NgRx** frontend: content, subscriptions, discounts, payment plans and profiles
-- Admin analytics built on **server-authoritative counts** (paying customers, not just active subscribers), with filters and export
-- GA4 conversion-funnel tracking; Next.js business site ([nwplus.biz](https://nwplus.biz))
-- Wrote the full technical handover
+- Node.js / Express / Prisma API on **Google Cloud Run**, media in Cloud Storage behind signed URLs, Paystack payments
+- Angular 15 + NgRx frontend: content, subscriptions, discounts, payment plans, profiles
+- Admin analytics on **server-authoritative counts** (paying customers, not just active subscribers)
+- GA4 funnel tracking, the Next.js business site and the full technical handover
 
-`Node.js` `Prisma` `Angular` `NgRx` `Cloud Run` `Paystack`
+`Node.js` `Prisma` `Angular` `NgRx` `Cloud Run`
+
+</td>
+<td width="50%" valign="top">
+
+### 🧠 Ajirii · AI recruitment platform
+
+**Serverless API (95 of 131 commits) + Next.js app**
+
+Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionally anonymised candidates.
+
+- Python API on **AWS SAM**: Cognito with a Lambda authorizer, DynamoDB, SES, tests
+- **CV text extraction** with Textract and DOCX parsing; **SHA-256 de-duplication**
+- Anonymisation as an org setting; ML-scoring integration endpoints
+- Next.js 15 app: processing pipeline with stage progress, analytics, audit logs, **MFA for admins**
+
+`Python` `AWS SAM` `Cognito` `Textract` `Next.js`
 
 </td>
 </tr>
@@ -94,8 +102,8 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 
 ### 🛡️ Security & governance at org scale
 
-- **Threat-detection pipeline across 4 client AWS accounts**: GuardDuty → EventBridge (severity ≥ 7) → Lambda enricher → SNS, with operator attribution so routine admin activity doesn't page but genuine threats do. Includes deploy and end-to-end verification tooling.
-- **AWS Partner tag enforcement in four layers**: SCP hard-block, tag policy, AWS Config auto-remediation and an EventBridge + Lambda safety net, rolled out with CloudFormation StackSets across the organisation.
+- **Threat detection across 4 client AWS accounts:** GuardDuty → EventBridge (severity ≥ 7) → Lambda enricher → SNS. Operator attribution means routine admin work doesn't page, but genuine threats do. Includes deploy and end-to-end verification tooling.
+- **AWS Partner tag enforcement in four layers:** SCP hard-block, tag policy, AWS Config auto-remediation and an EventBridge + Lambda safety net, rolled out with CloudFormation StackSets across the organisation.
 
 `GuardDuty` `EventBridge` `Lambda` `SCPs` `AWS Config` `StackSets`
 
@@ -104,12 +112,35 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 
 ### 💰 Operations & FinOps
 
-- **SAP HANA backup automation** for a multi-tenant logistics account: S3 lifecycle to Glacier Instant Retrieval, plus a cross-region Deep Archive copy
+- **SAP HANA backup automation** for a multi-tenant logistics account: S3 lifecycle to Glacier Instant Retrieval plus a cross-region Deep Archive copy
 - **Cost investigations** for client accounts that tripped their budgets: root cause, remediation and a written report each time
-- **Migration decision guides**, e.g. SQL Server on EC2 (BYOL) vs RDS (BYOM) with costed recommendations
-- Incident RCAs, runbooks and weekly client reporting
+- Incident **RCAs**, runbooks, DR positions and weekly client reports
 
 `AWS Backup` `S3 Lifecycle` `Cost Explorer` `Budgets` `Python`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 📐 Solution architecture & pre-sales
+
+- **Digital forms and approvals platform** for a sugar manufacturer: ECS Fargate behind CloudFront, RDS PostgreSQL Multi-AZ, SSO with Entra ID, data-only DR to a second region, costed at $265–382/month
+- **SQL Server migration guide:** EC2 with BYOL vs RDS with BYOM, costed with a clear recommendation
+- **WhatsApp AI agent demo** for a 40-company conglomerate: four agent patterns on one platform, with demo sites carrying the live widget
+
+`Solution design` `Cost modelling` `Entra ID SSO` `AWS Pricing`
+
+</td>
+<td width="50%" valign="top">
+
+### 🧰 Web & internal tools
+
+- **Kitstek website:** Next.js 16 App Router marketing site with SEO structure and audit, deployed on AWS Amplify (60 of 62 commits)
+- **Kitsilano HRMS:** leave management for the whole company, with accrual by cron, role-based access, approvals and email notifications, on AWS Lightsail
+- **CKAD lab repository:** structured labs and a microservices practice app for the Certified Kubernetes Application Developer exam
+
+`Next.js 16` `Tailwind` `PHP 8` `MariaDB` `Lightsail` `kubectl`
 
 </td>
 </tr>
@@ -117,24 +148,21 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 
 <sub>Client work is described without client names or internal details. Happy to walk through any of it in conversation.</sub>
 
+## `$ cat principles.md`
+
+| Principle | In practice |
+|---|---|
+| **Git is the source of truth** | If it runs in production, it's in Terraform or the GitOps repo. Drift gets found and closed, not tolerated. |
+| **Design for the recovery target** | RTO and RPO are agreed first; backups, regions and runbooks follow from them. |
+| **Alerts must mean something** | A page is a real threat or a real outage. Routine admin activity is attributed and filtered out. |
+| **Cost is a feature** | Graviton, right-sized requests, lifecycle policies, budgets and anomaly detection by default. |
+| **Leave it better documented** | Runbooks, RCAs, DR positions and handover documents that let someone else take over. |
+
 ## `$ cat certifications.yml`
 
-<div align="center">
+<img src="assets/certifications.svg" alt="Certifications: all 12 active AWS certifications: Professional (Solutions Architect, DevOps Engineer, Generative AI Developer), Specialty (Security, Advanced Networking), Associate (Solutions Architect, Developer, CloudOps Engineer, Data Engineer, Machine Learning Engineer), Foundational (Cloud Practitioner, AI Practitioner). Google Cloud Professional Cloud Architect, Professional Cloud DevOps Engineer, Associate Cloud Engineer. KCNA. Microsoft SC-900 and MS-900. Cisco Ethical Hacker." width="100%"/>
 
-**All 12 active AWS certifications · 3 Google Cloud certifications · 34 badges on [Credly](https://www.credly.com/users/nicanor-kyamba)**
-
-</div>
-
-| | Certification | Earned |
-|---|---|---|
-| ![AWS](https://img.shields.io/badge/AWS-Professional-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Solutions Architect · DevOps Engineer · Generative AI Developer *(early adopter)* | 2025–26 |
-| ![AWS](https://img.shields.io/badge/AWS-Specialty-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Security · Advanced Networking | 2025–26 |
-| ![AWS](https://img.shields.io/badge/AWS-Associate-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Solutions Architect · Developer · CloudOps Engineer · Data Engineer · Machine Learning Engineer | 2024–26 |
-| ![AWS](https://img.shields.io/badge/AWS-Foundational-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Cloud Practitioner · AI Practitioner | 2023, 2026 |
-| ![Google Cloud](https://img.shields.io/badge/Google_Cloud-Professional-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Cloud Architect · Cloud DevOps Engineer | 2025–26 |
-| ![Google Cloud](https://img.shields.io/badge/Google_Cloud-Associate-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Associate Cloud Engineer | 2025 |
-| ![Linux Foundation](https://img.shields.io/badge/Linux_Foundation-CNCF-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | KCNA: Kubernetes and Cloud Native Associate | 2026 |
-| ![Microsoft · Cisco](https://img.shields.io/badge/Microsoft_·_Cisco-Fundamentals-0b110d?style=flat-square&labelColor=133D17&color=0b110d) | Security, Compliance & Identity · Microsoft 365 · Cisco Ethical Hacker | 2024–25 |
+<div align="center"><sub>Verify every badge on <a href="https://www.credly.com/users/nicanor-kyamba">Credly</a>.</sub></div>
 
 ## `$ which --all tools`
 
@@ -144,13 +172,14 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 <img src="https://img.shields.io/badge/AWS-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="AWS"/>
 <img src="https://img.shields.io/badge/Google_Cloud-0b110d?style=for-the-badge&logo=googlecloud&logoColor=39d98a" alt="Google Cloud"/>
 <img src="https://img.shields.io/badge/Terraform-0b110d?style=for-the-badge&logo=terraform&logoColor=39d98a" alt="Terraform"/>
-<img src="https://img.shields.io/badge/CloudFormation-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="CloudFormation"/>
+<img src="https://img.shields.io/badge/CloudFormation_·_SAM-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="CloudFormation and SAM"/>
 <img src="https://img.shields.io/badge/Ansible-0b110d?style=for-the-badge&logo=ansible&logoColor=39d98a" alt="Ansible"/>
 
 **Containers & delivery**<br/>
 <img src="https://img.shields.io/badge/Kubernetes-0b110d?style=for-the-badge&logo=kubernetes&logoColor=39d98a" alt="Kubernetes"/>
-<img src="https://img.shields.io/badge/Docker-0b110d?style=for-the-badge&logo=docker&logoColor=39d98a" alt="Docker"/>
+<img src="https://img.shields.io/badge/ArgoCD-0b110d?style=for-the-badge&logo=argo&logoColor=39d98a" alt="ArgoCD"/>
 <img src="https://img.shields.io/badge/Helm-0b110d?style=for-the-badge&logo=helm&logoColor=39d98a" alt="Helm"/>
+<img src="https://img.shields.io/badge/Docker-0b110d?style=for-the-badge&logo=docker&logoColor=39d98a" alt="Docker"/>
 <img src="https://img.shields.io/badge/GitHub_Actions-0b110d?style=for-the-badge&logo=githubactions&logoColor=39d98a" alt="GitHub Actions"/>
 <img src="https://img.shields.io/badge/Linux-0b110d?style=for-the-badge&logo=linux&logoColor=39d98a" alt="Linux"/>
 
@@ -158,7 +187,7 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 <img src="https://img.shields.io/badge/Datadog-0b110d?style=for-the-badge&logo=datadog&logoColor=39d98a" alt="Datadog"/>
 <img src="https://img.shields.io/badge/CloudWatch-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="CloudWatch"/>
 <img src="https://img.shields.io/badge/Prometheus-0b110d?style=for-the-badge&logo=prometheus&logoColor=39d98a" alt="Prometheus"/>
-<img src="https://img.shields.io/badge/Grafana-0b110d?style=for-the-badge&logo=grafana&logoColor=39d98a" alt="Grafana"/>
+<img src="https://img.shields.io/badge/RabbitMQ-0b110d?style=for-the-badge&logo=rabbitmq&logoColor=39d98a" alt="RabbitMQ"/>
 <img src="https://img.shields.io/badge/Kali_Linux-0b110d?style=for-the-badge&logo=kalilinux&logoColor=39d98a" alt="Kali Linux"/>
 
 **Software & AI**<br/>
@@ -167,8 +196,9 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 <img src="https://img.shields.io/badge/Next.js-0b110d?style=for-the-badge&logo=nextdotjs&logoColor=39d98a" alt="Next.js"/>
 <img src="https://img.shields.io/badge/Angular-0b110d?style=for-the-badge&logo=angular&logoColor=39d98a" alt="Angular"/>
 <img src="https://img.shields.io/badge/Node.js-0b110d?style=for-the-badge&logo=nodedotjs&logoColor=39d98a" alt="Node.js"/>
-<img src="https://img.shields.io/badge/Firebase-0b110d?style=for-the-badge&logo=firebase&logoColor=39d98a" alt="Firebase"/>
+<img src="https://img.shields.io/badge/Amazon_Bedrock-0b110d?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iIzM5ZDk4YSIgZD0iTTYuNSAxOWE0LjUgNC41IDAgMCAxLS44LTguOTNBNiA2IDAgMCAxIDE3LjMgOC42IDQuNSA0LjUgMCAwIDEgMTcuNSAxOWgtMTF6Ii8+PC9zdmc+" alt="Amazon Bedrock"/>
 <img src="https://img.shields.io/badge/LangChain-0b110d?style=for-the-badge&logo=langchain&logoColor=39d98a" alt="LangChain"/>
+<img src="https://img.shields.io/badge/Firebase-0b110d?style=for-the-badge&logo=firebase&logoColor=39d98a" alt="Firebase"/>
 <img src="https://img.shields.io/badge/PostgreSQL_·_MySQL-0b110d?style=for-the-badge&logo=postgresql&logoColor=39d98a" alt="PostgreSQL and MySQL"/>
 <img src="https://img.shields.io/badge/Redis-0b110d?style=for-the-badge&logo=redis&logoColor=39d98a" alt="Redis"/>
 
@@ -178,7 +208,7 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 
 ```text
 2025-03 → now      Cloud Engineer · Kitsilano Technologies (AWS Partner), Nairobi
-                   AWS platforms, security and FinOps for clients across East Africa
+                   Platform lead on EKS and AWS; security and FinOps for clients across East Africa
 2024-06 → 2026-07  Full-Stack Engineer · NW Plus TV (Nifty Works Plus)
                    Video-streaming platform on Google Cloud: Node.js, Angular, Cloud Run
 
@@ -187,14 +217,19 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 2022-08 → 2023     ALX Software Engineering programme
 ```
 
+## `$ cat now.md`
+
+- 📚 Preparing for **CKAD**, with hands-on labs in my CKAD repository
+- ✍️ Writing up the road to **all 12 AWS certifications** and what I learned along the way
+- 🎓 Studying **Computer Science** at the University of the People
+
 ## `$ gh stats`
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=NICANORKYAMBA&show_icons=true&count_private=true&hide_border=true&bg_color=0b110d&title_color=5dffa8&text_color=c9d6cc&icon_color=39d98a&ring_color=39d98a" alt="GitHub stats for NICANORKYAMBA" height="165"/>
 <img src="https://streak-stats.demolab.com?user=NICANORKYAMBA&hide_border=true&background=0b110d&ring=39d98a&fire=5dffa8&currStreakLabel=5dffa8&sideLabels=c9d6cc&currStreakNum=c9d6cc&sideNums=c9d6cc&dates=4a6b52&stroke=1f3324" alt="GitHub contribution streak for NICANORKYAMBA" height="165"/>
 
-<sub>Most of my work lives in private client and company repositories, so public repos show only part of it.</sub>
+<sub>Most of my work lives in private client and company repositories, so public stats show only part of it.</sub>
 
 </div>
 
