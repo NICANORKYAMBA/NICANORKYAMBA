@@ -470,3 +470,43 @@ radiobutton radio:checked {
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
 }
+
+/* ─── Panel: flat items instead of DarkMint's glossy tiles ─── */
+.xfce4-panel button,
+.xfce4-panel button:backdrop {
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  box-shadow: none;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+}
+
+.xfce4-panel button:hover {
+  background-color: rgba(57, 217, 138, 0.14);
+  border-color: rgba(57, 217, 138, 0.25);
+}
+
+.xfce4-panel button:checked,
+.xfce4-panel button:active {
+  background-color: rgba(57, 217, 138, 0.22);
+  border-color: rgba(57, 217, 138, 0.55);
+}
+
+.xfce4-panel button label {
+  color: #8fa894;
+}
+
+.xfce4-panel button:checked label {
+  color: #5dffa8;
+  font-weight: bold;
+}
+
+/* Clock */
+.xfce4-panel .clock-button label,
+.xfce4-panel #clock-button label {
+  color: #5dffa8;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+}

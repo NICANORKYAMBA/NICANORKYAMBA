@@ -55,8 +55,8 @@
       <property name="position-commands-alternate" type="bool" value="true"/>
       <property name="position-search-alternate" type="bool" value="true"/>
       <property name="recent" type="array">
-        <value type="string" value="brave-browser.desktop"/>
         <value type="string" value="google-chrome.desktop"/>
+        <value type="string" value="brave-browser.desktop"/>
         <value type="string" value="spotify.desktop"/>
         <value type="string" value="org.flameshot.Flameshot.desktop"/>
         <value type="string" value="logisim.desktop"/>
@@ -171,6 +171,7 @@
         <value type="string" value="redshift"/>
       </property>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “kitsilano” active: kitsilano (67%)"/>
         <value type="string" value="wi-fi network connection “kitsilano” active: kitsilano (65%)"/>
         <value type="string" value="wi-fi network connection “kitsilano” active: kitsilano (68%)"/>
         <value type="string" value="wi-fi network connection “kitsilano” active: kitsilano (63%)"/>
@@ -212,7 +213,7 @@
     <property name="plugin-18" type="string" value="power-manager-plugin"/>
     <property name="plugin-19" type="string" value="clock">
       <property name="digital-layout" type="uint" value="3"/>
-      <property name="digital-time-font" type="string" value="Cascadia Code 10"/>
+      <property name="digital-time-font" type="string" value="JetBrainsMono Nerd Font Bold 10"/>
       <property name="digital-time-format" type="string" value="%H:%M"/>
     </property>
     <property name="plugin-22" type="string" value="actions">
