@@ -510,3 +510,52 @@ radiobutton radio:checked {
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
 }
+
+/* ─── Whisker menu: no sunken frames, one background, calm selection ─── */
+#whiskermenu-window frame,
+#whiskermenu-window frame > border,
+#whiskermenu-window scrolledwindow,
+#whiskermenu-window viewport {
+  border: none;
+  box-shadow: none;
+  background-image: none;
+  background-color: transparent;
+}
+
+#whiskermenu-window scrolledwindow .view,
+#whiskermenu-window treeview.view {
+  background-color: #0d1410;
+  border-radius: 10px;
+}
+
+#whiskermenu-window .category-button {
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+
+#whiskermenu-window .category-button:hover {
+  background-color: rgba(57, 217, 138, 0.10);
+}
+
+#whiskermenu-window .category-button:checked {
+  background-image: none;
+  background-color: rgba(57, 217, 138, 0.14);
+  border: 1px solid rgba(57, 217, 138, 0.30);
+  box-shadow: inset 3px 0 0 #39d98a;
+}
+
+#whiskermenu-window .category-button label {
+  color: #c9d6cc;
+}
+
+#whiskermenu-window .category-button:checked label {
+  color: #5dffa8;
+  font-weight: bold;
+}
+
+#whiskermenu-window separator {
+  background-color: #1f3324;
+  min-height: 1px;
+}
