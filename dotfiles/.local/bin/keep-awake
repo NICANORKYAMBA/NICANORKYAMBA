@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Ctrl+Alt+K: toggle "keep awake" for demos, calls and presentations.
+# Holds a screensaver inhibit and turns on power-manager presentation mode
+# (which stops the screen blanking); toggling again releases both.
+PIDFILE=${XDG_RUNTIME_DIR:-/tmp}/keep-awake.pid
+
+if [ -f "$PIDFILE" ] && kill -0 "$(cat "$PIDFILE")" 2>/dev/null; then
+  kill "$(cat "$PIDFILE")"
+  rm -f "$PIDFILE"
+  xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -n -t bool -s false
+  notify-send -t 2500 -i weather-clear-night 'Keep awake: off' 'Screensaver and screen blanking are back on.'
+else
+  # --inhibit blocks for as long as the inhibit should last, so run it in the background
+  setsid xfce4-screensaver-command --inhibit -n keep-awake -r 'Keep awake' >/dev/null 2>&1 &
+  echo $! > "$PIDFILE"
+  xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -n -t bool -s true
+  notify-send -t 2500 -i weather-clear 'Keep awake: on' 'No screensaver or screen blanking until you press Ctrl+Alt+K again.'
+fi

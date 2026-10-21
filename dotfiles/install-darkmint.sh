@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Restore the DarkMint Neon desktop (Kali XFCE) from this repo.
 #   Packages: sudo apt install -y darkmint-gtk-theme papirus-icon-theme picom conky-all qt5ct qt6ct \
-#               rofi fastfetch zoxide fd-find eza bat fzf xscreensaver-gl btop tmux
+#               rofi fastfetch zoxide fd-find eza bat fzf xscreensaver-gl btop tmux cmatrix
 #   Fonts:    JetBrainsMono Nerd Font, Cascadia Code NF; cursor: Bibata-Modern-Classic
 #   Optional, sudo: ~/.local/bin/darkmint-login-setup   (login screen)
 #                   ~/.local/bin/darkmint-boot-setup    (GRUB menu + boot splash)
@@ -68,6 +68,8 @@ k() { x xfce4-keyboard-shortcuts "/commands/custom/$1" string "$2"; }
 k '<Super>space' 'rofi -show drun'
 k '<Primary><Alt>p' "$HOME/.local/bin/privacy-shield"
 k '<Primary><Alt>u' "$HOME/.local/bin/privacy-mode"
+k '<Super>Escape' "$HOME/.local/bin/walk-away"
+k '<Primary><Alt>k' "$HOME/.local/bin/keep-awake"
 
 # Matrix screensaver
 x xfce4-screensaver /saver/mode int 2

@@ -139,3 +139,6 @@ fi
 if [[ ${DARKMINT_PROMPT:-darkmint} != classic ]] && (( ${+ZSH_HIGHLIGHT_PATTERNS} )); then
     ZSH_HIGHLIGHT_PATTERNS+=('sudo *' 'fg=#e6c46a,bold')
 fi
+
+# ─── matrix: falling code in the terminal (q to quit) ───
+(( $+commands[cmatrix] )) && alias matrix='cmatrix -b -u 5 -C green'

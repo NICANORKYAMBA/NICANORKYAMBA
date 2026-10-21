@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Super+Escape: start the matrix screensaver now and lock behind it.
+xfce4-screensaver-command --lock
