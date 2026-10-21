@@ -8,7 +8,7 @@ The current look lives in [`../dotfiles/`](../dotfiles/), mirrored to home-folde
 
 ```bash
 sudo apt install -y darkmint-gtk-theme papirus-icon-theme picom conky-all qt5ct qt6ct \
-  rofi fastfetch zoxide fd-find eza bat fzf xscreensaver-gl
+  rofi fastfetch zoxide fd-find eza bat fzf xscreensaver-gl btop tmux cmatrix
 # Fonts: JetBrainsMono Nerd Font, Cascadia Code NF. Cursor: Bibata-Modern-Classic
 git clone git@github.com:NICANORKYAMBA/NICANORKYAMBA.git && cd NICANORKYAMBA
 dotfiles/install-darkmint.sh        # copies dotfiles + applies all theme settings
@@ -28,13 +28,18 @@ What it gives you:
 | Wallpaper | `Pictures/wallpapers/darkmint-kali-net.jpg` (desktop + lock screen) |
 | Effects | picom: rounded corners, blur, shadows, fades (`fx-on` / `fx-off`) |
 | Dashboard | conky: clock, CPU/temp, RAM, disk, Wi-Fi, VPN, Docker, K8s, AWS |
-| Terminals | DarkMint Neon scheme in qterminal + Alacritty, Nerd Fonts |
+| Terminals | DarkMint Neon scheme in qterminal + Alacritty, Nerd Fonts; DarkMint welcome banner and prompt colors (`DARKMINT_BANNER=classic` / `DARKMINT_PROMPT=classic` restore the originals) |
 | Notifications | `DarkMint-Notify` theme |
 | Launcher | Rofi on **Super+Space** (apps / windows / ssh / run, Tab to switch) |
 | Shell tools | `ls`→eza icons, `cat`→bat, fzf on Ctrl+R / Ctrl+T, `z` (zoxide), `ff` (fastfetch) — `~/.config/zsh/darkmint-tools.zsh` |
 | Screensaver | DarkMint Matrix (glmatrix), then lock screen |
 | Boot | DarkMint GRUB theme + green Kali Plymouth splash (`~/.local/share/darkmint-boot/`) |
 | Privacy | Hardware privacy key + **Ctrl+Alt+P** shield (dim, mute notifications, hide dashboard); **Ctrl+Alt+U** Windows disguise via kali-undercover |
+| Lock screen | Unlock dialog styled in `gtk.css` by its GTK widget names (`#content_frame`, `#prompt_entry`, `#login_button`, `#panel_window`); green dragon avatar in `~/.face` |
+| Hotkeys | **Super+Escape** start the matrix screensaver and lock · **Ctrl+Alt+K** keep awake (screensaver inhibit + power-manager presentation mode) |
+| Fun | `matrix` in any terminal, or "Matrix" in the app menu (full-screen cmatrix) |
+| btop · tmux | `btop` with the DarkMint theme (`~/.config/btop`); tmux status bar with session, git branch and clock (`~/.config/tmux/tmux.conf`) |
+| Editors | DarkMint chrome for VS Code / Kiro, scoped to the Abyss theme: paste `dotfiles/editor/darkmint-abyss-colors.json` into `settings.json` |
 
 XFCE settings files (panel layout, shortcuts, etc.) are under `dotfiles/.config/xfce4/`. Copy them before the first login on a new machine; in a running session XFCE keeps its settings in memory and can overwrite them, which is why the installer also applies the key settings live.
 
@@ -300,6 +305,6 @@ For issues or improvements, update configs and commit to GitHub.
 
 ---
 
-**Last Updated**: 2026-05-16  
-**Setup Version**: 1.0  
+**Last Updated**: 2026-10-21  
+**Setup Version**: 2.0 (DarkMint Neon)  
 **Status**: Production-Ready ✅

@@ -72,6 +72,8 @@
       <property name="&lt;Primary&gt;&lt;Alt&gt;u" type="string" value="/home/nicanorkyamba/.local/bin/privacy-mode"/>
       <property name="&lt;Super&gt;space" type="string" value="rofi -show drun"/>
       <property name="&lt;Primary&gt;&lt;Alt&gt;p" type="string" value="/home/nicanorkyamba/.local/bin/privacy-shield"/>
+      <property name="&lt;Super&gt;Escape" type="string" value="/home/nicanorkyamba/.local/bin/walk-away"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;k" type="string" value="/home/nicanorkyamba/.local/bin/keep-awake"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

@@ -9,7 +9,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 echo "Copying dotfiles into $HOME"
-find . -type f ! -name 'install-darkmint.sh' ! -path './.git/*' | while read -r f; do
+find . -type f ! -name 'install-darkmint.sh' ! -path './.git/*' ! -path './editor/*' | while read -r f; do
   install -Dm"$( [ -x "$f" ] && echo 755 || echo 644 )" "$f" "$HOME/${f#./}"
 done
 xrdb -merge ~/.Xresources

@@ -55,9 +55,9 @@
       <property name="position-commands-alternate" type="bool" value="true"/>
       <property name="position-search-alternate" type="bool" value="true"/>
       <property name="recent" type="array">
+        <value type="string" value="brave-browser.desktop"/>
         <value type="string" value="google-chrome.desktop"/>
         <value type="string" value="spotify.desktop"/>
-        <value type="string" value="brave-browser.desktop"/>
         <value type="string" value="org.flameshot.Flameshot.desktop"/>
         <value type="string" value="logisim.desktop"/>
         <value type="string" value="org.pulseaudio.pavucontrol.desktop"/>
