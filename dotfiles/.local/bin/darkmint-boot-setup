@@ -17,6 +17,11 @@ GRUB_BACKGROUND="/boot/grub/themes/darkmint/boot.png"
 CFG
 sudo update-grub
 
+# Readable copy of what GRUB will actually use (grub.cfg is root-only)
+{ echo "# $(date)"; sudo grep -nE 'background_image|^ *set theme|gfxmode|insmod png' /boot/grub/grub.cfg; } \
+  > ~/.cache/darkmint-boot-check.txt
+cat ~/.cache/darkmint-boot-check.txt
+
 echo "Setting boot splash (rebuilds initramfs, takes a minute)..."
 sudo plymouth-set-default-theme -R darkmint
 echo "Done. Reboot to see the new boot menu and splash."
