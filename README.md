@@ -62,6 +62,12 @@ Businesses train an AI agent on their own documents and websites, embed it on th
 
 ## `$ ls ~/work --selected`
 
+<img src="assets/selected-work.svg" alt="Selected work: NW Plus TV, African video streaming with 970+ commits; Ajirii, AI recruitment platform; org-scale security with GuardDuty detection across 4 accounts and 4-layer tag enforcement; operations and FinOps; solution architecture and pre-sales; web and internal tools." width="100%"/>
+
+<details>
+<summary><b>Read the full write-ups</b></summary>
+<br/>
+
 <table>
 <tr>
 <td width="50%" valign="top">
@@ -145,6 +151,8 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 </td>
 </tr>
 </table>
+
+</details>
 
 <sub>Client work is described without client names or internal details. Happy to walk through any of it in conversation.</sub>
 

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="656" viewBox="0 0 1000 656" role="img" aria-label="Selected work: NW Plus TV, African video streaming: Node.js + Prisma API on Cloud Run, Angular 15 + NgRx streaming app, Paystack billing · signed media URLs, Analytics on paying customers; Ajirii, AI recruitment platform: Python API on AWS SAM + Cognito, CV extraction: Textract + DOCX, SHA-256 de-dup · anonymisation, Next.js 15 app · MFA · audit logs; Org-scale security, Detection and guardrails: GuardDuty → EventBridge → Lambda, Pages on threats, not admin work, Tagging: SCP + Config + Lambda, Rolled out with StackSets; Operations &amp; FinOps, Run it, then make it cheaper: SAP HANA backups to Glacier IR, Cross-region Deep Archive copy, Cost investigations + reports, RCAs, runbooks, DR positions; Solution architecture, Pre-sales designs, costed: Forms &amp; approvals on ECS Fargate, RDS Multi-AZ · Entra ID SSO, SQL Server: EC2 vs RDS, costed, WhatsApp agents: 4 patterns, 1 app; Web &amp; internal tools, What the company runs on: Kitstek site: Next.js 16 + SEO, Deployed on AWS Amplify, Company HRMS: PHP 8, Lightsail, CKAD labs + microservices app">
+<defs><pattern id="g" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#39d98a" stroke-opacity="0.04"/></pattern>
+<linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#11211a"/><stop offset="1" stop-color="#0c140f"/></linearGradient>
+<style>text{font-family:'JetBrains Mono','Fira Code',SFMono-Regular,Consolas,'Liberation Mono',monospace}.k{font-size:10.5px;font-weight:700;fill:#39d98a;letter-spacing:1.5px}.t{font-size:17px;font-weight:700;fill:#5dffa8}.s{font-size:12px;fill:#8fa894}.m{font-size:11.5px;font-weight:700;fill:#d6e5d8}.b{font-size:11.5px;fill:#c9d6cc}.d{fill:#39d98a}.c{font-size:10.5px;fill:#8fa894}</style></defs>
+<rect width="1000" height="656" rx="16" fill="#0b110d"/><rect width="1000" height="656" rx="16" fill="url(#g)"/><rect x="0.5" y="0.5" width="999" height="655" rx="16" fill="none" stroke="#39d98a" stroke-opacity="0.22"/>
+<rect x="20" y="20" width="309" height="300" rx="12" fill="url(#cg)" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="38" y="20" width="48" height="3" rx="1.5" fill="#39d98a"/>
+<text x="38" y="50" class="k">01 · PRODUCT</text>
+<text x="38" y="78" class="t">NW Plus TV</text>
+<text x="38" y="98" class="s">African video streaming</text>
+<rect x="38" y="112" width="180" height="26" rx="13" fill="#133D17" stroke="#39d98a" stroke-opacity="0.55"/>
+<circle cx="51" cy="125" r="3" fill="#5dffa8"/>
+<text x="60" y="129" class="m">970+ commits · 3 repos</text>
+<path d="M38 162h8" stroke="#39d98a" stroke-width="2"/>
+<text x="54" y="166" class="b">Node.js + Prisma API on Cloud Run</text>
+<path d="M38 188h8" stroke="#39d98a" stroke-width="2"/>
+<text x="54" y="192" class="b">Angular 15 + NgRx streaming app</text>
+<path d="M38 214h8" stroke="#39d98a" stroke-width="2"/>
+<text x="54" y="218" class="b">Paystack billing · signed media URLs</text>
+<path d="M38 240h8" stroke="#39d98a" stroke-width="2"/>
+<text x="54" y="244" class="b">Analytics on paying customers</text>
+<path d="M38 270H311" stroke="#1f3324"/>
+<rect x="38" y="284" width="64" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="47" y="299" class="c">Node.js</text>
+<rect x="110" y="284" width="64" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="119" y="299" class="c">Angular</text>
+<rect x="182" y="284" width="77" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="191" y="299" class="c">Cloud Run</text>
+<rect x="345" y="20" width="309" height="300" rx="12" fill="url(#cg)" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="363" y="20" width="48" height="3" rx="1.5" fill="#39d98a"/>
+<text x="363" y="50" class="k">02 · PRODUCT</text>
+<text x="363" y="78" class="t">Ajirii</text>
+<text x="363" y="98" class="s">AI recruitment platform</text>
+<rect x="363" y="112" width="173" height="26" rx="13" fill="#133D17" stroke="#39d98a" stroke-opacity="0.55"/>
+<circle cx="376" cy="125" r="3" fill="#5dffa8"/>
+<text x="385" y="129" class="m">95 of 131 API commits</text>
+<path d="M363 162h8" stroke="#39d98a" stroke-width="2"/>
+<text x="379" y="166" class="b">Python API on AWS SAM + Cognito</text>
+<path d="M363 188h8" stroke="#39d98a" stroke-width="2"/>
+<text x="379" y="192" class="b">CV extraction: Textract + DOCX</text>
+<path d="M363 214h8" stroke="#39d98a" stroke-width="2"/>
+<text x="379" y="218" class="b">SHA-256 de-dup · anonymisation</text>
+<path d="M363 240h8" stroke="#39d98a" stroke-width="2"/>
+<text x="379" y="244" class="b">Next.js 15 app · MFA · audit logs</text>
+<path d="M363 270H636" stroke="#1f3324"/>
+<rect x="363" y="284" width="57" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="372" y="299" class="c">Python</text>
+<rect x="428" y="284" width="64" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="437" y="299" class="c">AWS SAM</text>
+<rect x="500" y="284" width="64" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="509" y="299" class="c">Next.js</text>
+<rect x="670" y="20" width="309" height="300" rx="12" fill="url(#cg)" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="688" y="20" width="48" height="3" rx="1.5" fill="#39d98a"/>
+<text x="688" y="50" class="k">03 · SECURITY</text>
+<text x="688" y="78" class="t">Org-scale security</text>
+<text x="688" y="98" class="s">Detection and guardrails</text>
+<rect x="688" y="112" width="173" height="26" rx="13" fill="#133D17" stroke="#39d98a" stroke-opacity="0.55"/>
+<circle cx="701" cy="125" r="3" fill="#5dffa8"/>
+<text x="710" y="129" class="m">4 accounts · 4 layers</text>
+<path d="M688 162h8" stroke="#39d98a" stroke-width="2"/>
+<text x="704" y="166" class="b">GuardDuty → EventBridge → Lambda</text>
+<path d="M688 188h8" stroke="#39d98a" stroke-width="2"/>
+<text x="704" y="192" class="b">Pages on threats, not admin work</text>
+<path d="M688 214h8" stroke="#39d98a" stroke-width="2"/>
+<text x="704" y="218" class="b">Tagging: SCP + Config + Lambda</text>
+<path d="M688 240h8" stroke="#39d98a" stroke-width="2"/>
+<text x="704" y="244" class="b">Rolled out with StackSets</text>
+<path d="M688 270H961" stroke="#1f3324"/>
+<rect x="688" y="284" width="77" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="697" y="299" class="c">GuardDuty</text>
+<rect x="773" y="284" width="44" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="782" y="299" class="c">SCPs</text>
+<rect x="825" y="284" width="77" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="834" y="299" class="c">StackSets</text>
+<rect x="20" y="336" width="309" height="300" rx="12" fill="url(#cg)" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="38" y="336" width="48" height="3" rx="1.5" fill="#39d98a"/>
+<text x="38" y="366" class="k">04 · OPERATIONS</text>
+<text x="38" y="394" class="t">Operations &amp; FinOps</text>
+<text x="38" y="414" class="s">Run it, then make it cheaper</text>
+<rect x="38" y="428" width="201" height="26" rx="13" fill="#133D17" stroke="#39d98a" stroke-opacity="0.55"/>
+<circle cx="51" cy="441" r="3" fill="#5dffa8"/>
+<text x="60" y="445" class="m">budget alert → root cause</text>
+<path d="M38 478h8" stroke="#39d98a" stroke-width="2"/>
+<text x="54" y="482" class="b">SAP HANA backups to Glacier IR</text>
+<path d="M38 504h8" stroke="#39d98a" stroke-width="2"/>
+<text x="54" y="508" class="b">Cross-region Deep Archive copy</text>
+<path d="M38 530h8" stroke="#39d98a" stroke-width="2"/>
+<text x="54" y="534" class="b">Cost investigations + reports</text>
+<path d="M38 556h8" stroke="#39d98a" stroke-width="2"/>
+<text x="54" y="560" class="b">RCAs, runbooks, DR positions</text>
+<path d="M38 586H311" stroke="#1f3324"/>
+<rect x="38" y="600" width="97" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="47" y="615" class="c">S3 Lifecycle</text>
+<rect x="143" y="600" width="64" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="152" y="615" class="c">Budgets</text>
+<rect x="215" y="600" width="57" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="224" y="615" class="c">Python</text>
+<rect x="345" y="336" width="309" height="300" rx="12" fill="url(#cg)" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="363" y="336" width="48" height="3" rx="1.5" fill="#39d98a"/>
+<text x="363" y="366" class="k">05 · ARCHITECTURE</text>
+<text x="363" y="394" class="t">Solution architecture</text>
+<text x="363" y="414" class="s">Pre-sales designs, costed</text>
+<rect x="363" y="428" width="187" height="26" rx="13" fill="#133D17" stroke="#39d98a" stroke-opacity="0.55"/>
+<circle cx="376" cy="441" r="3" fill="#5dffa8"/>
+<text x="385" y="445" class="m">$265–382 / month design</text>
+<path d="M363 478h8" stroke="#39d98a" stroke-width="2"/>
+<text x="379" y="482" class="b">Forms &amp; approvals on ECS Fargate</text>
+<path d="M363 504h8" stroke="#39d98a" stroke-width="2"/>
+<text x="379" y="508" class="b">RDS Multi-AZ · Entra ID SSO</text>
+<path d="M363 530h8" stroke="#39d98a" stroke-width="2"/>
+<text x="379" y="534" class="b">SQL Server: EC2 vs RDS, costed</text>
+<path d="M363 556h8" stroke="#39d98a" stroke-width="2"/>
+<text x="379" y="560" class="b">WhatsApp agents: 4 patterns, 1 app</text>
+<path d="M363 586H636" stroke="#1f3324"/>
+<rect x="363" y="600" width="64" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="372" y="615" class="c">Fargate</text>
+<rect x="435" y="600" width="70" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="444" y="615" class="c">Entra ID</text>
+<rect x="513" y="600" width="64" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="522" y="615" class="c">Pricing</text>
+<rect x="670" y="336" width="309" height="300" rx="12" fill="url(#cg)" stroke="#39d98a" stroke-opacity="0.3"/>
+<rect x="688" y="336" width="48" height="3" rx="1.5" fill="#39d98a"/>
+<text x="688" y="366" class="k">06 · TOOLS</text>
+<text x="688" y="394" class="t">Web &amp; internal tools</text>
+<text x="688" y="414" class="s">What the company runs on</text>
+<rect x="688" y="428" width="173" height="26" rx="13" fill="#133D17" stroke="#39d98a" stroke-opacity="0.55"/>
+<circle cx="701" cy="441" r="3" fill="#5dffa8"/>
+<text x="710" y="445" class="m">60 of 62 site commits</text>
+<path d="M688 478h8" stroke="#39d98a" stroke-width="2"/>
+<text x="704" y="482" class="b">Kitstek site: Next.js 16 + SEO</text>
+<path d="M688 504h8" stroke="#39d98a" stroke-width="2"/>
+<text x="704" y="508" class="b">Deployed on AWS Amplify</text>
+<path d="M688 530h8" stroke="#39d98a" stroke-width="2"/>
+<text x="704" y="534" class="b">Company HRMS: PHP 8, Lightsail</text>
+<path d="M688 556h8" stroke="#39d98a" stroke-width="2"/>
+<text x="704" y="560" class="b">CKAD labs + microservices app</text>
+<path d="M688 586H961" stroke="#1f3324"/>
+<rect x="688" y="600" width="64" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="697" y="615" class="c">Next.js</text>
+<rect x="760" y="600" width="37" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="769" y="615" class="c">PHP</text>
+<rect x="805" y="600" width="84" height="22" rx="6" fill="#0b110d" stroke="#2f6b45"/>
+<text x="814" y="615" class="c">Kubernetes</text>
+</svg>
