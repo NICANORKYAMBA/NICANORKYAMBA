@@ -58,7 +58,7 @@ done
 
 # qterminal
 q=~/.config/qterminal.org/qterminal.ini
-[ -f "$q" ] && sed -i 's/^colorScheme=.*/colorScheme=DarkMint-Neon/; s/^fontFamily=.*/fontFamily=JetBrainsMono Nerd Font/; s/^fontSize=.*/fontSize=11/; s/^MenuVisible=.*/MenuVisible=false/' "$q"
+[ -f "$q" ] && sed -i 's/^colorScheme=.*/colorScheme=DarkMint-Neon/; s/^fontFamily=.*/fontFamily=Cascadia Code NF/; s/^fontSize=.*/fontSize=10/; s/^MenuVisible=.*/MenuVisible=false/' "$q"
 
 # Folders open in Thunar
 xdg-mime default thunar.desktop inode/directory

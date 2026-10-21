@@ -120,3 +120,22 @@ if [[ ${DARKMINT_PROMPT:-darkmint} != classic && -n $PROMPT ]]; then
     _dm_recolor "$PS3"; PS3=$REPLY
     _dm_recolor "$SPROMPT"; SPROMPT=$REPLY
 fi
+
+# ─── Command-line colors: syntax highlighting + paste/selection in DarkMint ───
+if [[ ${DARKMINT_PROMPT:-darkmint} != classic ]]; then
+    # Pasted text and selections: subtle dark green instead of reverse-video orange
+    zle_highlight=(region:bg=#133D17 paste:bg=#133D17,fg=#d6e5d8 isearch:fg=#5dffa8,underline special:fg=#2ee6c5)
+    if (( ${+ZSH_HIGHLIGHT_STYLES} )); then
+        _DM_COLORS[135]='#6b8f74'; _DM_COLORS[226]='#c9f5d9'
+        for _k in ${(k)ZSH_HIGHLIGHT_STYLES}; do
+            _v=${ZSH_HIGHLIGHT_STYLES[$_k]}
+            [[ $_v =~ 'fg=([0-9]+)' ]] && (( ${+_DM_COLORS[${match[1]}]} )) &&
+                ZSH_HIGHLIGHT_STYLES[$_k]=${_v/fg=${match[1]}/fg=${_DM_COLORS[${match[1]}]}}
+        done
+        unset _k _v
+    fi
+fi
+# sudo commands: amber bold text instead of the black-on-orange block (still a visible root warning)
+if [[ ${DARKMINT_PROMPT:-darkmint} != classic ]] && (( ${+ZSH_HIGHLIGHT_PATTERNS} )); then
+    ZSH_HIGHLIGHT_PATTERNS+=('sudo *' 'fg=#e6c46a,bold')
+fi
