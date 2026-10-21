@@ -11,5 +11,12 @@ sudo sed -i \
   -e 's/^icon-theme-name = .*/icon-theme-name = Papirus-Dark/' \
   -e 's/^cursor-theme-name = .*/cursor-theme-name = Bibata-Modern-Classic/' \
   -e 's/^cursor-theme-size = .*/cursor-theme-size = 20/' "$G"
+# Always use the background above: the per-user one lives in ~ (mode 700),
+# which the greeter can't read, so it fell back to Kali's 16:9 default.
+grep -q '^user-background' "$G" \
+  && sudo sed -i 's/^user-background.*/user-background = false/' "$G" \
+  || echo 'user-background = false' | sudo tee -a "$G" >/dev/null
 grep -E '^(background|theme-name|icon-theme-name|cursor-theme)' "$G"
+busctl set-property org.freedesktop.Accounts "/org/freedesktop/Accounts/User$(id -u)" \
+  org.freedesktop.DisplayManager.AccountsService BackgroundFile s "$W" || true
 echo "Login screen updated. Original saved as $G.bak-darkmint"
