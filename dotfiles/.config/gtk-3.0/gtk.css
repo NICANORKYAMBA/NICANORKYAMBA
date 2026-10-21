@@ -372,3 +372,101 @@ radiobutton radio:checked {
 .xfce4-panel image {
   -gtk-icon-style: regular;
 }
+
+/* ─── Lock screen (xfce4-screensaver unlock dialog) ───
+   GTK matches #name on the widget name property, which the dialog sets as:
+   login_window, content_frame, buttonbox_frame, prompt_entry,
+   login_button (Unlock), panel_window (top bar), user_image_border. */
+#login_window {
+  background-color: transparent;
+}
+
+#content_frame,
+#buttonbox_frame {
+  background-color: rgba(11, 17, 13, 0.92);
+  border: 1px solid rgba(57, 217, 138, 0.35);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+#content_frame {
+  border-top: 3px solid #39d98a;
+}
+
+#content_frame label,
+#buttonbox_frame label {
+  color: #c9d6cc;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+#content_frame > box label:first-child {
+  color: #5dffa8;
+  font-weight: bold;
+}
+
+#user_image_border {
+  border: 2px solid #39d98a;
+  border-radius: 99px;
+  background-color: transparent;
+}
+
+#prompt_entry {
+  background-image: none;
+  background-color: #0b110d;
+  color: #d6e5d8;
+  caret-color: #5dffa8;
+  border: 1px solid #2f6b45;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-family: "JetBrainsMono Nerd Font";
+  box-shadow: none;
+}
+
+#prompt_entry:focus {
+  border-color: #39d98a;
+  box-shadow: 0 0 0 3px rgba(57, 217, 138, 0.2);
+}
+
+#buttonbox_frame button {
+  background-image: none;
+  background-color: rgba(57, 217, 138, 0.10);
+  border: 1px solid rgba(57, 217, 138, 0.3);
+  border-radius: 10px;
+  padding: 6px 16px;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#buttonbox_frame button label {
+  color: #c9d6cc;
+}
+
+#buttonbox_frame button:hover {
+  background-color: rgba(57, 217, 138, 0.22);
+}
+
+#buttonbox_frame #login_button {
+  background-color: #39d98a;
+  border-color: #5dffa8;
+}
+
+#buttonbox_frame #login_button label {
+  color: #0b110d;
+  font-weight: bold;
+}
+
+#buttonbox_frame #login_button:hover {
+  background-color: #5dffa8;
+}
+
+#panel_window {
+  background-image: none;
+  background-color: rgba(11, 17, 13, 0.88);
+  border-bottom: 1px solid rgba(57, 217, 138, 0.25);
+}
+
+#panel_window label {
+  color: #5dffa8;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+}
