@@ -17,6 +17,40 @@ setopt nonomatch notify numericglobsort promptsubst
 setopt hist_expire_dups_first hist_ignore_dups hist_ignore_space hist_verify
 setopt extended_glob glob_dots
 
+# ═══════════════════════════════════════════════════════════════════
+# 🛡️ RELIABILITY GUARDS  (why each of these is here)
+# ═══════════════════════════════════════════════════════════════════
+
+# Use fcntl() locking for the history file instead of a ~/.zsh_history.LOCK
+# symlink. The kernel drops fcntl locks automatically when a process dies —
+# even on SIGKILL — so a force-killed shell can never leave a stale lock that
+# makes every new shell spin at 100% CPU waiting for it. This is the exact
+# failure that made the prompt need Ctrl+C.
+setopt hist_fcntl_lock
+
+# Trim redundant whitespace before storing commands; keeps the history file
+# smaller and faster to load.
+setopt hist_reduce_blanks
+
+# Ctrl+S is XOFF by default and silently freezes terminal output until Ctrl+Q.
+# We bind ^S to history search below, so turn flow control off. Removes a very
+# common "my terminal froze" cause.
+unsetopt flow_control
+
+# Keep hook arrays unique. Re-sourcing ~/.zshrc (e.g. the `reload` alias) would
+# otherwise register the same precmd/preexec hook again — that is why
+# precmd_vcs_info was running twice per prompt.
+typeset -U precmd_functions preexec_functions chpwd_functions
+
+# Needed early: every hook below is registered with add-zsh-hook rather than by
+# defining precmd()/preexec() directly, so nothing can silently overwrite
+# another hook.
+autoload -Uz add-zsh-hook
+
+# Fast, dependency-free helpers used by the prompt cache.
+zmodload zsh/datetime 2>/dev/null        # $EPOCHSECONDS
+zmodload -F zsh/stat b:zstat 2>/dev/null # file mtime without spawning stat(1)
+
 WORDCHARS=${WORDCHARS//\/}
 PROMPT_EOL_MARK=""
 
@@ -41,7 +75,17 @@ bindkey '^S' history-incremental-search-forward
 # 🚀 ENHANCED COMPLETION SYSTEM
 # ═══════════════════════════════════════════════════════════════════
 autoload -Uz compinit
-compinit -d ~/.cache/zcompdump
+# Rebuild the completion dump at most once a day. On every other shell start we
+# use `compinit -C`, which skips the fpath security audit and the rebuild — that
+# audit is also what can stop and ask "ignore insecure directories [y/n]?" and
+# block startup waiting for a keypress.
+_zcompdump=~/.cache/zcompdump
+if [[ ! -s $_zcompdump ]] || [[ -n $_zcompdump(#qNmh+24) ]]; then
+    compinit -d "$_zcompdump"
+else
+    compinit -C -d "$_zcompdump"
+fi
+unset _zcompdump
 zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' special-dirs true
@@ -50,12 +94,40 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 zstyle ':completion:*:*:*:*:processes' command "ps -u $USER -o pid,user,comm -w -w"
 zstyle ':completion:*:cd:*' tag-order local-directories directory-stack path-directories
 
+# `menu select` above needs this module to actually give you an arrow-key
+# selectable menu. Without it the setting is silently inert.
+zmodload zsh/complist 2>/dev/null
+
+# Cache completion results on disk. Heavy completers — kubectl, aws, gcloud —
+# get noticeably quicker after their first use in a session.
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path "${XDG_CACHE_HOME:-$HOME/.cache}/zcompcache"
+
+# Nicer completion behaviour: complete from the middle of a word, and jump the
+# cursor to the end once a completion is accepted.
+setopt complete_in_word always_to_end
+
 # ═══════════════════════════════════════════════════════════════════
 # 📚 HISTORY CONFIGURATION
 # ═══════════════════════════════════════════════════════════════════
 HISTFILE=~/.zsh_history
-HISTSIZE=50000
+# HISTSIZE (in memory) should be larger than SAVEHIST (on disk) so the dedup
+# options have a full picture when deciding what to write out.
+HISTSIZE=60000
 SAVEHIST=50000
+
+# Append each command to the history file as it is entered, rather than only at
+# shell exit. Together with hist_fcntl_lock this means a force-killed shell no
+# longer throws away its entire session — previously `kill -9` lost the lot.
+setopt inc_append_history
+
+# Store a timestamp and duration per entry. Enables `history -i` and lets the
+# file be trimmed by age rather than blindly by line count.
+setopt extended_history
+
+# Don't show duplicates while searching backwards through history.
+setopt hist_find_no_dups
+
 alias history="history 0"
 
 # ═══════════════════════════════════════════════════════════════════
@@ -68,11 +140,71 @@ esac
 force_color_prompt=yes
 
 # ═══════════════════════════════════════════════════════════════════
+# ⚡ PROMPT PERFORMANCE LAYER
+# ═══════════════════════════════════════════════════════════════════
+# The prompt shows live context (network, kubernetes, docker, git, terraform).
+# Gathering that means running external tools, and a slow tool must never be
+# able to stall the prompt. Everything goes through one of two helpers:
+#
+#   _p_cached  Prints the last known value INSTANTLY, then refreshes it in a
+#              detached background job if the value is older than its TTL.
+#              The prompt therefore never waits on the tool — worst case it
+#              shows a value that is a few seconds old.
+#
+#   _p_run     Runs an external command with a hard timeout, for the segments
+#              that must be live (git state changes as you work).
+#
+# Net effect: prompt render time is bounded and independent of how busy docker,
+# minikube or the network happen to be.
+
+_ZSH_PCACHE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh-prompt"
+[[ -d $_ZSH_PCACHE ]] || mkdir -p "$_ZSH_PCACHE"
+
+# _p_cached <key> <ttl-seconds> <function-or-command> [args...]
+_p_cached() {
+    emulate -L zsh
+    local key=$1 ttl=$2
+    shift 2
+    local f="$_ZSH_PCACHE/$key"
+
+    # 1. Serve what we already have, immediately and unconditionally.
+    [[ -r $f ]] && cat -- "$f"
+
+    # 2. Decide if it is stale, using zstat (no subprocess).
+    local -a st
+    local mtime=0
+    zstat -A st +mtime -- "$f" 2>/dev/null && mtime=${st[1]}
+
+    # 3. Refresh out of band. `&!` backgrounds and disowns, so no job noise and
+    #    nothing for the shell to wait on at exit. Each refresh writes its own
+    #    temp file, so overlapping refreshes of the same key can't race.
+    if (( mtime + ttl <= EPOCHSECONDS )); then
+        { local tmp
+          tmp=$(mktemp -- "$f.XXXXXX") || return
+          { "$@" >| "$tmp" 2>/dev/null && mv -f -- "$tmp" "$f" } || rm -f -- "$tmp" } &!
+    fi
+}
+
+# _p_run <timeout-seconds> <command> [args...]  — bounded, live execution.
+_p_run() {
+    emulate -L zsh
+    local secs=$1
+    shift
+    if (( $+commands[timeout] )); then
+        timeout "$secs" "$@" 2>/dev/null
+    else
+        "$@" 2>/dev/null
+    fi
+}
+
+# ═══════════════════════════════════════════════════════════════════
 # 🌟 ULTRA-ADVANCED GIT INTEGRATION
 # ═══════════════════════════════════════════════════════════════════
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
+# Registered via add-zsh-hook (which is idempotent) instead of appending to the
+# array directly — appending is what let this run twice per prompt.
+add-zsh-hook precmd precmd_vcs_info
 
 zstyle ':vcs_info:git:*' formats ' %F{081}%f %F{213}%B%b%f'
 zstyle ':vcs_info:git:*' actionformats ' %F{081}%f %F{213}%B%b%f %F{196}(%a)%f'
@@ -80,13 +212,17 @@ zstyle ':vcs_info:*' enable git
 
 # Advanced Git Status with Performance Optimization
 git_status_detailed() {
-    if ! git rev-parse --git-dir > /dev/null 2>&1; then
+    # Cheap gate first: not a repo → nothing to do, no further processes.
+    if ! _p_run 1 git rev-parse --git-dir >/dev/null; then
         return
     fi
 
-    local git_status_output=$(git status --porcelain 2>/dev/null)
+    # Git state must be live (it changes as you work), so it is not cached — but
+    # every call is hard-bounded. In a pathologically large repo the segment
+    # simply comes back empty instead of hanging the prompt.
+    local git_status_output=$(_p_run 2 git status --porcelain)
     local git_status_icons=""
-    local ahead_behind=$(git rev-list --count --left-right @{upstream}...HEAD 2>/dev/null)
+    local ahead_behind=$(_p_run 1 git rev-list --count --left-right @{upstream}...HEAD)
 
     # File status indicators
     if [[ -n $git_status_output ]]; then
@@ -119,18 +255,23 @@ git_status_detailed() {
 # ═══════════════════════════════════════════════════════════════════
 # 🌐 NETWORK & SYSTEM INFO
 # ═══════════════════════════════════════════════════════════════════
-get_network_info() {
-    local eth_ip=$(ip -4 addr show eth0 2>/dev/null | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | head -1)
-    local wifi_ip=$(ip -4 addr show wlan0 2>/dev/null | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | head -1)
-    local vpn_ip=$(ip -4 addr show tun0 2>/dev/null | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | head -1)
+# Worker: does the actual work (3 × ip). Runs in the background via _p_cached.
+_seg_network() {
+    emulate -L zsh
+    local eth_ip=$(_p_run 3 ip -4 addr show eth0  | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | head -1)
+    local wifi_ip=$(_p_run 3 ip -4 addr show wlan0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | head -1)
+    local vpn_ip=$(_p_run 3 ip -4 addr show tun0  | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | head -1)
 
     local network_info=""
     [[ -n $eth_ip ]] && network_info+="%F{046}───%F{051}⟪%F{051}🌐$eth_ip%f%F{208}⟫"
     [[ -n $vpn_ip ]] && network_info+="%F{046}───%F{051}⟪%F{226}🔒$vpn_ip%f%F{208}⟫"
     [[ -n $wifi_ip ]] && network_info+="%F{046}───%F{051}⟪%F{201}📡$wifi_ip%f%F{208}⟫"
 
-    echo "$network_info"
+    print -rn -- "$network_info"
 }
+# Your IP does not change often, so a 30s cache is plenty and costs the prompt
+# nothing: previously this was 3 subprocesses on every single keypress-to-prompt.
+get_network_info() { _p_cached network 30 _seg_network; }
 
 # ═══════════════════════════════════════════════════════════════════
 # ☁️ CLOUD & DEVOPS CONTEXT
@@ -147,32 +288,46 @@ get_aws_context() {
 }
 
 # Kubernetes Context & Namespace
-get_k8s_context() {
-    if command -v kubectl &>/dev/null; then
-        local ctx=$(kubectl config current-context 2>/dev/null)
-        local ns=$(kubectl config view --minify --output 'jsonpath={..namespace}' 2>/dev/null)
-        [[ -z $ns ]] && ns="default"
-        if [[ -n $ctx ]]; then
-            echo "%F{039}☸ %B${ctx:0:15}%b%f%F{081}:$ns%f"
-        fi
-    fi
+_seg_k8s() {
+    emulate -L zsh
+    (( $+commands[kubectl] )) || return
+    local ctx=$(_p_run 3 kubectl config current-context)
+    [[ -n $ctx ]] || return
+    local ns=$(_p_run 3 kubectl config view --minify --output 'jsonpath={..namespace}')
+    [[ -z $ns ]] && ns="default"
+    print -rn -- "%F{039}☸ %B${ctx:0:15}%b%f%F{081}:$ns%f"
 }
+# Two kubectl invocations, cached for 15s. Switching context/namespace shows up
+# within a few seconds; a busy or unreachable cluster can no longer stall you.
+get_k8s_context() { _p_cached k8s 15 _seg_k8s; }
 
 # Docker Status
-get_docker_status() {
-    if command -v docker &>/dev/null && docker info &>/dev/null 2>&1; then
-        local containers=$(docker ps -q 2>/dev/null | wc -l)
-        local images=$(docker images -q 2>/dev/null | wc -l)
-        [[ $containers -gt 0 || $images -gt 0 ]] && echo "%F{045}🐳%B$containers%b%f%F{240}/%f%F{045}$images%f"
-    fi
+_seg_docker() {
+    emulate -L zsh
+    (( $+commands[docker] )) || return
+    # `docker info` talks to the daemon and is the slowest call in this prompt —
+    # it is now bounded and runs in the background, never inline.
+    _p_run 5 docker info >/dev/null || return
+    local containers=$(_p_run 3 docker ps -q | wc -l)
+    local images=$(_p_run 3 docker images -q | wc -l)
+    (( containers > 0 || images > 0 )) && \
+        print -rn -- "%F{045}🐳%B$containers%b%f%F{240}/%f%F{045}$images%f"
+}
+get_docker_status() { _p_cached docker 15 _seg_docker; }
+
+# Terraform Workspace — directory-specific, so kept live but bounded. The -d
+# test is a cheap syscall, so outside a terraform project this costs nothing.
+get_terraform_workspace() {
+    [[ -d .terraform ]] || return
+    local workspace=$(_p_run 3 terraform workspace show)
+    [[ -n $workspace ]] && print -rn -- "%F{135}🏗️ %B$workspace%b%f"
 }
 
-# Terraform Workspace
-get_terraform_workspace() {
-    if [[ -d .terraform ]]; then
-        local workspace=$(terraform workspace show 2>/dev/null)
-        [[ -n $workspace ]] && echo "%F{135}🏗️ %B$workspace%b%f"
-    fi
+# System load — read straight from /proc, so it spawns nothing at all.
+get_load_info() {
+    local line
+    read -r line < /proc/loadavg 2>/dev/null || return
+    print -rn -- "%F{135}⚙ ${line%% *}%f"
 }
 
 # Combined Cloud Context with separators
@@ -203,14 +358,19 @@ get_cloud_context() {
 # ═══════════════════════════════════════════════════════════════════
 # ⏱️ COMMAND EXECUTION TIME TRACKING
 # ═══════════════════════════════════════════════════════════════════
-function preexec() {
+# NOTE: these used to be defined as bare preexec()/precmd(). Further down the
+# file another precmd() (the terminal-title one) was defined, which silently
+# REPLACED this one — so $cmd_exec_time was never set and the ⏱ segment in
+# RPROMPT never appeared. Both are now registered as named hooks via
+# add-zsh-hook, so they coexist and neither can clobber the other.
+_preexec_timer() {
     cmd_start_time=$SECONDS
 }
 
-function precmd() {
+_precmd_timer() {
     if [[ -n $cmd_start_time ]]; then
-        local elapsed=$((SECONDS - cmd_start_time))
-        if [[ $elapsed -gt 3 ]]; then
+        local elapsed=$(( SECONDS - cmd_start_time ))
+        if (( elapsed > 3 )); then
             cmd_exec_time=" %F{226}⏱ ${elapsed}s%f"
         else
             cmd_exec_time=""
@@ -218,6 +378,9 @@ function precmd() {
         unset cmd_start_time
     fi
 }
+
+add-zsh-hook preexec _preexec_timer
+add-zsh-hook precmd  _precmd_timer
 
 # ═══════════════════════════════════════════════════════════════════
 # 🎭 ULTRA-MODERN PROMPT DESIGN
@@ -230,7 +393,7 @@ if [ "$color_prompt" = yes ]; then
 %F{046}╰──%F{196}⚡%F{208}❯%F{226}❯%F{046}❯%f '
 
     # Sleek right prompt with gradient
-    RPROMPT='%F{240}⟨%F{081}%D{%H:%M:%S}%f%F{240}⟩%f${cmd_exec_time}%(?.%F{046} ✨%f.%F{196} 💀 %?%f)%(1j. %F{220}⚙%j%f.)%(!.%F{196} 👑%f.)'
+    RPROMPT='$(get_load_info) %F{240}⟨%F{081}%D{%H:%M:%S}%f%F{240}⟩%f${cmd_exec_time}%(?.%F{046} ✨%f.%F{196} 💀 %?%f)%(1j. %F{220}⚙%j%f.)%(!.%F{196} 👑%f.)'
 
     # Secondary prompts with vibrant colors
     PS2="%F{046}├───%F{051}⟪ %F{226}%_%f %F{208}⟫ "
@@ -726,7 +889,9 @@ fi
 # Terminal title
 case "$TERM" in
     xterm*|rxvt*|screen*|tmux*)
-        precmd() {
+        # Was a bare precmd(), which overwrote the command-timer precmd defined
+        # earlier. Now a named hook so both run.
+        _precmd_title() {
             print -Pnr -- $'\e]0;%n@%m: %~\a'
             if [[ "$new_line_before_prompt" == yes ]]; then
                 if [[ -z "$_NEW_LINE_BEFORE_PROMPT" ]]; then
@@ -736,6 +901,7 @@ case "$TERM" in
                 fi
             fi
         }
+        add-zsh-hook precmd _precmd_title
         ;;
 esac
 
@@ -744,7 +910,42 @@ new_line_before_prompt=yes
 # ═══════════════════════════════════════════════════════════════════
 # 🌟 ULTRA-MODERN STARTUP WELCOME MESSAGE
 # ═══════════════════════════════════════════════════════════════════
-if [[ -o interactive && -z "$TMUX" ]]; then
+# Defined here, but deliberately CALLED at the very bottom of this file.
+#
+# It used to run at this point, with ~230 lines of config still to execute after
+# it. Anything further down that emitted output (completion loading, the Kiro
+# shell-integration sequences, an auto-listing from chpwd) printed over the
+# freshly drawn banner, which is why it appeared with directory listings
+# interleaved through it. Drawing it last makes that impossible.
+#
+# It also no longer spawns processes: `date` ×2, `uname` ×3 and `cut` are
+# replaced with prompt escapes, $HOST, and a read from /proc.
+_zsh_welcome_banner() {
+    emulate -L zsh
+    [[ -o interactive && -z $TMUX ]] || return
+
+    local kernel=""
+    read -r kernel < /proc/sys/kernel/osrelease 2>/dev/null
+
+    local kube_ctx=""
+    local kubecfg="${KUBECONFIG:-$HOME/.kube/config}"
+    if [[ -r $kubecfg ]]; then
+        # Plain parameter expansion on the matching line — no sed/awk/kubectl.
+        local line
+        while read -r line; do
+            if [[ $line == current-context:* ]]; then
+                kube_ctx=${${line#current-context:}## }
+                break
+            fi
+        done < $kubecfg
+    fi
+    [[ -n $kube_ctx ]] || kube_ctx="Not configured"
+
+    # Reuse the prompt's cached docker segment rather than querying the daemon.
+    local docker_info=""
+    [[ -r $_ZSH_PCACHE/docker ]] && docker_info=$(<$_ZSH_PCACHE/docker)
+    [[ -n $docker_info ]] || docker_info="%F{240}none%f"
+
     clear
     print ""
     print -P "%F{051}================================================================%f"
@@ -752,13 +953,13 @@ if [[ -o interactive && -z "$TMUX" ]]; then
     print -P "    %F{081}Software Engineer%f %F{240}|%f %F{046}Cloud Engineer%f %F{240}|%f %F{226}DevOps%f"
     print -P "%F{051}================================================================%f"
     print -P " %F{046}👋 Welcome back, Chief!%f"
-    print -P " %F{081}📅 $(date '+%A, %B %d, %Y')%f"
-    print -P " %F{226}⏰ $(date '+%I:%M:%S %p')%f"
-    print -P " %F{196}🖥️  $(uname -n) | $(uname -s) $(uname -r | cut -d'-' -f1)%f"
+    print -P " %F{081}📅 %D{%A, %B %d, %Y}%f"
+    print -P " %F{226}⏰ %D{%I:%M:%S %p}%f"
+    print -P " %F{196}🖥️  ${HOST} | Linux ${kernel%%-*}%f"
     print -P "%F{051}================================================================%f"
     print -P " %F{214}☁️  AWS:%f ${AWS_PROFILE:-Not configured}"
-    print -P " %F{039}☸  K8s:%f $(kubectl config current-context 2>/dev/null || echo 'Not configured')"
-    print -P " %F{045}🐳 Docker:%f $(docker ps -q 2>/dev/null | wc -l) containers running"
+    print -P " %F{039}☸  K8s:%f ${kube_ctx}"
+    print -P " %F{045}🐳 Docker:%f ${docker_info}"
     print -P "%F{051}================================================================%f"
     print ""
     print -P "%F{046}%B⚡ QUICK COMMANDS:%b%f"
@@ -766,8 +967,9 @@ if [[ -o interactive && -z "$TMUX" ]]; then
     print -P "   %F{081}awsswitch%f     - Switch AWS profile       %F{081}kswitch%f    - Switch K8s context"
     print -P "   %F{081}klogs%f         - View pod logs             %F{081}kshell%f     - Exec into pod"
     print -P "   %F{081}sysinfo%f       - System information        %F{081}gitsum%f     - Git repo summary"
+    print -P "   %F{081}rebuild-completions%f - Refresh cached kubectl/ng completions"
     print ""
-fi
+}
 
 # ═══════════════════════════════════════════════════════════════════
 # 🎯 MODERN TERMINAL FEATURES
@@ -843,17 +1045,39 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 
-# kubectl completion
-source <(kubectl completion zsh 2>/dev/null)
-compdef __start_kubectl k
+# kubectl completion is loaded from cache in the FINAL section of this file.
+# (It used to be loaded here AND again at the end — running kubectl twice on
+#  every shell start.)
 
 # ═══════════════════════════════════════════════════════════════════
 # 🚀 SMART CD WITH AUTO LS
 # ═══════════════════════════════════════════════════════════════════
+# Auto-list on directory change, with two guards:
+#
+#  1. It stays silent until the first prompt has been drawn. zsh fires chpwd
+#     while the shell is still starting, and that listing was being printed over
+#     the welcome banner.
+#  2. In large directories it prints a one-line summary instead of dumping
+#     hundreds of rows and blowing away your scrollback.
 chpwd() {
     emulate -L zsh
+    (( ${+_ZSH_CHPWD_READY} )) || return
+
+    local -a entries
+    entries=( *(N) )
+    if (( ${#entries} > 40 )); then
+        print -P "%F{240}⟪ ${#entries} entries — %F{081}ll%F{240} to list ⟫%f"
+        return
+    fi
     ls --color=auto -lh
 }
+
+# Arm chpwd once, just before the first prompt, then remove this hook.
+_chpwd_arm() {
+    _ZSH_CHPWD_READY=1
+    add-zsh-hook -d precmd _chpwd_arm
+}
+add-zsh-hook precmd _chpwd_arm
 
 # Modern replacements
 command -v bat &>/dev/null && alias cat='bat --style=plain'
@@ -872,3 +1096,71 @@ command_not_found_handler() {
     compgen -c | grep -i "^${1:0:3}" | head -5 | sed 's/^/   → /'
     return 127
 }
+alias ng="/usr/local/bin/ng"
+
+# ═══════════════════════════════════════════════════════════════════
+# 🧩 TOOL COMPLETIONS (cached — never executed inline at startup)
+# ═══════════════════════════════════════════════════════════════════
+# These were previously loaded with `source <(ng completion script)` and
+# `source <(kubectl completion zsh)`, which executes Angular CLI (a Node
+# process) and kubectl on EVERY new shell, inside a process substitution the
+# shell must wait for. Now we source a cached file, and generate it in a
+# detached background job with a hard timeout when it is missing.
+_ZSH_COMPCACHE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh-completions"
+[[ -d $_ZSH_COMPCACHE ]] || mkdir -p "$_ZSH_COMPCACHE"
+
+# _comp_load <name> <command...>
+_comp_load() {
+    emulate -L zsh
+    local name=$1
+    shift
+    local f="$_ZSH_COMPCACHE/$name.zsh"
+    if [[ -s $f ]]; then
+        source "$f"
+        return
+    fi
+    # Not cached yet: build it out of band so startup is unaffected. It will be
+    # picked up by the next shell.
+    { local tmp
+      tmp=$(mktemp -- "$f.XXXXXX") || return
+      { _p_run 20 "$@" >| "$tmp" && mv -f -- "$tmp" "$f" } || rm -f -- "$tmp" } &!
+}
+
+(( $+commands[kubectl] )) && _comp_load kubectl kubectl completion zsh
+(( $+commands[ng] ))      && _comp_load ng      ng completion script
+
+# Refresh the cached completions on demand (run after upgrading kubectl/ng).
+rebuild-completions() {
+    emulate -L zsh
+    local dir="$_ZSH_COMPCACHE"
+    mkdir -p "$dir"
+    print -P "%F{081}Rebuilding shell completions...%f"
+    if (( $+commands[kubectl] )); then
+        if _p_run 20 kubectl completion zsh >| "$dir/kubectl.zsh"; then
+            print -P "  %F{046}✓%f kubectl"
+        else
+            print -P "  %F{196}✗%f kubectl (timed out)"
+        fi
+    fi
+    if (( $+commands[ng] )); then
+        if _p_run 20 ng completion script >| "$dir/ng.zsh"; then
+            print -P "  %F{046}✓%f ng"
+        else
+            print -P "  %F{196}✗%f ng (timed out)"
+        fi
+    fi
+    print -P "%F{226}Open a new shell to load them.%f"
+}
+
+alias k=kubectl
+(( $+functions[__start_kubectl] )) && compdef __start_kubectl k
+export KUBE_EDITOR=vi
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+# ═══════════════════════════════════════════════════════════════════
+# 🌟 WELCOME BANNER — drawn LAST, on purpose
+# ═══════════════════════════════════════════════════════════════════
+# Everything that can write to the terminal has now finished, so nothing can
+# print over the banner. Defined near the top of this file; invoked here.
+_zsh_welcome_banner

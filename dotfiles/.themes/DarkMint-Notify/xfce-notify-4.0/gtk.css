@@ -1,0 +1,57 @@
+/* DarkMint notifications: green-black glass with a neon accent edge */
+#XfceNotifyWindow {
+    background-color: rgba(11, 17, 13, 0.94);
+    border: 1px solid rgba(57, 217, 138, 0.35);
+    border-left: 4px solid #39d98a;
+    border-radius: 12px;
+    padding: 14px 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.55);
+}
+
+#XfceNotifyWindow:hover {
+    border-color: rgba(93, 255, 168, 0.6);
+    border-left-color: #5dffa8;
+}
+
+#XfceNotifyWindow label,
+#XfceNotifyWindow image {
+    color: #c9d6cc;
+}
+
+#XfceNotifyWindow label#summary {
+    color: #5dffa8;
+    font-weight: bold;
+}
+
+#XfceNotifyWindow label#body {
+    color: #a9bdad;
+}
+
+#XfceNotifyWindow button {
+    background-image: none;
+    background-color: rgba(57, 217, 138, 0.12);
+    border: 1px solid rgba(57, 217, 138, 0.3);
+    border-radius: 8px;
+    color: #d6e5d8;
+    box-shadow: none;
+}
+
+#XfceNotifyWindow button:hover {
+    background-color: rgba(57, 217, 138, 0.25);
+    color: #f2fff4;
+}
+
+#XfceNotifyWindow progressbar trough {
+    background-color: #1a221c;
+    border: none;
+    border-radius: 99px;
+    min-height: 6px;
+}
+
+#XfceNotifyWindow progressbar progress {
+    background-image: none;
+    background-color: #39d98a;
+    border: none;
+    border-radius: 99px;
+    min-height: 6px;
+}

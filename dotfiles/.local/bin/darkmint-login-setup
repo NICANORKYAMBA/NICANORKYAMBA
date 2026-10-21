@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# One-time (needs sudo): make the LightDM login screen match the DarkMint desktop.
+set -euo pipefail
+G=/etc/lightdm/lightdm-gtk-greeter.conf
+W=/usr/share/backgrounds/darkmint/darkmint-kali-net.jpg
+sudo install -Dm644 "$HOME/Pictures/wallpapers/darkmint-kali-net.jpg" "$W"   # greeter user can't read $HOME
+sudo cp -n "$G" "$G.bak-darkmint"
+sudo sed -i \
+  -e "s|^background = .*|background = $W|" \
+  -e 's/^theme-name = .*/theme-name = DarkMint/' \
+  -e 's/^icon-theme-name = .*/icon-theme-name = Papirus-Dark/' \
+  -e 's/^cursor-theme-name = .*/cursor-theme-name = Bibata-Modern-Classic/' \
+  -e 's/^cursor-theme-size = .*/cursor-theme-size = 20/' "$G"
+grep -E '^(background|theme-name|icon-theme-name|cursor-theme)' "$G"
+echo "Login screen updated. Original saved as $G.bak-darkmint"

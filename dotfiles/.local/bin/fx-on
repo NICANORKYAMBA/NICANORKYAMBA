@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Turn on DarkMint glass effects (picom) and the conky dashboard.
+# picom replaces xfwm4's built-in compositor, so that one is switched off first.
+command -v picom >/dev/null || { echo "picom not installed: sudo apt install picom conky-all"; exit 1; }
+xfconf-query -c xfwm4 -p /general/use_compositing -s false
+pgrep -x picom >/dev/null || picom --config ~/.config/picom/picom.conf -b
+if command -v conky >/dev/null && ! pgrep -x conky >/dev/null; then
+  conky -c ~/.config/conky/darkmint.conf -d -p 2 >/dev/null 2>&1
+fi

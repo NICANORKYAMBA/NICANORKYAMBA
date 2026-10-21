@@ -1,0 +1,374 @@
+/* === DarkMint Premium - Elevated Developer Edition === */
+
+/* ─── Color overrides to fix DarkMint's weak spots ─── */
+
+/* Fix the ugly gray menu - make it dark like the rest */
+menu, .menu, .context-menu {
+  background-color: #1a1d1a;
+  border: 1px solid #2a2d2a;
+  border-radius: 10px;
+  padding: 6px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+menu menuitem {
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 2px 4px;
+  transition: background-color 100ms ease;
+}
+
+menu menuitem:hover {
+  background-color: #1e3d22;
+}
+
+menu separator {
+  background-color: #2a3a2c;
+  margin: 4px 8px;
+  min-height: 1px;
+}
+
+/* ─── Window Decorations ─── */
+window.csd decoration {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+window.csd.popup decoration {
+  border-radius: 10px;
+}
+
+dialog.background {
+  border-radius: 12px;
+}
+
+/* ─── Headerbar / Titlebar ─── */
+headerbar, .titlebar {
+  min-height: 36px;
+  padding: 0 8px;
+  border-radius: 12px 12px 0 0;
+  background-image: linear-gradient(to bottom, #2a2d2a, #232323);
+}
+
+/* ─── Buttons - green glow on hover ─── */
+button {
+  border-radius: 8px;
+  padding: 6px 14px;
+  min-height: 28px;
+  transition: all 150ms ease;
+}
+
+button:hover {
+  box-shadow: 0 0 0 1px alpha(#4DAF26, 0.3);
+}
+
+button:active, button:checked {
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Suggested action buttons - vibrant green */
+button.suggested-action {
+  background-image: linear-gradient(to bottom, #3d8f30, #2d7a22);
+  color: white;
+  border: none;
+}
+
+button.suggested-action:hover {
+  background-image: linear-gradient(to bottom, #4DAF26, #3d8f30);
+  box-shadow: 0 2px 8px alpha(#4DAF26, 0.4);
+}
+
+/* Destructive buttons - red */
+button.destructive-action:hover {
+  box-shadow: 0 2px 8px alpha(#ff4444, 0.4);
+}
+
+/* ─── Text Entries - green focus glow ─── */
+entry {
+  border-radius: 8px;
+  padding: 6px 10px;
+  transition: all 150ms ease;
+}
+
+entry:focus {
+  box-shadow: 0 0 0 2px alpha(#4DAF26, 0.3);
+}
+
+/* ─── Selections - vibrant green ─── */
+*:selected {
+  background-color: #1e4d22;
+}
+
+textview text selection,
+label selection {
+  background-color: alpha(#4DAF26, 0.3);
+}
+
+/* ─── Popovers ─── */
+popover.background {
+  border-radius: 12px;
+  padding: 4px;
+  background-color: #1a1d1a;
+  border: 1px solid #2a3a2c;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── Scrollbar - thin green-tinted ─── */
+scrollbar {
+  background: none;
+  border: none;
+}
+
+scrollbar trough {
+  background: none;
+  border: none;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+scrollbar slider {
+  border-radius: 99px;
+  min-width: 4px;
+  min-height: 4px;
+  background-color: alpha(#78B97E, 0.25);
+  border: 2px solid transparent;
+}
+
+scrollbar:hover slider {
+  min-width: 6px;
+  background-color: alpha(#78B97E, 0.5);
+}
+
+/* ─── Tooltips ─── */
+tooltip, tooltip.background {
+  border-radius: 8px;
+  padding: 4px 8px;
+  background-color: #0a0d0a;
+  border: 1px solid #2a3a2c;
+}
+
+/* ─── Notebook Tabs ─── */
+notebook > header > tabs > tab {
+  border-radius: 8px 8px 0 0;
+  padding: 4px 12px;
+}
+
+notebook > header > tabs > tab:checked {
+  box-shadow: inset 0 -2px 0 #4DAF26;
+}
+
+/* ─── Switches - green pill ─── */
+switch {
+  border-radius: 99px;
+  min-height: 24px;
+  min-width: 48px;
+}
+
+switch:checked {
+  background-color: #4DAF26;
+}
+
+switch slider {
+  border-radius: 99px;
+  min-height: 20px;
+  min-width: 20px;
+}
+
+/* ─── Progress bars - green gradient ─── */
+progressbar progress {
+  border-radius: 99px;
+  background-image: linear-gradient(to right, #2d7a22, #4DAF26, #9EFFA7);
+}
+
+progressbar trough {
+  border-radius: 99px;
+  background-color: #1a1d1a;
+}
+
+/* ─── List Rows ─── */
+row {
+  border-radius: 6px;
+}
+
+row:hover {
+  background-color: alpha(#4DAF26, 0.05);
+}
+
+/* ─── Check/Radio buttons - green ─── */
+checkbutton check:checked,
+radiobutton radio:checked {
+  background-color: #4DAF26;
+  color: #000;
+}
+
+/* ─── PANEL ─── */
+.xfce4-panel {
+  border: none;
+  font-weight: 500;
+  background-color: #0d100d;
+}
+
+.xfce4-panel button {
+  border-radius: 6px;
+  padding: 2px 4px;
+  margin: 2px 1px;
+  transition: background-color 100ms ease;
+}
+
+.xfce4-panel button:hover {
+  background-color: alpha(#4DAF26, 0.15);
+}
+
+.xfce4-panel button:checked {
+  background-color: alpha(#4DAF26, 0.1);
+}
+
+/* ─── Docklike Taskbar ─── */
+.xfce4-panel .docklike-plugin button {
+  padding: 2px 6px;
+  margin: 2px;
+  border-radius: 6px;
+}
+
+.xfce4-panel .docklike-plugin button:hover {
+  background-color: alpha(#4DAF26, 0.15);
+}
+
+.xfce4-panel .docklike-plugin button:checked {
+  background-color: alpha(#4DAF26, 0.1);
+  box-shadow: inset 0 -2px 0 #4DAF26;
+}
+
+/* ─── Panel launchers ─── */
+.xfce4-panel .launcher button {
+  padding: 3px 5px;
+  border-radius: 8px;
+}
+
+.xfce4-panel .launcher button:hover {
+  background-color: alpha(#4DAF26, 0.15);
+}
+
+/* ─── Whiskermenu button ─── */
+.xfce4-panel #whiskermenu-button {
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+
+.xfce4-panel #whiskermenu-button:hover {
+  background-color: alpha(#4DAF26, 0.12);
+}
+
+.xfce4-panel #whiskermenu-button:checked {
+  background-color: alpha(#4DAF26, 0.18);
+}
+
+/* ─── Actions (lock/logout) ─── */
+.xfce4-panel .actions button:hover {
+  background-color: alpha(#ff5555, 0.2);
+}
+
+/* ─── System Tray ─── */
+.xfce4-panel .systray {
+  padding: 0 4px;
+}
+
+/* ─── Clock ─── */
+.xfce4-panel .clock-button {
+  font-weight: 500;
+}
+
+/* ─── Whiskermenu window ─── */
+#whiskermenu-window {
+  background-color: #141714;
+  border-radius: 12px;
+  border: 1px solid #2a3a2c;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+}
+
+#whiskermenu-window entry {
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 4px;
+  background-color: #1a1d1a;
+  border: 1px solid #2a3a2c;
+}
+
+#whiskermenu-window entry:focus {
+  border-color: #4DAF26;
+  box-shadow: 0 0 0 2px alpha(#4DAF26, 0.2);
+}
+
+#whiskermenu-window .view {
+  background-color: #141714;
+  border-radius: 8px;
+}
+
+#whiskermenu-window .view:selected {
+  background-color: #1e3d22;
+  border-radius: 6px;
+}
+
+/* DarkMint paints buttons with a glossy background-image, which sits on top of
+   background-color; clear it so the flat look below actually shows. */
+#whiskermenu-window button {
+  border-radius: 8px;
+  padding: 6px 10px;
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+#whiskermenu-window button:hover {
+  background-color: alpha(#4DAF26, 0.12);
+  border-color: alpha(#4DAF26, 0.25);
+}
+
+#whiskermenu-window .category-button {
+  border-radius: 6px;
+  padding: 6px 10px;
+  margin: 1px 2px;
+}
+
+#whiskermenu-window .category-button:checked {
+  background-color: #1e3d22;
+  border-color: alpha(#4DAF26, 0.45);
+  box-shadow: inset 3px 0 0 #4DAF26;
+  border-radius: 6px;
+}
+
+/* ─── Whiskermenu scrollbar ─── */
+#whiskermenu-window scrollbar {
+  background: none;
+  border: none;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+#whiskermenu-window scrollbar trough {
+  background: none;
+  border: none;
+  min-width: 6px;
+}
+
+#whiskermenu-window scrolledwindow:hover scrollbar {
+  opacity: 1;
+}
+
+#whiskermenu-window scrollbar slider {
+  min-width: 3px;
+  border-radius: 99px;
+  background-color: alpha(#4DAF26, 0.3);
+}
+
+#whiskermenu-window scrollbar:hover slider {
+  min-width: 5px;
+  background-color: alpha(#4DAF26, 0.5);
+}
+
+/* ─── Panel icon style ─── */
+.xfce4-panel image {
+  -gtk-icon-style: regular;
+}

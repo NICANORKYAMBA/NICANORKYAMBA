@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=DarkMint Effects
+Comment=picom glass effects + conky dashboard (toggle with fx-on / fx-off)
+Exec=sh -c "sleep 3; /home/nicanorkyamba/.local/bin/fx-on"
+X-GNOME-Autostart-enabled=true

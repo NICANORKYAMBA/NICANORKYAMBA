@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Turn off picom + conky and hand compositing back to xfwm4.
+pkill -x picom; pkill -x conky
+xfconf-query -c xfwm4 -p /general/use_compositing -s true

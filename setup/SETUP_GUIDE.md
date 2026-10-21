@@ -2,7 +2,36 @@
 
 This directory contains all configuration files for a modern, professional DevOps development environment on Kali Linux with XFCE.
 
-## Quick Setup
+## DarkMint Neon Desktop (current setup, Oct 2026)
+
+The current look lives in [`../dotfiles/`](../dotfiles/), mirrored to home-folder paths, with a one-shot installer:
+
+```bash
+sudo apt install -y darkmint-gtk-theme papirus-icon-theme picom conky-all qt5ct qt6ct
+# Fonts: JetBrainsMono Nerd Font, Cascadia Code NF. Cursor: Bibata-Modern-Classic
+git clone git@github.com:NICANORKYAMBA/NICANORKYAMBA.git && cd NICANORKYAMBA
+dotfiles/install-darkmint.sh        # copies dotfiles + applies all theme settings
+~/.local/bin/darkmint-login-setup   # optional, sudo: matching login screen
+# Log out and back in
+```
+
+What it gives you:
+
+| Piece | Setup |
+| --- | --- |
+| GTK theme | DarkMint + custom `gtk.css` (flat Whisker menu, rounded menus) |
+| Window borders / GTK4 | Kali-Green-Dark (DarkMint ships neither) |
+| Qt apps | Kali-Green-Dark palette, Papirus-Dark icons |
+| Icons / cursor | Papirus-Dark / Bibata-Modern-Classic |
+| Wallpaper | `Pictures/wallpapers/darkmint-kali-net.jpg` (desktop + lock screen) |
+| Effects | picom: rounded corners, blur, shadows, fades (`fx-on` / `fx-off`) |
+| Dashboard | conky: clock, CPU/temp, RAM, disk, Wi-Fi, VPN, Docker, K8s, AWS |
+| Terminals | DarkMint Neon scheme in qterminal + Alacritty, Nerd Fonts |
+| Notifications | `DarkMint-Notify` theme |
+
+XFCE settings files (panel layout, shortcuts, etc.) are under `dotfiles/.config/xfce4/`. Copy them before the first login on a new machine; in a running session XFCE keeps its settings in memory and can overwrite them, which is why the installer also applies the key settings live.
+
+## Quick Setup (original v1.0)
 
 ### 1. Install Dependencies
 ```bash

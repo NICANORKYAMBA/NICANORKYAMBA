@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Set Volume
+Exec=wpctl set-volume @DEFAULT_AUDIO_SINK@ 1.5
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
