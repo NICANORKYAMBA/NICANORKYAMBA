@@ -12,7 +12,6 @@ sudo cp -r "$SRC/plymouth/darkmint" /usr/share/plymouth/themes/darkmint
 # Loaded after Kali's kali-themes.cfg, so it wins without editing package files
 sudo tee /etc/default/grub.d/zz-darkmint.cfg >/dev/null <<'CFG'
 GRUB_THEME="/boot/grub/themes/darkmint/theme.txt"
-GRUB_GFXMODE="1920x1200,auto"
 CFG
 sudo update-grub
 

@@ -11,7 +11,7 @@ Y_CENTER = Window.GetHeight() / 2;
 status = "normal";
 
 Window.SetBackgroundTopColor(0.02, 0.05, 0.03);
-Window.SetBackgroundBottomColor(0, 0, 0);
+Window.SetBackgroundBottomColor(0.02, 0.05, 0.03);
 
 /* Images */
 container.image = Image("kali-logo-container.png");
