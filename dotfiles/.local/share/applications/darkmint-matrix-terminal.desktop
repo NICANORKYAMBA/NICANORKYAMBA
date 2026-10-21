@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Matrix
+Comment=Falling green code, full screen (press q to quit)
+Exec=alacritty --class Matrix -o window.startup_mode=Fullscreen -e cmatrix -b -u 5 -C green
+Icon=utilities-terminal
+Categories=Utility;
