@@ -30,6 +30,7 @@ x xfce4-screensaver /lock/background string "$W"
 gsettings set org.gnome.desktop.interface gtk-theme DarkMint
 gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+gsettings set org.x.apps.portal color-scheme prefer-dark   # XFCE asks the XApp portal; apps read dark mode from it
 
 # Wallpaper on every monitor and workspace
 for m in $(xrandr --listmonitors | awk 'NR>1{print $4}'); do

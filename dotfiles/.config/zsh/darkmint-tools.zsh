@@ -87,3 +87,36 @@ _zsh_welcome_banner() {
     print ""
 }
 fi
+
+# ─── Prompt: same layout, DarkMint colors (set DARKMINT_PROMPT=classic for the original) ───
+# The prompt's segments emit 256-color codes; each prompt is expanded once in
+# precmd and its colors are mapped to the DarkMint palette. Red stays red.
+if [[ ${DARKMINT_PROMPT:-darkmint} != classic && -n $PROMPT ]]; then
+    typeset -gA _DM_COLORS=(
+        046 '#39d98a'  051 '#2f6b45'  208 '#2f6b45'  226 '#c9f5d9'
+        081 '#2ee6c5'  201 '#5dffa8'  033 '#39d98a'  213 '#7cf5b4'
+        135 '#6b8f74'  240 '#3a4a3e'  214 '#e6c46a'  220 '#e6c46a'
+        045 '#2ee6c5'  039 '#2ee6c5'  196 '#ff5c6c'
+    )
+    typeset -g _DM_PROMPT_SRC=$PROMPT _DM_RPROMPT_SRC=$RPROMPT
+
+    _dm_recolor() {
+        local s=$1 k
+        for k in ${(k)_DM_COLORS}; do
+            s=${s//\%F\{$k\}/%F{${_DM_COLORS[$k]}}}
+        done
+        # The result is shown with prompt_subst on, so keep it from re-expanding
+        s=${s//\\/\\\\}; s=${s//\$/\\\$}; s=${s//\`/\\\`}
+        REPLY=$s
+    }
+
+    _dm_prompt_precmd() {
+        _dm_recolor "${(e)_DM_PROMPT_SRC}";  PROMPT=$REPLY
+        _dm_recolor "${(e)_DM_RPROMPT_SRC}"; RPROMPT=$REPLY
+    }
+    add-zsh-hook precmd _dm_prompt_precmd
+
+    _dm_recolor "$PS2"; PS2=$REPLY
+    _dm_recolor "$PS3"; PS3=$REPLY
+    _dm_recolor "$SPROMPT"; SPROMPT=$REPLY
+fi
