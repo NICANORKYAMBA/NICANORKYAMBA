@@ -22,7 +22,8 @@ What it gives you:
 | Piece | Setup |
 | --- | --- |
 | GTK theme | DarkMint + custom `gtk.css` (flat Whisker menu, rounded menus) |
-| Window borders / GTK4 | Kali-Green-Dark (DarkMint ships neither) |
+| Window borders / GTK4 | `DarkMint-WM` title bars (green-black, amber / green / red buttons with symbols on hover, in `~/.themes`); GTK4 from Kali-Green-Dark |
+| File manager · Alt+Tab | Thunar with a flat toolbar, clean headers and dark sidebar; Alt+Tab as an icon switcher on a dark glass card (all in `gtk.css`) |
 | Qt apps | Kali-Green-Dark palette, Papirus-Dark icons |
 | Icons / cursor | Papirus-Dark / Bibata-Modern-Classic |
 | Wallpaper | `Pictures/wallpapers/darkmint-kali-net.jpg` (desktop + lock screen) |

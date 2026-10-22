@@ -23,7 +23,8 @@ x xsettings /Xft/Antialias int 1
 x xsettings /Xft/Hinting int 1
 x xsettings /Xft/HintStyle string hintslight
 x xsettings /Xft/RGBA string rgb
-x xfwm4 /general/theme string Kali-Green-Dark      # DarkMint ships no xfwm4 borders
+x xfwm4 /general/theme string DarkMint-WM          # green-black title bar, amber/green/red buttons (~/.themes)
+x xfwm4 /general/cycle_preview bool false          # icon switcher: live previews need the xfwm compositor, which picom replaces
 x xfce4-notifyd /theme string DarkMint-Notify
 W="$HOME/Pictures/wallpapers/darkmint-kali-net.jpg"
 x xfce4-screensaver /lock/background string "$W"

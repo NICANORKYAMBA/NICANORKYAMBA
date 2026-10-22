@@ -559,3 +559,119 @@ radiobutton radio:checked {
   background-color: #1f3324;
   min-height: 1px;
 }
+
+/* ─── Thunar: flat toolbar, clean headers, calm sidebar ─── */
+.thunar toolbar,
+.thunar .toolbar {
+  background-image: none;
+  background-color: #0b110d;
+  border: none;
+  border-bottom: 1px solid #1f3324;
+  padding: 4px 6px;
+}
+
+.thunar toolbar button,
+.thunar .path-bar button,
+.thunar .location-button {
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+.thunar toolbar button:hover,
+.thunar .path-bar button:hover {
+  background-color: rgba(57, 217, 138, 0.12);
+  border-color: rgba(57, 217, 138, 0.25);
+}
+
+.thunar toolbar button:checked,
+.thunar .path-bar button:checked {
+  background-color: rgba(57, 217, 138, 0.18);
+  border-color: rgba(57, 217, 138, 0.5);
+}
+
+.thunar toolbar entry {
+  background-image: none;
+  background-color: #0d1410;
+  border: 1px solid #1f3324;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+.thunar treeview.view header button {
+  background-image: none;
+  background-color: #0b110d;
+  border: none;
+  border-bottom: 1px solid #1f3324;
+  box-shadow: none;
+  text-shadow: none;
+  color: #6b8f74;
+}
+
+.thunar treeview.view header button:hover {
+  color: #5dffa8;
+}
+
+.thunar .sidebar,
+.thunar .sidebar treeview.view,
+.thunar .shortcuts-pane,
+.thunar .shortcuts-pane treeview.view {
+  background-color: #090f0b;
+}
+
+.thunar scrolledwindow,
+.thunar frame,
+.thunar frame > border {
+  border: none;
+  box-shadow: none;
+}
+
+.thunar paned > separator {
+  background-color: #1f3324;
+  background-image: none;
+  min-width: 1px;
+}
+
+.thunar statusbar {
+  background-color: #090f0b;
+  border-top: 1px solid #1f3324;
+}
+
+/* ─── Alt+Tab switcher: dark glass card, flat tiles, green selection ─── */
+XfwmTabwinWidget,
+#xfwm-tabwin {
+  background-image: none;
+  background-color: rgba(11, 17, 13, 0.94);
+  border: 1px solid rgba(57, 217, 138, 0.35);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+XfwmTabwinWidget button,
+#xfwm-tabwin button {
+  background-image: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 10px;
+}
+
+XfwmTabwinWidget button:hover,
+XfwmTabwinWidget button:checked,
+XfwmTabwinWidget button:active,
+#xfwm-tabwin button:hover,
+#xfwm-tabwin button:checked {
+  background-color: rgba(57, 217, 138, 0.16);
+  border-color: rgba(57, 217, 138, 0.55);
+}
+
+XfwmTabwinWidget label,
+#xfwm-tabwin label {
+  color: #c9d6cc;
+  font-family: "JetBrainsMono Nerd Font";
+}
