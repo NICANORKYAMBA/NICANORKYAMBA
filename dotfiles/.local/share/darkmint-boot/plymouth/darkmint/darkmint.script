@@ -10,8 +10,15 @@ Y_CENTER = Window.GetHeight() / 2;
 
 status = "normal";
 
-Window.SetBackgroundTopColor(0.02, 0.05, 0.03);
-Window.SetBackgroundBottomColor(0.02, 0.05, 0.03);
+/* DarkMint: frame counter for the breathing glow (refresh runs ~50 times a second) */
+global.tick = 0;
+fun refreshCallback () {
+  global.tick++;
+}
+Plymouth.SetRefreshFunction(refreshCallback);
+
+Window.SetBackgroundTopColor(0, 0, 0);
+Window.SetBackgroundBottomColor(0, 0, 0);
 
 /* Images */
 container.image = Image("kali-logo-container.png");
@@ -56,7 +63,7 @@ fun showKaliLogo () {
 
 /* -------------------------------- Message -------------------------------- */
 fun displayMessageCallback (text) {
-  prompt.image = Image.Text(text, 1, 1, 1);
+  prompt.image = Image.Text(text, 0.36, 1, 0.66);
   prompt.sprite = Sprite(prompt.image);
   prompt.sprite.SetPosition(
     X_CENTER - prompt.image.GetWidth() / 2,
@@ -152,7 +159,8 @@ if (Plymouth.GetMode() == "boot") {
     animationProgress %= 1;
 
     if (animationProgress < 0.9) {
-      fade.sprite.SetOpacity(0);
+      // DarkMint: the glow breathes (about 3 s per breath) while the dragon fills
+      fade.sprite.SetOpacity(0.10 + 0.14 * (0.5 + 0.5 * Math.Sin(global.tick * 2 * Math.Pi / 150)));
       logo.sprite.SetOpacity(Math.Min(animationProgress / 0.3 - 1, 1));
       relativeProgress = animationProgress / 0.9;
       outline.sprite.SetY(outline.initialPosition

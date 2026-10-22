@@ -11,28 +11,33 @@ terminal-box: "select_*.png"
     top = 34%
     width = 44%
     height = 40%
-    item_font = "JetBrainsMono Nerd Font Regular 22"
+    item_font = "JetBrainsMono Nerd Font Regular 20"
     item_color = "#8fa894"
-    selected_item_font = "JetBrainsMono Nerd Font Regular 22"
+    selected_item_font = "JetBrainsMono Nerd Font Regular 20"
     selected_item_color = "#f2fff4"
     item_height = 44
     item_padding = 18
     item_spacing = 8
-    icon_width = 0
-    icon_height = 0
+    icon_width = 30
+    icon_height = 30
+    item_icon_space = 14
     selected_item_pixmap_style = "select_*.png"
     scrollbar = false
 }
 
-+ label {
++ progress_bar {
     id = "__timeout__"
-    top = 80%
-    left = 0
-    width = 100%
-    align = "center"
+    left = 36%
+    top = 79%
+    width = 28%
+    height = 22
+    show_text = true
     text = "booting in %d s"
-    color = "#39d98a"
     font = "JetBrainsMono Nerd Font Regular 16"
+    text_color = "#5dffa8"
+    fg_color = "#133D17"
+    bg_color = "#0b110d"
+    border_color = "#2f6b45"
 }
 
 + label {

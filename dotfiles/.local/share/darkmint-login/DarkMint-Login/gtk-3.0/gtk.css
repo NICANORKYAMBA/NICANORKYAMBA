@@ -1,0 +1,119 @@
+/* DarkMint-Login: DarkMint plus a login screen that matches the lock screen */
+@import url("file:///usr/share/themes/DarkMint/gtk-3.0/gtk.css");
+
+#login_window,
+#login_window > * {
+  background-color: transparent;
+}
+
+#content_frame,
+#buttonbox_frame {
+  background-image: none;
+  background-color: rgba(11, 17, 13, 0.90);
+  border: 1px solid rgba(57, 217, 138, 0.35);
+  border-radius: 16px;
+  padding: 22px 26px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.65);
+}
+
+#content_frame {
+  border-top: 3px solid #39d98a;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-width: 0;
+}
+
+#buttonbox_frame {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 1px solid rgba(57, 217, 138, 0.15);
+  padding-top: 14px;
+}
+
+#content_frame label,
+#buttonbox_frame label {
+  color: #c9d6cc;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+#user_image_border {
+  background-color: transparent;
+  border: 2px solid #39d98a;
+  border-radius: 99px;
+}
+
+#content_frame entry,
+#content_frame combobox button {
+  background-image: none;
+  background-color: #0b110d;
+  color: #d6e5d8;
+  caret-color: #5dffa8;
+  border: 1px solid #2f6b45;
+  border-radius: 10px;
+  padding: 9px 12px;
+  box-shadow: none;
+  font-family: "JetBrainsMono Nerd Font";
+}
+
+#content_frame entry:focus {
+  border-color: #39d98a;
+  box-shadow: 0 0 0 3px rgba(57, 217, 138, 0.2);
+}
+
+#buttonbox_frame button {
+  color: #c9d6cc;
+  background-image: none;
+  background-color: rgba(57, 217, 138, 0.10);
+  border: 1px solid rgba(57, 217, 138, 0.3);
+  border-radius: 10px;
+  padding: 8px 20px;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#buttonbox_frame button:hover {
+  background-color: rgba(57, 217, 138, 0.22);
+}
+
+#buttonbox_frame #login_button {
+  background-color: #39d98a;
+  border-color: #5dffa8;
+}
+
+#buttonbox_frame #login_button label {
+  color: #0b110d;
+  font-weight: bold;
+}
+
+#buttonbox_frame #login_button:hover {
+  background-color: #5dffa8;
+}
+
+#panel_window {
+  background-image: none;
+  background-color: rgba(11, 17, 13, 0.88);
+  border-bottom: 1px solid rgba(57, 217, 138, 0.25);
+}
+
+#panel_window menubar,
+#panel_window menubar > menuitem {
+  background-image: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+#panel_window label {
+  color: #5dffa8;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+}
+
+#panel_window menubar > menuitem:hover {
+  background-color: rgba(57, 217, 138, 0.15);
+  border-radius: 6px;
+}
+
+#buttonbox_frame button label {
+  color: #c9d6cc;
+}

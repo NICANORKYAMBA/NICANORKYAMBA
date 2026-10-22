@@ -33,9 +33,10 @@ What it gives you:
 | Launcher | Rofi on **Super+Space** (apps / windows / ssh / run, Tab to switch) |
 | Shell tools | `ls`→eza icons, `cat`→bat, fzf on Ctrl+R / Ctrl+T, `z` (zoxide), `ff` (fastfetch) — `~/.config/zsh/darkmint-tools.zsh` |
 | Screensaver | DarkMint Matrix (glmatrix), then lock screen |
-| Boot | DarkMint GRUB theme + green Kali Plymouth splash (`~/.local/share/darkmint-boot/`) |
+| Boot | DarkMint GRUB theme with green Kali / Windows / UEFI icons and a draining countdown bar; Kali Plymouth splash on black with a breathing green glow (`~/.local/share/darkmint-boot/`, installed by `darkmint-boot-setup`) |
 | Privacy | Hardware privacy key + **Ctrl+Alt+P** shield (dim, mute notifications, hide dashboard); **Ctrl+Alt+U** Windows disguise via kali-undercover |
 | Lock screen | Unlock dialog styled in `gtk.css` by its GTK widget names (`#content_frame`, `#prompt_entry`, `#login_button`, `#panel_window`); green dragon avatar in `~/.face` |
+| Login screen | `DarkMint-Login` GTK theme: centered card matching the lock screen, green top bar with date and clock (`~/.local/share/darkmint-login/`, installed by `darkmint-login-setup`, undo with `--undo`) |
 | Hotkeys | **Super+Escape** start the matrix screensaver and lock · **Ctrl+Alt+K** keep awake (screensaver inhibit + power-manager presentation mode) |
 | Fun | `matrix` in any terminal, or "Matrix" in the app menu (full-screen cmatrix) |
 | btop · tmux | `btop` with the DarkMint theme (`~/.config/btop`); tmux status bar with session, git branch and clock (`~/.config/tmux/tmux.conf`) |

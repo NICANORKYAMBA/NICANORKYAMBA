@@ -1,22 +1,33 @@
 #!/usr/bin/env bash
 # One-time (needs sudo): make the LightDM login screen match the DarkMint desktop.
+#   darkmint-login-setup          install the DarkMint-Login theme and greeter config
+#   darkmint-login-setup --undo   go back to the login screen as it was before the DarkMint-Login theme
 set -euo pipefail
 G=/etc/lightdm/lightdm-gtk-greeter.conf
+SRC=~/.local/share/darkmint-login
 W=/usr/share/backgrounds/darkmint/darkmint-kali-net.jpg
+
+if [ "${1:-}" = --undo ]; then
+  B="$G.bak-before-login-theme"; [ -f "$B" ] || B="$G.bak-darkmint"
+  sudo cp "$B" "$G"
+  sudo rm -rf /usr/share/themes/DarkMint-Login
+  echo "Login screen restored from $B"
+  exit 0
+fi
+
 sudo install -Dm644 "$HOME/Pictures/wallpapers/darkmint-kali-net.jpg" "$W"   # greeter user can't read $HOME
-sudo cp -n "$G" "$G.bak-darkmint"
-sudo sed -i \
-  -e "s|^background = .*|background = $W|" \
-  -e 's/^theme-name = .*/theme-name = DarkMint/' \
-  -e 's/^icon-theme-name = .*/icon-theme-name = Papirus-Dark/' \
-  -e 's/^cursor-theme-name = .*/cursor-theme-name = Bibata-Modern-Classic/' \
-  -e 's/^cursor-theme-size = .*/cursor-theme-size = 20/' "$G"
-# Always use the background above: the per-user one lives in ~ (mode 700),
-# which the greeter can't read, so it fell back to Kali's 16:9 default.
-grep -q '^user-background' "$G" \
-  && sudo sed -i 's/^user-background.*/user-background = false/' "$G" \
-  || echo 'user-background = false' | sudo tee -a "$G" >/dev/null
-grep -E '^(background|theme-name|icon-theme-name|cursor-theme)' "$G"
-busctl set-property org.freedesktop.Accounts "/org/freedesktop/Accounts/User$(id -u)" \
+sudo cp -n "$G" "$G.bak-darkmint"                 # Kali's original, from the first run
+sudo cp -n "$G" "$G.bak-before-login-theme"       # the config just before the DarkMint-Login theme
+sudo rm -rf /usr/share/themes/DarkMint-Login
+sudo cp -r "$SRC/DarkMint-Login" /usr/share/themes/DarkMint-Login
+sudo chmod -R a+rX /usr/share/themes/DarkMint-Login
+sudo install -m644 "$SRC/lightdm-gtk-greeter.conf" "$G"
+grep -vE '^\s*(#|$)' "$G"
+
+# The greeter can't read ~ (mode 700): give it the wallpaper and avatar through AccountsService
+U="/org/freedesktop/Accounts/User$(id -u)"
+busctl set-property org.freedesktop.Accounts "$U" \
   org.freedesktop.DisplayManager.AccountsService BackgroundFile s "$W" || true
-echo "Login screen updated. Original saved as $G.bak-darkmint"
+[ -f ~/.face ] && busctl call org.freedesktop.Accounts "$U" org.freedesktop.Accounts.User SetIconFile s "$HOME/.face" || true
+
+echo "Login screen updated. Original saved as $G.bak-darkmint (undo: darkmint-login-setup --undo)"
