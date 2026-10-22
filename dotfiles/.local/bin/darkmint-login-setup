@@ -18,6 +18,10 @@ fi
 sudo install -Dm644 "$HOME/Pictures/wallpapers/darkmint-kali-net.jpg" "$W"   # greeter user can't read $HOME
 sudo cp -n "$G" "$G.bak-darkmint"                 # Kali's original, from the first run
 sudo cp -n "$G" "$G.bak-before-login-theme"       # the config just before the DarkMint-Login theme
+# The greeter runs as the lightdm user: avatar and fonts must live in system folders
+sudo install -Dm644 "$HOME/.face" /usr/share/backgrounds/darkmint/avatar.png
+sudo install -Dm644 -t /usr/local/share/fonts/JetBrainsMono "$HOME"/.local/share/fonts/JetBrainsMonoNerdFont-{Regular,Bold}.ttf
+sudo fc-cache -f /usr/local/share/fonts >/dev/null
 sudo rm -rf /usr/share/themes/DarkMint-Login
 sudo cp -r "$SRC/DarkMint-Login" /usr/share/themes/DarkMint-Login
 sudo chmod -R a+rX /usr/share/themes/DarkMint-Login
