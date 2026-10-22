@@ -15,6 +15,8 @@ GRUB_THEME="/boot/grub/themes/darkmint/theme.txt"
 # Shown behind the "Booting `Kali GNU/Linux'" text after a menu entry is picked
 GRUB_BACKGROUND="/boot/grub/themes/darkmint/boot.png"
 CFG
+# Classes for the Advanced options and UEFI entries, so the theme can show their icons
+sudo /usr/bin/python3 "$SRC/patch-grub-classes.py"
 sudo update-grub
 
 # Readable copy of what GRUB will actually use (grub.cfg is root-only)
