@@ -12,7 +12,7 @@
 
 ## `$ cat about.md`
 
-I'm a **Cloud & DevOps Engineer** at [Kitsilano Technologies](https://kitstek.com), an AWS Partner in Nairobi. I lead production platforms, from Kubernetes and GitOps to Terraform, security and cost, for products and clients across East Africa, and I write a lot of the software that runs on them: multi-tenant AI products, a video-streaming service, recruitment tooling.
+I'm a **Cloud & DevOps Engineer** at [Kitsilano Technologies](https://kitstek.com), an AWS Advanced Partner in Nairobi. I lead production platforms, from Kubernetes and GitOps to Terraform, security and cost, for products and clients across East Africa, and I write a lot of the software that runs on them: multi-tenant AI products, a video-streaming service, recruitment tooling.
 
 What people get when they work with me: infrastructure that matches what's in git, security that pages on real threats, recovery targets that are written down and designed for, and documentation good enough to hand over.
 
@@ -68,7 +68,7 @@ Businesses train an AI agent on their own documents and websites, embed it on th
 
 ## `$ ls ~/work --selected`
 
-<img src="assets/selected-work.svg" alt="Selected work: NW Plus TV, African video streaming with 970+ commits; Ajirii, AI recruitment platform; org-scale security with GuardDuty detection across 4 accounts and 4-layer tag enforcement; operations and FinOps; solution architecture and pre-sales; web and internal tools." width="100%"/>
+<img src="assets/selected-work.svg" alt="Selected work: NW Plus TV, African video streaming with 970+ commits; Ajirii, AI recruitment platform; org-scale security with GuardDuty detection across 4 accounts and 4-layer tag enforcement; SAP on AWS operations and FinOps; solution architecture and pre-sales; web and internal tools." width="100%"/>
 
 <details>
 <summary><b>Read the full write-ups</b></summary>
@@ -122,13 +122,14 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 </td>
 <td width="50%" valign="top">
 
-### 💰 Operations & FinOps
+### 🗄️ SAP on AWS operations & FinOps
 
-- **SAP HANA backup automation** for a multi-tenant logistics account: S3 lifecycle to Glacier Instant Retrieval plus a cross-region Deep Archive copy
-- **Cost investigations** for client accounts that tripped their budgets: root cause, remediation and a written report each time
-- Incident **RCAs**, runbooks, DR positions and weekly client reports
+- **Fixed a SAP backup bucket that had never deleted anything:** with versioning on, every retention delete only wrote a delete marker, so 1.7 TB across 95 M objects was growing 632 GB a month. Traced it, proved it against CloudWatch object counts, purged the 58% that was dead data and made retention real
+- **HANA backup pipeline:** archives verified before upload (every gzip CRC plus file count), Glacier Instant Retrieval, cross-region replication to Deep Archive, SNS alerts and a daily missing-backup check
+- **HANA out-of-memory outage:** RCA, a 40 GB allocation limit agreed with the SAP partner, a weekly restart gated on all services GREEN, and memory alerting
+- Graceful HANA stop/start scheduling with SSM Automation; **cost investigations** reconciling invoice, budget and estimate; RCAs, runbooks and weekly client reports
 
-`AWS Backup` `S3 Lifecycle` `Cost Explorer` `Budgets` `Python`
+`SAP HANA` `SUSE` `S3 Lifecycle` `SSM Automation` `EventBridge` `Lambda` `Cost Explorer`
 
 </td>
 </tr>
@@ -214,7 +215,7 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 
 ## `$ git log --career`
 
-<img src="assets/career.svg" alt="Career timeline. Work: Cloud Engineer at Kitsilano Technologies (AWS Partner, Nairobi) since March 2025; Full-Stack Engineer at NW Plus TV, June 2024 to July 2026. Learning: ALX Software Engineering programme 2022 to 2023; HNG12 internship (DevOps and backend) January to February 2025; BSc Computer Science at the University of the People since January 2026. Milestones: first AWS certification October 2023; AWS Solutions Architect Professional and Google Cloud Professional Cloud Architect December 2025; all 12 AWS certifications June 2026. Now: preparing for CKAD, writing about the road to 12 AWS certifications, studying computer science." width="100%"/>
+<img src="assets/career.svg" alt="Career timeline. Work: Cloud Engineer at Kitsilano Technologies (AWS Advanced Partner, Nairobi) since March 2025; Full-Stack Engineer at NW Plus TV, June 2024 to July 2026. Learning: Bachelor of Technology in Surveying Technology, Technical University of Kenya, completed December 2022; ALX Software Engineering programme 2022 to 2023; HNG12 internship (DevOps and backend) January to February 2025; BSc Computer Science at the University of the People since January 2026. Milestones: first AWS certification October 2023; AWS Solutions Architect Professional and Google Cloud Professional Cloud Architect December 2025; all 12 AWS certifications June 2026. Now: preparing for CKAD, writing about the road to 12 AWS certifications, studying computer science." width="100%"/>
 
 ## `$ gh stats`
 
