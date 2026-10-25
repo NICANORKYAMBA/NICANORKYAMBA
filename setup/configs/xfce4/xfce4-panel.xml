@@ -201,23 +201,9 @@
       <property name="square-icons" type="bool" value="true"/>
       <property name="symbolic-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
-        <value type="string" value="wi-fi network connection “kitsilano” active: kitsilano (68%)"/>
-        <value type="string" value="wi-fi network connection “kitsilano” active: kitsilano (63%)"/>
         <value type="string" value="polkit-mate-authentication-agent-1"/>
-        <value type="string" value="wi-fi network connection “kitsilano” active: kitsilano (62%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (86%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (94%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (97%)"/>
         <value type="string" value="onboard"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (74%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (100%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (89%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (90%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (88%)"/>
         <value type="string" value="redshift-gtk"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (91%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (87%)"/>
-        <value type="string" value="wi-fi network connection “nicanornicanor” active: nicanornicanor (92%)"/>
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-items" type="array">
