@@ -215,7 +215,7 @@ Recruiters post jobs, upload CVs in bulk and get extracted, scored and optionall
 
 ## `$ git log --career`
 
-<img src="assets/career.svg" alt="Career timeline. Work: Cloud Engineer at Kitsilano Technologies (AWS Advanced Partner, Nairobi) since March 2025; Full-Stack Engineer at NW Plus TV, June 2024 to July 2026. Learning: Bachelor of Technology in Surveying Technology, Technical University of Kenya, completed December 2022; ALX Software Engineering programme 2022 to 2023; HNG12 internship (DevOps and backend) January to February 2025; BSc Computer Science at the University of the People since January 2026. Milestones: first AWS certification October 2023; AWS Solutions Architect Professional and Google Cloud Professional Cloud Architect December 2025; all 12 AWS certifications June 2026. Now: preparing for CKAD, writing about the road to 12 AWS certifications, studying computer science." width="100%"/>
+<img src="assets/career.svg" alt="Career timeline. Work: Cloud Engineer at Kitsilano Technologies (AWS Advanced Partner, Nairobi) since January 2025; Full-Stack Engineer at NW Plus TV, June 2024 to July 2026. Learning: Bachelor of Technology in Surveying Technology, Technical University of Kenya, completed November 2022; ALX Software Engineering programme 2022 to 2023; HNG12 internship (DevOps and backend) January to February 2025; BSc Computer Science at the University of the People since January 2026. Milestones: first AWS certification October 2023; AWS Solutions Architect Professional and Google Cloud Professional Cloud Architect December 2025; all 12 AWS certifications June 2026. Now: preparing for CKAD, writing about the road to 12 AWS certifications, studying computer science." width="100%"/>
 
 ## `$ gh stats`
 
