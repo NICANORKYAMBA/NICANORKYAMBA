@@ -1013,7 +1013,7 @@ export GREP_COLOR="1;32"
 export CLICOLOR=1
 
 # Development environment
-export NODE_ENV="development"
+# export NODE_ENV="development"  # disabled 2026-11-05: Node tools set NODE_ENV themselves; a global value breaks production builds (e.g. next build)
 export PYTHONDONTWRITEBYTECODE=1
 export PYTHONUNBUFFERED=1
 
