@@ -76,6 +76,9 @@ k '<Primary><Alt>k' "$HOME/.local/bin/keep-awake"
 x xfce4-screensaver /saver/mode int 2
 xfconf-query -c xfce4-screensaver -p /saver/themes/list -n --force-array -t string -s screensavers-darkmint-matrix
 
+# Resource watch: notifies when CPU or memory stays high, naming the apps responsible
+systemctl --user daemon-reload && systemctl --user enable --now resource-watch.service || true
+
 xfdesktop --reload 2>/dev/null || true
 ~/.local/bin/fx-on || true
 echo "Done. Log out and back in to pick up everything."

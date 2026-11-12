@@ -1,0 +1,69 @@
+#!/usr/bin/env bash
+# Background watch for a slow machine (runs as the resource-watch user service).
+# Every 15 s it samples total CPU use and available memory. When either stays
+# high for a minute, it shows a desktop notification naming the apps responsible
+# and appends the details to ~/.local/state/resource-watch.log.
+#   resource-watch          run the watch loop (what the service does)
+#   resource-watch --now    print the current top consumers and exit
+CPU_LIMIT=85        # % of all cores busy
+MEM_LIMIT=10        # % of RAM still available
+SAMPLES=4           # consecutive 15 s samples = 1 minute
+COOLDOWN=600        # seconds between notifications for the same problem
+LOG=${XDG_STATE_HOME:-$HOME/.local/state}/resource-watch.log
+mkdir -p "$(dirname "$LOG")"
+
+# Busy % of all cores since the previous call, from /proc/stat
+prev_total=0 prev_idle=0
+cpu_busy() {
+  read -r _ u n s i w q sq st _ < /proc/stat
+  local total=$((u + n + s + i + w + q + sq + st)) idle=$((i + w))
+  local dt=$((total - prev_total)) di=$((idle - prev_idle))
+  prev_total=$total prev_idle=$idle
+  (( dt > 0 )) && echo $(( (100 * (dt - di)) / dt )) || echo 0
+}
+mem_avail() { awk '/MemTotal/{t=$2} /MemAvailable/{a=$2} END{print int(100*a/t)}' /proc/meminfo; }
+
+# Top 3 apps by CPU, with their processes summed (Chrome's many processes count as one app)
+top_cpu() {
+  command top -b -n 2 -d 2 -o %CPU | awk '/^top -/{n++} n==2 && /^ *[0-9]/' |
+    awk '{cpu[$12]+=$9} END{for (a in cpu) printf "%s %.0f\n", a, cpu[a]}' |
+    sort -k2nr | head -3 | awk '{printf "%s%s %s%%", (NR>1?", ":""), $1, $2}'
+}
+# Top 3 apps by memory. Uses PSS, which splits shared pages between processes,
+# so totals add up; RSS counts shared libraries in every process.
+top_mem() {
+  for d in /proc/[0-9]*; do
+    pss=$(awk '/^Pss:/{print $2}' "$d/smaps_rollup" 2>/dev/null) && [ -n "$pss" ] &&
+      echo "$(cat "$d/comm" 2>/dev/null) $pss"
+  done | awk '{m[$1]+=$2} END{for (a in m) printf "%s %.1f\n", a, m[a]/1048576}' |
+    sort -k2nr | head -3 | awk '{printf "%s%s %s GB", (NR>1?", ":""), $1, $2}'
+}
+
+if [ "${1:-}" = --now ]; then
+  cpu_busy >/dev/null; sleep 1
+  echo "CPU busy: $(cpu_busy)%   RAM available: $(mem_avail)%"
+  echo "Top CPU: $(top_cpu)"
+  echo "Top RAM: $(top_mem)"
+  exit 0
+fi
+
+cpu_busy >/dev/null
+hot_cpu=0 hot_mem=0 last_cpu=0 last_mem=0
+while sleep 15; do
+  cpu=$(cpu_busy) mem=$(mem_avail) now=$(date +%s)
+  (( cpu >= CPU_LIMIT )) && hot_cpu=$((hot_cpu + 1)) || hot_cpu=0
+  (( mem <= MEM_LIMIT )) && hot_mem=$((hot_mem + 1)) || hot_mem=0
+
+  if (( hot_cpu >= SAMPLES && now - last_cpu >= COOLDOWN )); then
+    apps=$(top_cpu)
+    echo "$(date '+%F %T') CPU ${cpu}% busy for 1 min | top: $apps" >> "$LOG"
+    notify-send -u normal -t 8000 -i utilities-system-monitor "High CPU: ${cpu}% for a minute" "Busiest: $apps"
+    last_cpu=$now
+  fi
+  if (( hot_mem >= SAMPLES && now - last_mem >= COOLDOWN )); then
+    apps=$(top_mem)
+    echo "$(date '+%F %T') RAM only ${mem}% available for 1 min | top: $apps" >> "$LOG"
+    notify-send -u critical -t 10000 -i utilities-system-monitor "Low memory: ${mem}% free" "Using the most: $apps"
+    last_mem=$now
+  fi
+done

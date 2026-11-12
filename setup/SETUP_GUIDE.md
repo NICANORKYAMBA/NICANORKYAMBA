@@ -39,6 +39,7 @@ What it gives you:
 | Lock screen | Unlock dialog styled in `gtk.css` by its GTK widget names (`#content_frame`, `#prompt_entry`, `#login_button`, `#panel_window`); green dragon avatar in `~/.face` |
 | Login screen | `DarkMint-Login` GTK theme: centered card matching the lock screen, green top bar with date and clock (`~/.local/share/darkmint-login/`, installed by `darkmint-login-setup`, undo with `--undo`) |
 | Hotkeys | **Super+Escape** start the matrix screensaver and lock · **Ctrl+Alt+K** keep awake (screensaver inhibit + power-manager presentation mode) |
+| Resource watch | `resource-watch` user service: a desktop notification (and a line in `~/.local/state/resource-watch.log`) naming the busiest apps when CPU stays above 85% or free RAM below 10% for a minute; `resource-watch --now` prints the current top consumers |
 | Fun | `matrix` in any terminal, or "Matrix" in the app menu (full-screen cmatrix) |
 | btop · tmux | `btop` with the DarkMint theme (`~/.config/btop`); tmux status bar with session, git branch and clock (`~/.config/tmux/tmux.conf`) |
 | Editors | DarkMint chrome for VS Code / Kiro, scoped to the Abyss theme: paste `dotfiles/editor/darkmint-abyss-colors.json` into `settings.json` |
